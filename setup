@@ -1,0 +1,32 @@
+yay -S firefox-appmenu-bin pamac-aur virtualbox stremio wine nemo qbittorrent qgnomeplatform steam papirus-icon-theme 
+
+
+#xfce-panel-global-menu
+xfce4-panel
+vala-panel-appmenu-xfce
+appmenu-gtk-module
+/////
+gedit ~/.config/autostart/fildem.desktop
+//////
+[Desktop Entry]
+Type=Application
+Exec=xfce4-panel
+Hidden=false
+NoDisplay=false
+X-GNOME-Autostart-enabled=true
+
+//////
+
+##extension
+gnome-shell-extension-dash-to-panel
+gconnect-git
+gnome-shell-extension-vitals
+
+
+## wallpaper
+gsettings set org.gnome.desktop.background picture-uri file:///home/serrano/Pictures/y.jpg
+## change theme
+gsettings set org.gnome.desktop.interface gtk-theme "Adwaita-dark"
+
+
+
