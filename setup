@@ -39,5 +39,8 @@ gsettings set org.gnome.desktop.interface gtk-theme "Adwaita-dark"
 ##change font
 gsettings set org.gnome.desktop.interface font-name 'Cantarell Regular 14'
 
+##Change Icon-Theme:
+gsettings set org.gnome.desktop.interface icon-theme 'Papirus-Dark'
+
 
 
