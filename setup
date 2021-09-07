@@ -2,9 +2,9 @@ yay -S firefox-appmenu-bin pamac-aur virtualbox stremio wine nemo qbittorrent qg
 
 
 #xfce-panel-global-menu
-xfce4-panel
-vala-panel-appmenu-xfce
-appmenu-gtk-module
+xfce4-panel appmenu-gtk-module vala-panel-appmenu-xfce vala-panel-appmenu-budgie vala-panel-appmenu-common vala-panel-appmenu-registrar-git vala-panel-appmenu-valapanel
+
+
 /////
 gedit ~/.config/autostart/fildem.desktop
 //////
@@ -18,15 +18,19 @@ X-GNOME-Autostart-enabled=true
 //////
 
 ##extension
-gnome-shell-extension-dash-to-panel
-gconnect-git
-gnome-shell-extension-vitals
+chrome-gnome-shell gnome-shell-extension-dash-to-panel gconnect-git gnome-shell-extension-vitals
 
 
 ## wallpaper
-gsettings set org.gnome.desktop.background picture-uri file:///home/serrano/Pictures/y.jpg
+pacman -S wget
+wget https://w.wallhaven.cc/full/md/wallhaven-mdjrqy.jpg
+gsettings set org.gnome.desktop.background picture-uri file:///home/j/wallhaven-mdjrqy.jpg
+
 ## change theme
 gsettings set org.gnome.desktop.interface gtk-theme "Adwaita-dark"
+
+##change font
+gsettings set org.gnome.desktop.interface font-name 'Cantarell Regular 14'
 
 
 
