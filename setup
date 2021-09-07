@@ -30,7 +30,7 @@ unzip extensions.zip -d ~/.local/share/gnome-shell/
 
 ## wallpaper
 wget https://w.wallhaven.cc/full/md/wallhaven-mdjrqy.jpg
-gsettings set org.gnome.desktop.background picture-uri file:///home/j/wallhaven-mdjrqy.jpg
+gsettings set org.gnome.desktop.background picture-uri file:///home/j/setup/wallhaven-mdjrqy.jpg
 
 ## change theme
 gsettings set org.gnome.desktop.interface gtk-theme "Adwaita-dark"
