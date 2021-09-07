@@ -6,7 +6,8 @@ xfce4-panel appmenu-gtk-module vala-panel-appmenu-xfce vala-panel-appmenu-budgie
 
 
 /////
-gedit ~/.config/autostart/fildem.desktop
+mkdir ~/.config/autostart/
+gedit ~/.config/autostart/xfce4.desktop
 //////
 [Desktop Entry]
 Type=Application
