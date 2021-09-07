@@ -1,4 +1,4 @@
-yay -S firefox-appmenu-bin pamac-aur virtualbox stremio wine nemo qbittorrent qgnomeplatform steam papirus-icon-theme 
+yay -S firefox-appmenu-bin pamac-aur virtualbox stremio wine nemo qbittorrent qgnomeplatform steam papirus-icon-theme wget 
 
 
 #xfce-panel-global-menu
@@ -29,7 +29,6 @@ unzip extensions.zip -d ~/.local/share/gnome-shell/
 
 
 ## wallpaper
-pacman -S wget
 wget https://w.wallhaven.cc/full/md/wallhaven-mdjrqy.jpg
 gsettings set org.gnome.desktop.background picture-uri file:///home/j/wallhaven-mdjrqy.jpg
 
