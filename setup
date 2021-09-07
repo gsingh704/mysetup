@@ -18,7 +18,13 @@ X-GNOME-Autostart-enabled=true
 //////
 
 ##extension
-chrome-gnome-shell gnome-shell-extension-dash-to-panel gconnect-git gnome-shell-extension-vitals
+chrome-gnome-shell 
+
+mkdir setup
+cd setup/
+wget https://github.com/gsingh704/mysetup/raw/main/extensions.zip
+unzip extensions.zip -d ~/.local/share/gnome-shell/
+
 
 
 ## wallpaper
