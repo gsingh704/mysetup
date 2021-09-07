@@ -1,0 +1,25 @@
+
+yay -S firefox-appmenu-bin pamac-aur virtualbox  wget stremio wine nemo qbittorrent qgnomeplatform steam papirus-icon-theme chrome-gnome-shell xfce4-panel appmenu-gtk-module vala-panel-appmenu-xfce vala-panel-appmenu-budgie vala-panel-appmenu-common vala-panel-appmenu-registrar-git vala-panel-appmenu-valapanel
+
+
+
+
+mkdir setup
+cd setup/
+wget https://github.com/gsingh704/mysetup/raw/main/extensions.zip
+unzip extensions.zip -d ~/.local/share/gnome-shell/
+wget https://w.wallhaven.cc/full/md/wallhaven-mdjrqy.jpg
+gsettings set org.gnome.desktop.background picture-uri file:///home/j/setup/wallhaven-mdjrqy.jpg
+gsettings set org.gnome.desktop.interface gtk-theme "Adwaita-dark"
+gsettings set org.gnome.desktop.interface font-name 'Cantarell Regular 14'
+
+/
+mkdir ~/.config/autostart/
+gedit ~/.config/autostart/xfce4-panel.desktop
+/
+[Desktop Entry]
+Type=Application
+Exec=xfce4-panel
+Hidden=false
+NoDisplay=false
+X-GNOME-Autostart-enabled=true
