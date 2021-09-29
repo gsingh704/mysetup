@@ -11,7 +11,7 @@ sudo efibootmgr -b 0003 -B
 
 sudoedit /etc/default/grub
 GRUB_CMDLINE_LINUX_DEFAULT="i8042.nopnp=1 pci=nocrs"
-sudo update-grub
+sudo update-grub   *orororororor* sudo grub-mkconfig -o /boot/grub/grub.cfg
 Reboot
 
 Pop os 
