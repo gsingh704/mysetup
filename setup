@@ -1,7 +1,9 @@
 yay -S firefox-appmenu-bin pamac-aur virtualbox stremio wine nemo qbittorrent qgnomeplatform steam papirus-icon-theme wget 
 #bluetoth-fix
 yay -S pipewire-pulse  pipewire-alsa
-pacman -R pulseaudio pulseaudio-alsa
+or
+yay -S manjaro-pipewire pipewire-jack-dropin
+
 
 #xfce-panel-global-menu
 xfce4-panel appmenu-gtk-module vala-panel-appmenu-xfce vala-panel-appmenu-budgie vala-panel-appmenu-common vala-panel-appmenu-registrar-git vala-panel-appmenu-valapanel
