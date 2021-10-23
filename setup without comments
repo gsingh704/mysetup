@@ -1,10 +1,9 @@
 
-yay -S firefox-appmenu-bin pamac-aur virtualbox stremio wine nemo qbittorrent qgnomeplatform steam papirus-icon-theme wget pipewire-pulse chrome-gnome-shell  pipewire-alsa manjaro-pipewire pipewire-jack-dropin xfce4-panel appmenu-gtk-module vala-panel-appmenu-xfce vala-panel-appmenu-budgie vala-panel-appmenu-common vala-panel-appmenu-registrar-git vala-panel-appmenu-valapanel
+yay -S firefox-appmenu-bin pamac-aur virtualbox stremio wine nemo qbittorrent dash-to-panel steam papirus-icon-theme wget pipewire-pulse chrome-gnome-shell  pipewire-alsa manjaro-pipewire pipewire-jack-dropin xfce4-panel appmenu-gtk-module vala-panel-appmenu-xfce vala-panel-appmenu-budgie vala-panel-appmenu-common vala-panel-appmenu-registrar-git vala-panel-appmenu-valapanel
 
 /////
 mkdir ~/.config/autostart/
-gedit ~/.config/autostart/xfce4.desktop
-//////
+cd ~/.config/autostart/
 echo "[Desktop Entry]    
 Type=Application
 Exec=xfce4-panel
@@ -24,9 +23,6 @@ gsettings set org.gnome.desktop.background picture-uri file:///home/j/setup/wall
 gsettings set org.gnome.desktop.interface gtk-theme "Adwaita-dark"
 gsettings set org.gnome.desktop.interface font-name 'Cantarell Regular 14'
 gsettings set org.gnome.desktop.interface icon-theme 'Papirus-Dark'
-
-
-
 wget --no-check-certificate "https://onedrive.live.com/download?cid=7C58C021468CACC8&resid=7C58C021468CACC8%21106&authkey=AFLclwBpun_oi5g" -O a.zip
 unzip  -o a.zip -d /home/j/
 
