@@ -5,12 +5,13 @@ yay -S firefox-appmenu-bin pamac-aur virtualbox stremio wine nemo qbittorrent qg
 mkdir ~/.config/autostart/
 gedit ~/.config/autostart/xfce4.desktop
 //////
-[Desktop Entry]
+echo "[Desktop Entry]    
 Type=Application
 Exec=xfce4-panel
 Hidden=false
 NoDisplay=false
-X-GNOME-Autostart-enabled=true
+X-GNOME-Autostart-enabled=true" > xfce4.desktop
+
 
 //////
 
