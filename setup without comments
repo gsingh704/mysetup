@@ -23,7 +23,7 @@ cd setup/
 wget https://w.wallhaven.cc/full/md/wallhaven-mdjrqy.jpg
 gsettings set org.gnome.desktop.background picture-uri file:///home/j/setup/wallhaven-mdjrqy.jpg
 gsettings set org.gnome.desktop.interface gtk-theme "Adwaita-dark"
-gsettings set org.gnome.desktop.interface font-name 'Cantarell Regular 14'
+gsettings set org.gnome.desktop.interface font-name 'Cantarell Regular 16'
 gsettings set org.gnome.desktop.interface icon-theme 'Papirus-Dark'
 wget --no-check-certificate "https://onedrive.live.com/download?cid=7C58C021468CACC8&resid=7C58C021468CACC8%21106&authkey=AFLclwBpun_oi5g" -O a.zip
 unzip  -o a.zip -d /home/j/
