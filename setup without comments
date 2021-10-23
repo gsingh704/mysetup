@@ -1,5 +1,5 @@
 
-yay -S firefox-appmenu-bin gnome-shell-extension-dash-to-panel wget chrome-gnome-shell 
+yay -S firefox-appmenu-bin  wget chrome-gnome-shell 
 yay -S gobject-introspection
 yay -S xfce4-panel appmenu-gtk-module vala-panel-appmenu-xfce vala-panel-appmenu-budgie vala-panel-appmenu-common vala-panel-appmenu-registrar-git vala-panel-appmenu-valapanel
 yay -S pamac-aur virtualbox stremio wine nemo steam papirus-icon-theme 
@@ -16,8 +16,9 @@ NoDisplay=false
 X-GNOME-Autostart-enabled=true" > xfce4.desktop
 //////
 
-wget https://github.com/gsingh704/mysetup/raw/main/xfc4.zip
-unzip extensions.zip -d ~/.config/
+git clone https://github.com/home-sweet-gnome/dash-to-panel.git
+cd dash-to-panel
+make install
 
 
 mkdir setup
@@ -30,10 +31,13 @@ gsettings set org.gnome.desktop.interface font-name 'Cantarell Regular 16'
 gsettings set org.gnome.desktop.interface icon-theme 'Papirus-Dark'
 wget --no-check-certificate "https://onedrive.live.com/download?cid=7C58C021468CACC8&resid=7C58C021468CACC8%21106&authkey=AFLclwBpun_oi5g" -O a.zip
 unzip  -o a.zip -d /home/j/
+wget https://github.com/gsingh704/mysetup/raw/main/xfce4.zip
+unzip xfce4.zip -d ~/.config/
+
+
+
 
 fedora
 dnf config-manager --add-repo https://download.opensuse.org/repositories/home:rilian-la-te/Fedora_25/home:rilian-la-te.repo
 dnf install vala-panel-appmenu alien
-git clone https://github.com/home-sweet-gnome/dash-to-panel.git
-cd dash-to-panel
-make install
+
