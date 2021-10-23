@@ -1,5 +1,10 @@
 
-yay -S firefox-appmenu-bin pamac-aur virtualbox stremio wine nemo qbittorrent dash-to-panel steam papirus-icon-theme wget pipewire-pulse chrome-gnome-shell  pipewire-alsa manjaro-pipewire pipewire-jack-dropin xfce4-panel appmenu-gtk-module vala-panel-appmenu-xfce vala-panel-appmenu-budgie vala-panel-appmenu-common vala-panel-appmenu-registrar-git vala-panel-appmenu-valapanel
+yay -S firefox-appmenu-bin gnome-shell-extension-dash-to-panel wget chrome-gnome-shell 
+yay -S gobject-introspection
+yay -S xfce4-panel appmenu-gtk-module vala-panel-appmenu-xfce vala-panel-appmenu-budgie vala-panel-appmenu-common vala-panel-appmenu-registrar-git vala-panel-appmenu-valapanel
+
+
+yay -S pamac-aur virtualbox stremio wine nemo steam papirus-icon-theme  pipewire-pulse   pipewire-alsa manjaro-pipewire pipewire-jack-dropin 
 
 /////
 mkdir ~/.config/autostart/
