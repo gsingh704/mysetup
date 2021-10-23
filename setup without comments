@@ -2,9 +2,8 @@
 yay -S firefox-appmenu-bin gnome-shell-extension-dash-to-panel wget chrome-gnome-shell 
 yay -S gobject-introspection
 yay -S xfce4-panel appmenu-gtk-module vala-panel-appmenu-xfce vala-panel-appmenu-budgie vala-panel-appmenu-common vala-panel-appmenu-registrar-git vala-panel-appmenu-valapanel
-
-
-yay -S pamac-aur virtualbox stremio wine nemo steam papirus-icon-theme  pipewire-pulse   pipewire-alsa manjaro-pipewire pipewire-jack-dropin 
+yay -S pamac-aur virtualbox stremio wine nemo steam papirus-icon-theme 
+yay -S pipewire-pulse pipewire-alsa manjaro-pipewire pipewire-jack-dropin 
 
 /////
 mkdir ~/.config/autostart/
@@ -15,8 +14,6 @@ Exec=xfce4-panel
 Hidden=false
 NoDisplay=false
 X-GNOME-Autostart-enabled=true" > xfce4.desktop
-
-
 //////
 
 
@@ -30,7 +27,6 @@ gsettings set org.gnome.desktop.interface font-name 'Cantarell Regular 14'
 gsettings set org.gnome.desktop.interface icon-theme 'Papirus-Dark'
 wget --no-check-certificate "https://onedrive.live.com/download?cid=7C58C021468CACC8&resid=7C58C021468CACC8%21106&authkey=AFLclwBpun_oi5g" -O a.zip
 unzip  -o a.zip -d /home/j/
-
 
 fedora
 dnf config-manager --add-repo https://download.opensuse.org/repositories/home:rilian-la-te/Fedora_25/home:rilian-la-te.repo
