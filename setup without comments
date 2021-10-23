@@ -16,6 +16,9 @@ NoDisplay=false
 X-GNOME-Autostart-enabled=true" > xfce4.desktop
 //////
 
+wget https://github.com/gsingh704/mysetup/raw/main/xfc4.zip
+unzip extensions.zip -d ~/.config/
+
 
 mkdir setup
 cd setup/
