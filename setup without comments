@@ -26,14 +26,14 @@ gsettings set org.gnome.desktop.interface font-name 'Cantarell Regular 14'
 gsettings set org.gnome.desktop.interface icon-theme 'Papirus-Dark'
 
 
+
+wget --no-check-certificate "https://onedrive.live.com/download?cid=7C58C021468CACC8&resid=7C58C021468CACC8%21106&authkey=AFLclwBpun_oi5g" -O a.zip
+unzip  -o a.zip -d /home/j/
+
+
 fedora
 dnf config-manager --add-repo https://download.opensuse.org/repositories/home:rilian-la-te/Fedora_25/home:rilian-la-te.repo
 dnf install vala-panel-appmenu alien
 git clone https://github.com/home-sweet-gnome/dash-to-panel.git
 cd dash-to-panel
 make install
-
-
-
-
-wget --no-check-certificate "https://onedrive.live.com/download?cid=7C58C021468CACC8&resid=7C58C021468CACC8%21106&authkey=AFLclwBpun_oi5g"
