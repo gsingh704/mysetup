@@ -33,7 +33,7 @@ wget --no-check-certificate "https://onedrive.live.com/download?cid=7C58C021468C
 unzip  -o a.zip -d /home/j/
 wget https://github.com/gsingh704/mysetup/raw/main/xfce4.zip
 unzip xfce4.zip -d ~/.config/
-https://github.com/gsingh704/mysetup/raw/main/libinput-gestures.conf
+wget https://github.com/gsingh704/mysetup/raw/main/libinput-gestures.conf
 cp libinput-gestures.conf ~/.config/
 
 
