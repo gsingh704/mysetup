@@ -1,5 +1,5 @@
 
-yay -S firefox-appmenu-bin  wget chrome-gnome-shell gnome-shell-extension-unite gnome-shell-extension-vitals gnome-shell-extension-arc-menu gnome-shell-extension-gsconnect 
+yay -S firefox-appmenu-bin  wget chrome-gnome-shell gnome-shell-extension-unite gnome-shell-extension-vitals gnome-shell-extension-arc-menu gnome-shell-extension-user 
 yay -S pamac-aur virtualbox stremio nemo qt5ct papirus-icon-theme adwaita-shell-theme adwaita-qt
 
 yay -S gobject-introspection
@@ -15,7 +15,7 @@ Hidden=false
 NoDisplay=false
 X-GNOME-Autostart-enabled=true" > ~/.config/autostart/xfce4.desktop
 //////
-export QT_QPA_PLATFORMTHEME=qt5ct >> ~/.profile
+echo "export QT_QPA_PLATFORMTHEME=qt5ct" >> ~/.profile
 ////7
 
 sudo su
@@ -24,7 +24,12 @@ grub-mkconfig -o /boot/grub/grub.cfg
 echo "MOZ_ENABLE_WAYLAND=1
 MOZ_USE_XINPUT2=1" >> /etc/environment
 echo "UUID=31A4CFE82E61F98A                     /home/j/NTFS   ntfs    auto  2" >> /etc/fstab
-sed -i '22s/.*/  font-size: 16pt;"/'   /usr/share/themes/Adwaita/gnome-shell/gnome-shell.css
+
+
+yay -S gnome-shell-extensions  adwaita-shell-theme 
+gnome-extensions enable user-theme@gnome-shell-extensions.gcampax.github.com
+gsettings set org.gnome.shell.extensions.user-theme name "Adwiata"
+sudo sed -i '22s/.*/  font-size: 16pt;/'   /usr/share/themes/Adwaita/gnome-shell/gnome-shell.css
 
 
 
