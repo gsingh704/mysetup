@@ -25,7 +25,7 @@ MOZ_USE_XINPUT2=1" >> /etc/environment
 echo "UUID=31A4CFE82E61F98A                     /home/j/NTFS   ntfs    auto  2" >> /etc/fstab
 
 
-cd ~/setup/
+cd /home/j/setup/
 git clone https://github.com/home-sweet-gnome/dash-to-panel.git
 cd dash-to-panel
 make install
