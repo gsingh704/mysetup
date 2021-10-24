@@ -34,7 +34,7 @@ gnome-extensions enable user-theme@gnome-shell-extensions.gcampax.github.com
 gnome-extensions enable Vitals@CoreCoding.com
 gnome-extensions enable arcmenu@arcmenu.com
 sudo sed -i '22s/.*/  font-size: 16pt;/'   /usr/share/themes/Adwaita/gnome-shell/gnome-shell.css
-
+exit
 gsettings set org.gnome.shell.extensions.user-theme name "Adwaita"
 
 
