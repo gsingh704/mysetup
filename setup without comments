@@ -1,7 +1,7 @@
 
 yay -S firefox-appmenu-bin  wget chrome-gnome-shell gnome-shell-extension-unite gnome-shell-extension-vitals gnome-shell-extension-arcmenu gnome-shell-extension-gsconnect 
 yay -S gobject-introspection
-yay -S pamac-aur virtualbox stremio nemo  papirus-icon-theme adwaita-shell-theme
+yay -S pamac-aur virtualbox stremio nemo  papirus-icon-theme adwaita-shell-theme adwaita-qt
 yay -S xfce4-panel appmenu-gtk-module vala-panel-appmenu-xfce vala-panel-appmenu-budgie vala-panel-appmenu-common vala-panel-appmenu-registrar-git vala-panel-appmenu-valapanel
 pamac install pipewire-pulse pipewire-alsa manjaro-pipewire pipewire-jack-dropin 
 
