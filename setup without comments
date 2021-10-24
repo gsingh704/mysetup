@@ -15,7 +15,7 @@ Hidden=false
 NoDisplay=false
 X-GNOME-Autostart-enabled=true" > ~/.config/autostart/xfce4.desktop
 //////
-sed -i '5s/.*/GRUB_CMDLINE_LINUX_DEFAULT="quiet udev.log_priority=3 i8042.nopnp=1 pci=nocrs"/'   /etc/default/grub
+sed -i '5s/.*/GRUB_CMDLINE_LINUX_DEFAULT="i8042.nopnp=1 pci=nocrs"/'   /etc/default/grub
 sudo grub-mkconfig -o /boot/grub/grub.cfg
 echo "UUID=31A4CFE82E61F98A                     /home/j/NTFS   ntfs    auto  2" >> /etc/fstab
 
