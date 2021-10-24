@@ -14,8 +14,8 @@ Hidden=false
 NoDisplay=false
 X-GNOME-Autostart-enabled=true" > ~/.config/autostart/xfce4.desktop
 //////
-
-
+export QT_QPA_PLATFORMTHEME=qt5ct >> ~/.profile
+////7
 
 sudo su
 sed -i '5s/.*/GRUB_CMDLINE_LINUX_DEFAULT="i8042.nopnp=1 pci=nocrs"/'   /etc/default/grub
