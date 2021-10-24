@@ -23,6 +23,9 @@ grub-mkconfig -o /boot/grub/grub.cfg
 echo "MOZ_ENABLE_WAYLAND=1
 MOZ_USE_XINPUT2=1" >> /etc/environment
 echo "UUID=31A4CFE82E61F98A                     /home/j/NTFS   ntfs    auto  2" >> /etc/fstab
+sed -i '22s/.*/  font-size: 16pt;"/'   /usr/share/themes/Adwaita/gnome-shell/gnome-shell.css
+
+
 
 //////////////////////////
 mkdir setup
