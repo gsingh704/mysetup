@@ -1,6 +1,6 @@
 sudo pacman -Syu
 
-yay -S firefox-appmenu-bin  wget pamac-aur qt5ct papirus-icon-theme adwaita-shell-theme adwaita-qt
+yay -S firefox-appmenu-bin  wget pamac-aur qt5ct papirus-icon-theme adwaita-qt
 
 yay -S gobject-introspection
 yay -S xfce4-panel appmenu-gtk-module vala-panel-appmenu-xfce vala-panel-appmenu-budgie vala-panel-appmenu-common vala-panel-appmenu-registrar-git vala-panel-appmenu-valapanel
@@ -33,9 +33,10 @@ gnome-extensions enable unite@hardpixel.eu
 gnome-extensions enable user-theme@gnome-shell-extensions.gcampax.github.com
 gnome-extensions enable Vitals@CoreCoding.com
 gnome-extensions enable arcmenu@arcmenu.com
+sudo sed -i '22s/.*/  font-size: 16pt;/'   /usr/share/themes/Adwaita/gnome-shell/gnome-shell.css
 
 gsettings set org.gnome.shell.extensions.user-theme name "Adwaita"
-sudo sed -i '22s/.*/  font-size: 16pt;/'   /usr/share/themes/Adwaita/gnome-shell/gnome-shell.css
+
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 
