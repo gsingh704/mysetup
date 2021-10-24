@@ -1,12 +1,13 @@
 sudo pacman -Syu
 
-yay -S firefox-appmenu-bin  wget 
-yay -S pamac-aur qt5ct papirus-icon-theme adwaita-shell-theme adwaita-qt
+yay -S firefox-appmenu-bin  wget pamac-aur qt5ct papirus-icon-theme adwaita-shell-theme adwaita-qt
+
 yay -S gobject-introspection
 yay -S xfce4-panel appmenu-gtk-module vala-panel-appmenu-xfce vala-panel-appmenu-budgie vala-panel-appmenu-common vala-panel-appmenu-registrar-git vala-panel-appmenu-valapanel
-pamac install pipewire-pulse pipewire-alsa 
 
-/////
+sudo pamac install pipewire-pulse pipewire-alsa 
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////
 
 mkdir ~/.config/autostart/
 echo "[Desktop Entry]    
@@ -17,15 +18,7 @@ NoDisplay=false
 X-GNOME-Autostart-enabled=true" > ~/.config/autostart/xfce4.desktop
 echo "export QT_QPA_PLATFORMTHEME=qt5ct" >> ~/.profile
 
-////
-
-sudo su
-sed -i '6s/.*/GRUB_CMDLINE_LINUX_DEFAULT="i8042.nopnp=1 pci=nocrs"/'   /etc/default/grub
-grub-mkconfig -o /boot/grub/grub.cfg
-echo "MOZ_ENABLE_WAYLAND=1
-MOZ_USE_XINPUT2=1" >> /etc/environment
-echo "UUID=31A4CFE82E61F98A                     /home/j/NTFS   ntfs    auto  2" >> /etc/fstab
-////
+//////////////////////////////////////////////////////////////////////////////////
 
 yay -S adwaita-shell-theme gnome-shell-extensions chrome-gnome-shell gnome-shell-extension-unite gnome-shell-extension-vitals gnome-shell-extension-arc-menu 
 cd /home/j/setup/
@@ -33,7 +26,7 @@ git clone https://github.com/home-sweet-gnome/dash-to-panel.git
 cd dash-to-panel
 make install
 
-rl
+//rl//
 
 gnome-extensions enable dash-to-panel@jderose9.github.com
 gnome-extensions enable unite@hardpixel.eu
@@ -44,7 +37,8 @@ gnome-extensions enable arcmenu@arcmenu.com
 gsettings set org.gnome.shell.extensions.user-theme name "Adwaita"
 sudo sed -i '22s/.*/  font-size: 16pt;/'   /usr/share/themes/Adwaita/gnome-shell/gnome-shell.css
 
-//////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////
+
 mkdir setup
 cd ~/setup/
 wget https://w.wallhaven.cc/full/md/wallhaven-mdjrqy.jpg
@@ -52,7 +46,6 @@ gsettings set org.gnome.desktop.background picture-uri file:///home/j/setup/wall
 gsettings set org.gnome.desktop.interface gtk-theme "Adwaita-dark"
 gsettings set org.gnome.desktop.interface font-name 'Cantarell Regular 16'
 gsettings set org.gnome.desktop.interface icon-theme 'Papirus-Dark'
-////
 
 wget --no-check-certificate "https://onedrive.live.com/download?cid=7C58C021468CACC8&resid=7C58C021468CACC8%21106&authkey=AFLclwBpun_oi5g" -O a.zip
 unzip  -o a.zip -d /home/j/
@@ -60,15 +53,7 @@ unzip  -o a.zip -d /home/j/
 wget https://github.com/gsingh704/mysetup/raw/main/xfce4.zip
 unzip xfce4.zip -d ~/.config/
 
-///
-
-sudo gpasswd -a $USER input
-yay -S wmctrl xdotool libinput-gestures
-wget https://github.com/gsingh704/mysetup/raw/main/libinput-gestures.conf
-cp libinput-gestures.conf ~/.config/
-libinput-gestures-setup autostart start
-
-/////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 yay -S zsh
 sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
