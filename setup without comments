@@ -1,9 +1,9 @@
 
 yay -S firefox-appmenu-bin  wget chrome-gnome-shell gnome-shell-extension-unite gnome-shell-extension-vitals gnome-shell-extension-arcmenu gnome-shell-extension-gsconnect 
 yay -S gobject-introspection
-yay -S xfce4-panel appmenu-gtk-module vala-panel-appmenu-xfce vala-panel-appmenu-budgie vala-panel-appmenu-common vala-panel-appmenu-registrar-git vala-panel-appmenu-valapanel
 yay -S pamac-aur virtualbox stremio wine nemo steam papirus-icon-theme 
-yay -S pipewire-pulse pipewire-alsa manjaro-pipewire pipewire-jack-dropin 
+yay -S xfce4-panel appmenu-gtk-module vala-panel-appmenu-xfce vala-panel-appmenu-budgie vala-panel-appmenu-common vala-panel-appmenu-registrar-git vala-panel-appmenu-valapanel
+pamac install pipewire-pulse pipewire-alsa manjaro-pipewire pipewire-jack-dropin 
 
 /////
 mkdir ~/.config/autostart/
@@ -18,9 +18,7 @@ X-GNOME-Autostart-enabled=true" > ~/.config/autostart/xfce4.desktop
 sed -i '5s/.*/GRUB_CMDLINE_LINUX_DEFAULT="quiet udev.log_priority=3 i8042.nopnp=1 pci=nocrs"/'   /etc/default/grub
 sudo grub-mkconfig -o /boot/grub/grub.cfg
 
-git clone https://github.com/home-sweet-gnome/dash-to-panel.git
-cd dash-to-panel
-make install
+
 
 
 mkdir setup
@@ -35,7 +33,9 @@ wget --no-check-certificate "https://onedrive.live.com/download?cid=7C58C021468C
 unzip  -o a.zip -d /home/j/
 wget https://github.com/gsingh704/mysetup/raw/main/xfce4.zip
 unzip xfce4.zip -d ~/.config/
-
+git clone https://github.com/home-sweet-gnome/dash-to-panel.git
+cd dash-to-panel
+make install
 
 
 
