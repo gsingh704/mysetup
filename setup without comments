@@ -7,6 +7,7 @@ yay -S xfce4-panel appmenu-gtk-module vala-panel-appmenu-xfce vala-panel-appmenu
 pamac install pipewire-pulse pipewire-alsa 
 
 /////
+
 mkdir ~/.config/autostart/
 echo "[Desktop Entry]    
 Type=Application
@@ -15,7 +16,8 @@ Hidden=false
 NoDisplay=false
 X-GNOME-Autostart-enabled=true" > ~/.config/autostart/xfce4.desktop
 echo "export QT_QPA_PLATFORMTHEME=qt5ct" >> ~/.profile
-////7
+
+////
 
 sudo su
 sed -i '6s/.*/GRUB_CMDLINE_LINUX_DEFAULT="i8042.nopnp=1 pci=nocrs"/'   /etc/default/grub
@@ -23,17 +25,16 @@ grub-mkconfig -o /boot/grub/grub.cfg
 echo "MOZ_ENABLE_WAYLAND=1
 MOZ_USE_XINPUT2=1" >> /etc/environment
 echo "UUID=31A4CFE82E61F98A                     /home/j/NTFS   ntfs    auto  2" >> /etc/fstab
+////
 
-
+yay -S adwaita-shell-theme gnome-shell-extensions chrome-gnome-shell gnome-shell-extension-unite gnome-shell-extension-vitals gnome-shell-extension-arc-menu 
 cd /home/j/setup/
 git clone https://github.com/home-sweet-gnome/dash-to-panel.git
 cd dash-to-panel
 make install
 
+rl
 
-
-
-yay -S adwaita-shell-theme gnome-shell-extensions chrome-gnome-shell gnome-shell-extension-unite gnome-shell-extension-vitals gnome-shell-extension-arc-menu 
 gnome-extensions enable dash-to-panel@jderose9.github.com
 gnome-extensions enable unite@hardpixel.eu
 gnome-extensions enable user-theme@gnome-shell-extensions.gcampax.github.com
@@ -43,8 +44,6 @@ gnome-extensions enable arcmenu@arcmenu.com
 gsettings set org.gnome.shell.extensions.user-theme name "Adwaita"
 sudo sed -i '22s/.*/  font-size: 16pt;/'   /usr/share/themes/Adwaita/gnome-shell/gnome-shell.css
 
-
-
 //////////////////////////
 mkdir setup
 cd ~/setup/
@@ -53,6 +52,7 @@ gsettings set org.gnome.desktop.background picture-uri file:///home/j/setup/wall
 gsettings set org.gnome.desktop.interface gtk-theme "Adwaita-dark"
 gsettings set org.gnome.desktop.interface font-name 'Cantarell Regular 16'
 gsettings set org.gnome.desktop.interface icon-theme 'Papirus-Dark'
+////
 
 wget --no-check-certificate "https://onedrive.live.com/download?cid=7C58C021468CACC8&resid=7C58C021468CACC8%21106&authkey=AFLclwBpun_oi5g" -O a.zip
 unzip  -o a.zip -d /home/j/
@@ -60,6 +60,7 @@ unzip  -o a.zip -d /home/j/
 wget https://github.com/gsingh704/mysetup/raw/main/xfce4.zip
 unzip xfce4.zip -d ~/.config/
 
+///
 
 sudo gpasswd -a $USER input
 yay -S wmctrl xdotool libinput-gestures
@@ -67,19 +68,36 @@ wget https://github.com/gsingh704/mysetup/raw/main/libinput-gestures.conf
 cp libinput-gestures.conf ~/.config/
 libinput-gestures-setup autostart start
 
-///////////////
+/////
 
-
-
-
-
- yay -S zsh
+yay -S zsh
 sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 git clone https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM:=~/.oh-my-zsh/custom}/plugins/zsh-completions
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 git clone https://github.com/zsh-users/zsh-history-substring-search ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-history-substring-search
 wget https://github.com/gsingh704/mysetup/raw/main/.zshrc
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+no vbox
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+sudo su
+sed -i '6s/.*/GRUB_CMDLINE_LINUX_DEFAULT="i8042.nopnp=1 pci=nocrs"/'   /etc/default/grub
+grub-mkconfig -o /boot/grub/grub.cfg
+echo "MOZ_ENABLE_WAYLAND=1
+MOZ_USE_XINPUT2=1" >> /etc/environment
+echo "UUID=31A4CFE82E61F98A                     /home/j/NTFS   ntfs    auto  2" >> /etc/fstab
+
+///////
+
+sudo gpasswd -a $USER input
+yay -S wmctrl xdotool libinput-gestures
+wget https://github.com/gsingh704/mysetup/raw/main/libinput-gestures.conf
+cp libinput-gestures.conf ~/.config/
+libinput-gestures-setup autostart start
+
+///////////////////////////////////////////////
+
 
 fedora
 dnf config-manager --add-repo https://download.opensuse.org/repositories/home:rilian-la-te/Fedora_25/home:rilian-la-te.repo
