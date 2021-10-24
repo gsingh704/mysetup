@@ -3,7 +3,7 @@ yay -S firefox-appmenu-bin  wget chrome-gnome-shell gnome-shell-extension-unite 
 yay -S gobject-introspection
 yay -S pamac-aur virtualbox stremio nemo  papirus-icon-theme adwaita-shell-theme adwaita-qt
 yay -S xfce4-panel appmenu-gtk-module vala-panel-appmenu-xfce vala-panel-appmenu-budgie vala-panel-appmenu-common vala-panel-appmenu-registrar-git vala-panel-appmenu-valapanel
-pamac install pipewire-pulse pipewire-alsa manjaro-pipewire pipewire-jack-dropin 
+pamac install pipewire-pulse pipewire-alsa 
 
 /////
 mkdir ~/.config/autostart/
@@ -14,18 +14,19 @@ Hidden=false
 NoDisplay=false
 X-GNOME-Autostart-enabled=true" > ~/.config/autostart/xfce4.desktop
 //////
-sed -i '5s/.*/GRUB_CMDLINE_LINUX_DEFAULT="i8042.nopnp=1 pci=nocrs"/'   /etc/default/grub
-sudo grub-mkconfig -o /boot/grub/grub.cfg
+
+
 
 sudo su
+sed -i '5s/.*/GRUB_CMDLINE_LINUX_DEFAULT="i8042.nopnp=1 pci=nocrs"/'   /etc/default/grub
+grub-mkconfig -o /boot/grub/grub.cfg
 echo "MOZ_ENABLE_WAYLAND=1
 MOZ_USE_XINPUT2=1" >> /etc/environment
 echo "UUID=31A4CFE82E61F98A                     /home/j/NTFS   ntfs    auto  2" >> /etc/fstab
 
-
+//////////////////////////
 mkdir setup
-cd setup/
-
+cd ~/setup/
 wget https://w.wallhaven.cc/full/md/wallhaven-mdjrqy.jpg
 gsettings set org.gnome.desktop.background picture-uri file:///home/j/setup/wallhaven-mdjrqy.jpg
 gsettings set org.gnome.desktop.interface gtk-theme "Adwaita-dark"
@@ -37,13 +38,13 @@ wget https://github.com/gsingh704/mysetup/raw/main/xfce4.zip
 unzip xfce4.zip -d ~/.config/
 wget https://github.com/gsingh704/mysetup/raw/main/libinput-gestures.conf
 cp libinput-gestures.conf ~/.config/
+///////////////
 
-
-
+cd ~/setup/
 git clone https://github.com/home-sweet-gnome/dash-to-panel.git
 cd dash-to-panel
 make install
-
+///////////////
 
 
 
