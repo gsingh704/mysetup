@@ -1,7 +1,7 @@
+sudo pacman -Syu
 
 yay -S firefox-appmenu-bin  wget 
 yay -S pamac-aur qt5ct papirus-icon-theme adwaita-shell-theme adwaita-qt
-
 yay -S gobject-introspection
 yay -S xfce4-panel appmenu-gtk-module vala-panel-appmenu-xfce vala-panel-appmenu-budgie vala-panel-appmenu-common vala-panel-appmenu-registrar-git vala-panel-appmenu-valapanel
 pamac install pipewire-pulse pipewire-alsa 
@@ -34,8 +34,10 @@ yay -S adwaita-shell-theme gnome-shell-extensions chrome-gnome-shell gnome-shell
 gnome-extensions enable dash-to-panel@jderose9.github.com
 gnome-extensions enable unite@hardpixel.eu
 gnome-extensions enable user-theme@gnome-shell-extensions.gcampax.github.com
+gnome-extensions enable Vitals@CoreCoding.com
+gnome-extensions enable arcmenu@arcmenu.com
 
-gsettings set org.gnome.shell.extensions.user-theme name "Adwiata"
+gsettings set org.gnome.shell.extensions.user-theme name "Adwaita"
 sudo sed -i '22s/.*/  font-size: 16pt;/'   /usr/share/themes/Adwaita/gnome-shell/gnome-shell.css
 
 
@@ -48,12 +50,20 @@ gsettings set org.gnome.desktop.background picture-uri file:///home/j/setup/wall
 gsettings set org.gnome.desktop.interface gtk-theme "Adwaita-dark"
 gsettings set org.gnome.desktop.interface font-name 'Cantarell Regular 16'
 gsettings set org.gnome.desktop.interface icon-theme 'Papirus-Dark'
+
 wget --no-check-certificate "https://onedrive.live.com/download?cid=7C58C021468CACC8&resid=7C58C021468CACC8%21106&authkey=AFLclwBpun_oi5g" -O a.zip
 unzip  -o a.zip -d /home/j/
+
 wget https://github.com/gsingh704/mysetup/raw/main/xfce4.zip
 unzip xfce4.zip -d ~/.config/
+
+
+sudo gpasswd -a $USER input
+yay -S wmctrl xdotool libinput-gestures
 wget https://github.com/gsingh704/mysetup/raw/main/libinput-gestures.conf
 cp libinput-gestures.conf ~/.config/
+libinput-gestures-setup autostart start
+
 ///////////////
 
 
