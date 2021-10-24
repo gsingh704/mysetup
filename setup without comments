@@ -7,13 +7,13 @@ yay -S pipewire-pulse pipewire-alsa manjaro-pipewire pipewire-jack-dropin
 
 /////
 mkdir ~/.config/autostart/
-cd ~/.config/autostart/
+
 echo "[Desktop Entry]    
 Type=Application
 Exec=xfce4-panel
 Hidden=false
 NoDisplay=false
-X-GNOME-Autostart-enabled=true" > xfce4.desktop
+X-GNOME-Autostart-enabled=true" > ~/.config/autostart/xfce4.desktop
 //////
 sed -i '5s/.*/GRUB_CMDLINE_LINUX_DEFAULT="quiet udev.log_priority=3 i8042.nopnp=1 pci=nocrs"/'   /etc/default/grub
 sudo grub-mkconfig -o /boot/grub/grub.cfg
