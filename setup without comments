@@ -1,6 +1,6 @@
 
-yay -S firefox-appmenu-bin  wget chrome-gnome-shell gnome-shell-extension-unite gnome-shell-extension-vitals gnome-shell-extension-arc-menu gnome-shell-extension-user 
-yay -S pamac-aur virtualbox stremio nemo qt5ct papirus-icon-theme adwaita-shell-theme adwaita-qt
+yay -S firefox-appmenu-bin  wget 
+yay -S pamac-aur qt5ct papirus-icon-theme adwaita-shell-theme adwaita-qt
 
 yay -S gobject-introspection
 yay -S xfce4-panel appmenu-gtk-module vala-panel-appmenu-xfce vala-panel-appmenu-budgie vala-panel-appmenu-common vala-panel-appmenu-registrar-git vala-panel-appmenu-valapanel
@@ -14,7 +14,6 @@ Exec=xfce4-panel
 Hidden=false
 NoDisplay=false
 X-GNOME-Autostart-enabled=true" > ~/.config/autostart/xfce4.desktop
-//////
 echo "export QT_QPA_PLATFORMTHEME=qt5ct" >> ~/.profile
 ////7
 
@@ -26,8 +25,16 @@ MOZ_USE_XINPUT2=1" >> /etc/environment
 echo "UUID=31A4CFE82E61F98A                     /home/j/NTFS   ntfs    auto  2" >> /etc/fstab
 
 
-yay -S gnome-shell-extensions  adwaita-shell-theme 
+cd ~/setup/
+git clone https://github.com/home-sweet-gnome/dash-to-panel.git
+cd dash-to-panel
+make install
+yay -S adwaita-shell-theme gnome-shell-extensions chrome-gnome-shell gnome-shell-extension-unite gnome-shell-extension-vitals gnome-shell-extension-arc-menu gnome-shell-extension-user 
+
+gnome-extensions enable dash-to-panel@jderose9.github.com
+gnome-extensions enable unite@hardpixel.eu
 gnome-extensions enable user-theme@gnome-shell-extensions.gcampax.github.com
+
 gsettings set org.gnome.shell.extensions.user-theme name "Adwiata"
 sudo sed -i '22s/.*/  font-size: 16pt;/'   /usr/share/themes/Adwaita/gnome-shell/gnome-shell.css
 
@@ -49,17 +56,7 @@ wget https://github.com/gsingh704/mysetup/raw/main/libinput-gestures.conf
 cp libinput-gestures.conf ~/.config/
 ///////////////
 
-cd ~/setup/
-git clone https://github.com/home-sweet-gnome/dash-to-panel.git
-cd dash-to-panel
-make install
-///////////////
 
-
-
-fedora
-dnf config-manager --add-repo https://download.opensuse.org/repositories/home:rilian-la-te/Fedora_25/home:rilian-la-te.repo
-dnf install vala-panel-appmenu alien
 
 
 
@@ -70,3 +67,7 @@ git clone https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM:=~/.oh-my-zs
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 git clone https://github.com/zsh-users/zsh-history-substring-search ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-history-substring-search
 wget https://github.com/gsingh704/mysetup/raw/main/.zshrc
+
+fedora
+dnf config-manager --add-repo https://download.opensuse.org/repositories/home:rilian-la-te/Fedora_25/home:rilian-la-te.repo
+dnf install vala-panel-appmenu alien
