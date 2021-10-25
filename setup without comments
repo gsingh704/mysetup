@@ -1,9 +1,10 @@
-sudo pacman -Syu
+sudo pacman -Syu meson
+
 
 yay -S firefox-appmenu-bin  wget pamac-aur qt5ct papirus-icon-theme adwaita-qt
 
 yay -S gobject-introspection
-yay -S xfce4-panel appmenu-gtk-module vala-panel-appmenu-xfce vala-panel-appmenu-budgie vala-panel-appmenu-common vala-panel-appmenu-registrar-git vala-panel-appmenu-valapanel
+sudo pamac install xfce4-panel appmenu-gtk-module vala-panel-appmenu-xfce vala-panel-appmenu-budgie vala-panel-appmenu-common vala-panel-appmenu-registrar-git vala-panel-appmenu-valapanel
 
 sudo pamac install pipewire-pulse pipewire-alsa 
 
@@ -41,7 +42,7 @@ gsettings set org.gnome.shell.extensions.user-theme name "Adwaita"
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 
 mkdir setup
-cd ~/setup/
+cd setup/
 wget https://w.wallhaven.cc/full/md/wallhaven-mdjrqy.jpg
 gsettings set org.gnome.desktop.background picture-uri file:///home/j/setup/wallhaven-mdjrqy.jpg
 gsettings set org.gnome.desktop.interface gtk-theme "Adwaita-dark"
