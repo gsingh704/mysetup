@@ -1,0 +1,8 @@
+﻿DATE=$(date)
+echo 'Start: " $DATE
+DAY=$(date +j) if test $(($DAY%2)) -eq 1 
+then
+rsync -avd /home/bernat/Documentos/ bernat@192.168.2.5:/copies/web/copiai echo "S'ha actualitzat la copia 1 else
+rsync -avd /home/bernat/Documents/ bernat@192.168.2.5:/copies/web/copia2
+DATE=$(date) echo 'Stop: " $DATE
+Exit 0
