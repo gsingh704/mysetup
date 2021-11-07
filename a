@@ -1,0 +1,18 @@
+#|bin/sh
+
+DATE=$(date)
+
+echo 'Start: " $DATE
+
+DAY=$(date +j) if test $(($DAY%2)) -eq 1 
+then
+rsync -avd /home/jant/Documents/ copia@192.168.1.120:/copies/web/copia1
+echo "S'ha actualitzat la copia 1"
+else
+rsync -avd /home/jant/Documents/ copia@192.168.1.120:/copies/web/copia2
+echo "S'ha actualitzat la copia 2"
+fi
+
+DATE=$(date) 
+echo 'Stop: " $DATE
+exit 0
