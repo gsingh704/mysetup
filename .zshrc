@@ -1,4 +1,3 @@
-
 export ZSH="/home/j/.oh-my-zsh"
 ZSH_THEME="agnoster"
 plugins=(git zsh-completions  zsh-completions 
