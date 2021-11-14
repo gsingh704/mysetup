@@ -43,3 +43,6 @@ MOZ_ENABLE_WAYLAND=1
 MOZ_USE_XINPUT2=1
 
 
+cp /usr/share/applications/smartcode-stremio.desktop /home/j/.local/share/applications 
+
+
