@@ -78,36 +78,40 @@ alias pr="sudo pacman -R"
 alias pc="sudo pacman -Qtdq |sudo  pacman -Rns -"
 alias update-grub="sudo grub-mkconfig -o /boot/grub/grub.cfg"" > ~/.zshrc
 
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+----------------------------------------------------------------------------
+------------------------------------------------------------------------------
 no vbox
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+--------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------
+#enable touchpad of lenovo v-14 ill
 sudo su
 sed -i '6s/.*/GRUB_CMDLINE_LINUX_DEFAULT="i8042.nopnp=1 pci=nocrs usbcore.autosuspend=-1"/'   /etc/default/grub
 grub-mkconfig -o /boot/grub/grub.cfg
+
+#edit environment to get better firefox support
 echo "MOZ_ENABLE_WAYLAND=1
 MOZ_USE_XINPUT2=1" >> /etc/environment
 
-
-
-////////////////
+-----------------------------------------
+#enable bluetooth on endevor os
 sudo pacman -S --needed bluez bluez-utils pulseaudio-bluetooth
 sudo systemctl enable --now bluetooth
-///////
-
+----------------------------------------------
+#install and configure libinput-gesture 
 sudo gpasswd -a $USER input
-yay -S wmctrl xdotool libinput-gestures
+yay -S wmctrl xdotool libinput-gestures gestures
 wget https://github.com/gsingh704/mysetup/raw/main/libinput-gestures.conf
 cp libinput-gestures.conf ~/.config/
 libinput-gestures-setup autostart start
-
-///////////////////////////////////////////////
-Down:   
+------------------------------------------------------
+#go to setting and add these costum shortcut
+decrease brightness:   
 sh -c 'gdbus call --session --dest org.gnome.SettingsDaemon.Power --object-path /org/gnome/SettingsDaemon/Power --method org.gnome.SettingsDaemon.Power.Screen.StepDown && gdbus call --session --dest org.gnome.SettingsDaemon.Power --object-path /org/gnome/SettingsDaemon/Power --method org.gnome.SettingsDaemon.Power.Screen.StepDown'
-
-up:
+increase brightness:
 sh -c 'gdbus call --session --dest org.gnome.SettingsDaemon.Power --object-path /org/gnome/SettingsDaemon/Power --method org.gnome.SettingsDaemon.Power.Screen.StepUp && gdbus call --session --dest org.gnome.SettingsDaemon.Power --object-path /org/gnome/SettingsDaemon/Power --method org.gnome.SettingsDaemon.Power.Screen.StepUp'
-
-//////////////////7777
-fedora
+-------------------------------------
+-------------------------------------
+-------------------------------------
+#global appmenu in fedora
 dnf config-manager --add-repo https://download.opensuse.org/repositories/home:rilian-la-te/Fedora_25/home:rilian-la-te.repo
 dnf install vala-panel-appmenu alien
