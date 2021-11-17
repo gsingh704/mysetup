@@ -66,6 +66,7 @@ git clone https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM:=~/.oh-my-zs
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 git clone https://github.com/zsh-users/zsh-history-substring-search ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-history-substring-search
 #make changes to .zshrc file
+####to change with sed
 echo "export ZSH="/home/j/.oh-my-zsh"
 ZSH_THEME="agnoster"
 plugins=(git zsh-completions  zsh-completions zsh-autosuggestions zsh-syntax-highlighting zsh-history-substring-search
