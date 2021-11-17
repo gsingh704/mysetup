@@ -1,15 +1,12 @@
+ #install main applications
+ yay -S firefox-appmenu-bin  wget pamac-aur qt5ct papirus-icon-theme adwaita-qt
+----------------------------------------------------------------------------------------------------------
+# to install global menu
 sudo pacman -Syu meson
-
-
-yay -S firefox-appmenu-bin  wget pamac-aur qt5ct papirus-icon-theme adwaita-qt
-
 yay -S gobject-introspection
 sudo pamac install xfce4-panel appmenu-gtk-module vala-panel-appmenu-xfce vala-panel-appmenu-budgie vala-panel-appmenu-common vala-panel-appmenu-registrar-git vala-panel-appmenu-valapanel
 
-sudo pamac install pipewire-pulse pipewire-alsa 
-
-///////////////////////////////////////////////////////////////////////////////////////////////////////
-
+#create autostart file for global menu 
 mkdir ~/.config/autostart/
 echo "[Desktop Entry]    
 Type=Application
@@ -17,59 +14,69 @@ Exec=xfce4-panel
 Hidden=false
 NoDisplay=false
 X-GNOME-Autostart-enabled=true" > ~/.config/autostart/xfce4.desktop
+#install config for global appmenu panel
+wget https://github.com/gsingh704/mysetup/raw/main/xfce4.zip
+unzip xfce4.zip -d ~/.config/
+---------------------------------------------------------------
+#to install pipewire for good bluetooth support
+sudo pamac install pipewire-pulse pipewire-alsa 
+-----------------------------------------------------------------
+# to get qt5ct working to change qt app theme
 echo "export QT_QPA_PLATFORMTHEME=qt5ct" >> ~/.profile
-
-
-/////
+------------------------------------------------------------------
+# install netdata
 bash <(curl -Ss https://my-netdata.io/kickstart.sh)
-//////////////////////////////////////////////////////////////////////////////////
+------------------------------------------------------------------
 
+#install shell theme and extensions
 yay -S adwaita-shell-theme gnome-shell-extensions chrome-gnome-shell gnome-shell-extension-unite gnome-shell-extension-vitals gnome-shell-extension-arc-menu 
+
+# install dash-to-panel-extension
+mkdir setup
 cd /home/j/setup/
 git clone https://github.com/home-sweet-gnome/dash-to-panel.git
 cd dash-to-panel
 make install
 
-//rl//
-
+#enable extensions
 gnome-extensions enable dash-to-panel@jderose9.github.com
 gnome-extensions enable unite@hardpixel.eu
 gnome-extensions enable user-theme@gnome-shell-extensions.gcampax.github.com
 gnome-extensions enable Vitals@CoreCoding.com
 gnome-extensions enable arcmenu@arcmenu.com
+
+#inscrese size of gnome shell theme
 sudo sed -i '22s/.*/  font-size: 16pt;/'   /usr/share/themes/Adwaita/gnome-shell/gnome-shell.css
 exit
+#change gnome shell theme
 gsettings set org.gnome.shell.extensions.user-theme name "Adwaita"
-
-
-//////////////////////////////////////////////////////////////////////////////////////////////////////
-
-mkdir setup
-cd setup/
+#set wallpaper
 wget https://w.wallhaven.cc/full/md/wallhaven-mdjrqy.jpg
 gsettings set org.gnome.desktop.background picture-uri file:///home/j/setup/wallhaven-mdjrqy.jpg
-gsettings set org.gnome.desktop.interface gtk-theme "Adwaita-dark"
-gsettings set org.gnome.desktop.interface font-name 'Cantarell Regular 16'
-gsettings set org.gnome.desktop.interface icon-theme 'Papirus-Dark'
+gsettings set org.gnome.desktop.interface gtk-theme "Adwaita-dark" #change app themes
+gsettings set org.gnome.desktop.interface font-name 'Cantarell Regular 16' #change font size
+gsettings set org.gnome.desktop.interface icon-theme 'Papirus-Dark' #change icon theme
+------------------------------------------------------------------------------------------------------------
 
-wget https://github.com/gsingh704/mysetup/raw/main/xfce4.zip
-unzip xfce4.zip -d ~/.config/
-
-
-
-
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-yay -S zsh
-sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-
-
+yay -S zsh  #install zsh
+sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"  #install oh-my-zsh
+#install oh-my-zsh plugins
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 git clone https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM:=~/.oh-my-zsh/custom}/plugins/zsh-completions
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 git clone https://github.com/zsh-users/zsh-history-substring-search ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-history-substring-search
-
-wget https://github.com/gsingh704/mysetup/raw/main/.zshrc
+#make changes to .zshrc file
+echo "export ZSH="/home/j/.oh-my-zsh"
+ZSH_THEME="agnoster"
+plugins=(git zsh-completions  zsh-completions zsh-autosuggestions zsh-syntax-highlighting zsh-history-substring-search
+)
+source $ZSH/oh-my-zsh.sh
+alias ys="yay -S"
+alias yr="yay -R"
+alias ps="sudo pacman -Syu"
+alias pr="sudo pacman -R"
+alias pc="sudo pacman -Qtdq |sudo  pacman -Rns -"
+alias update-grub="sudo grub-mkconfig -o /boot/grub/grub.cfg"" > ~/.zshrc
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 no vbox
