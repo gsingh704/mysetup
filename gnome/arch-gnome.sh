@@ -92,18 +92,10 @@ git clone https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM:=~/.oh-my-zs
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 git clone https://github.com/zsh-users/zsh-history-substring-search ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-history-substring-search
 #make changes to .zshrc file
-####to change with sed
-echo "export ZSH="/home/j/.oh-my-zsh"
-ZSH_THEME="jonathan"
-plugins=(git zsh-completions  zsh-completions zsh-autosuggestions zsh-syntax-highlighting zsh-history-substring-search
-)
-source $ZSH/oh-my-zsh.sh
-alias ys="yay -S"
-alias yr="yay -R"
-alias ps="sudo pacman -Syu"
-alias pr="sudo pacman -R"
-alias pc="sudo pacman -Qtdq |sudo  pacman -Rns -"
-alias update-grub="sudo grub-mkconfig -o /boot/grub/grub.cfg"" > ~/.zshrc
+
+
+cd ~
+wget https://github.com/gsingh704/mysetup/blob/main/.zshrc
 
 ----------------------------------------------------------------------------
 ------------------------------------------------------------------------------
