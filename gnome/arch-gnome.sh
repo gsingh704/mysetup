@@ -14,9 +14,35 @@ Exec=xfce4-panel
 Hidden=false
 NoDisplay=false
 X-GNOME-Autostart-enabled=true" > ~/.config/autostart/xfce4.desktop
-#install config for global appmenu panel
-wget https://github.com/gsingh704/mysetup/raw/main/xfce4.zip
-unzip xfce4.zip -d ~/.config/
+
+---------------------
+
+#fildem
+sudo pacman -S bamf appmenu-gtk-module libkeybinder3 libdbusmenu-gtk2 libdbusmenu-gtk3 libdbusmenu-qt5 git python-pip #install dependecies
+python3 -m pip install --user fuzzysearch
+#install the file
+wget https://github.com/gonzaarcr/Fildem/archive/refs/tags/0.6.7.zip
+unzip 0.6.7.zip
+cd Fildem*
+
+#load gtk modules
+echo "gtk-modules="appmenu-gtk-module" >> ~/.gtkrc-2.0
+echo "[Settings]
+gtk-modules="appmenu-gtk-module" > ~/.config/gtk-3.0/settings.ini
+
+#make a desktop file for fildem
+echo "[Desktop Entry]
+Type=Application
+Exec=fildem
+Hidden=false
+NoDisplay=false
+X-GNOME-Autostart-enabled=true
+Name[en_US]=Fildem
+Name=Fildem
+Comment[en_US]=Fildem Global Menu and HUD
+Comment=Fildem Global Menu and HUD" > ~/.config/autostart/fildem.desktop
+
+
 ---------------------------------------------------------------
 #to install pipewire for good bluetooth support
 sudo pamac install pipewire-pulse pipewire-alsa 
