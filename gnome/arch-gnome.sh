@@ -95,7 +95,7 @@ MOZ_USE_XINPUT2=1" >> /etc/environment
 
 -----------------------------------------
 #enable bluetooth on endevor os
-sudo pacman -S --needed bluez bluez-utils pulseaudio-bluetooth
+sudo pacman -S --needed bluez bluez-utils 
 sudo systemctl enable --now bluetooth
 ----------------------------------------------
 #install and configure libinput-gesture 
