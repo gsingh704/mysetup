@@ -95,7 +95,7 @@ git clone https://github.com/zsh-users/zsh-history-substring-search ${ZSH_CUSTOM
 
 
 cd ~
-wget https://github.com/gsingh704/mysetup/blob/main/.zshrc
+wget https://raw.githubusercontent.com/gsingh704/mysetup/main/.zshrc
 
 ----------------------------------------------------------------------------
 ------------------------------------------------------------------------------
