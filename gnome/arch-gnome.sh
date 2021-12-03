@@ -1,5 +1,5 @@
  #install main applications
- yay -S firefox-appmenu-bin  wget pamac-aur qt5ct papirus-icon-theme adwaita-qt
+ yay -S firefox-appmenu-bin  wget pamac-aur qt5ct papirus-icon-theme adwaita-qt tt-ms-fonts
 ----------------------------------------------------------------------------------------------------------
 # to install global menu
 sudo pacman -Syu meson
