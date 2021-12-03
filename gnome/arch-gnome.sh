@@ -18,9 +18,9 @@ X-GNOME-Autostart-enabled=true" > ~/.config/autostart/xfce4.desktop
 ---------------------
 
 #fildem
-sudo pacman -S bamf appmenu-gtk-module libkeybinder3 libdbusmenu-gtk2 libdbusmenu-gtk3 libdbusmenu-qt5 git python-pip #install dependecies
+sudo pacman -S dbus-python bamf appmenu-gtk-module libkeybinder3 libdbusmenu-gtk2 libdbusmenu-gtk3 libdbusmenu-qt5 git python-pip #install dependecies
 python3 -m pip install --user fuzzysearch
-#install the file
+#install the filedem
 wget https://github.com/gonzaarcr/Fildem/archive/refs/tags/0.6.7.zip
 unzip 0.6.7.zip
 cd Fildem*
