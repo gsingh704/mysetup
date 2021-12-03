@@ -58,21 +58,7 @@ bash <(curl -Ss https://my-netdata.io/kickstart.sh)
 ------------------------------------------------------------------
 
 #install shell theme and extensions
-yay -S adwaita-shell-theme gnome-shell-extensions chrome-gnome-shell gnome-shell-extension-unite gnome-shell-extension-vitals gnome-shell-extension-arc-menu 
-
-# install dash-to-panel-extension
-mkdir setup
-cd /home/j/setup/
-git clone https://github.com/home-sweet-gnome/dash-to-panel.git
-cd dash-to-panel
-make install
-
-#enable extensions
-gnome-extensions enable dash-to-panel@jderose9.github.com
-gnome-extensions enable unite@hardpixel.eu
-gnome-extensions enable user-theme@gnome-shell-extensions.gcampax.github.com
-gnome-extensions enable Vitals@CoreCoding.com
-gnome-extensions enable arcmenu@arcmenu.com
+yay -S adwaita-shell-theme gnome-shell-extensions chrome-gnome-shell
 
 #inscrese size of gnome shell theme
 sudo sed -i '22s/.*/  font-size: 16pt;/'   /usr/share/themes/Adwaita/gnome-shell/gnome-shell.css
@@ -98,7 +84,7 @@ git clone https://github.com/zsh-users/zsh-history-substring-search ${ZSH_CUSTOM
 
 
 cd ~
-wget https://raw.githubusercontent.com/gsingh704/mysetup/main/.zshrc
+wget https://raw.githubusercontent.com/gsingh704/mysetup/main/dotfiles/.zshrc
 
 ----------------------------------------------------------------------------
 ------------------------------------------------------------------------------
@@ -122,7 +108,7 @@ sudo systemctl enable --now bluetooth
 #install and configure libinput-gesture 
 sudo gpasswd -a $USER input
 yay -S wmctrl xdotool libinput-gestures gestures
-wget https://github.com/gsingh704/mysetup/raw/main/libinput-gestures.conf
+wget https://github.com/gsingh704/mysetup/raw/main/dotfiles/libinput-gestures.conf
 cp libinput-gestures.conf ~/.config/
 libinput-gestures-setup autostart start
 ------------------------------------------------------
