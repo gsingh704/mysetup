@@ -24,6 +24,9 @@ python3 -m pip install --user fuzzysearch
 wget https://github.com/gonzaarcr/Fildem/archive/refs/tags/0.6.7.zip
 unzip 0.6.7.zip
 cd Fildem*
+sudo python3 setup.py install --optimize=1
+cp -r fildemGMenu@gonza.com ~/.local/share/gnome-shell/extensions/
+
 
 #load gtk modules
 echo "gtk-modules="appmenu-gtk-module" >> ~/.gtkrc-2.0
