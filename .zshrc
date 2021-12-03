@@ -1,5 +1,5 @@
 export ZSH="/home/j/.oh-my-zsh"
-ZSH_THEME="agnoster"
+ZSH_THEME="jonathan"
 plugins=(git zsh-completions  zsh-completions 
 zsh-autosuggestions zsh-syntax-highlighting zsh-history-substring-search
 )
