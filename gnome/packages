@@ -1,0 +1,6 @@
+yay -S firefox-appmenu-bin  wget pamac-aur qt5ct papirus-icon-theme adwaita-qt tt-ms-fonts adwaita-shell-theme gnome-shell-extensions  zsh   dbus-python bamf appmenu-gtk-module libkeybinder3 libdbusmenu-gtk2 libdbusmenu-gtk3 libdbusmenu-qt5 git python-pip wmctrl xdotool libinput-gestures gestures
+
+
+sudo pamac install pipewire-pulse pipewire-alsa 
+
+python3 -m pip install --user fuzzysearch
