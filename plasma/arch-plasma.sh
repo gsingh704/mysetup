@@ -40,3 +40,18 @@ yay -S wmctrl xdotool libinput-gestures
 wget https://github.com/gsingh704/mysetup/raw/main/libinput-gestures.conf
 cp libinput-gestures.conf ~/.config/
 libinput-gestures-setup autostart start
+
+
+
+-----------------------------
+echo "headerbar button.titlebutton image, .titlebar button.titlebutton image {
+  color: transparent;
+}
+
+headerbar button.titlebutton, .titlebar button.titlebutton {
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 27px;
+  min-width: 27px;
+  background-size: 27px 27px;
+}" >> ~/.config/gtk-3.0/gtk.css
