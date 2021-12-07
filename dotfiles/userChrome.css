@@ -1,21 +1,17 @@
-
 @namespace url('http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul');
-/* Outline inactive tabs */
-@media (-moz-proton) {
-  .tab-background:not([selected=true]):not([multiselected=true]) {
-    border: 1px solid #0f79cf !important;
-  }
+
 * {
   --animation-speed: 0s;
-  
 }
 .tab-background[selected="true"] {
-  background-color: #0f79cf !important;
+  background-color: #0f79cf !important;  
+    margin-block: 0 !important;
 }
-#tabbrowser-tabs .tab-text{
+#TabsToolbar, #tabbrowser-tabs .tab-text{
   font-size:11pt !important;
-  font-weight: bold !important;  
- }
+  font-weight: bold !important; 
+  --tab-min-height: 20px !important;
+}
 
 #nav-bar:not([customizing]) {
   visibility: visible;
@@ -39,10 +35,6 @@
   filter: alpha(opacity=100);
   opacity: 100; 
 }
-.tab-background {   
-    margin-block: 0 !important;
-}
-#TabsToolbar, #tabbrowser-tabs {
-    --tab-min-height: 29px !important;
-}
-    
+.tab-secondary-label{ display: none }
+
+
