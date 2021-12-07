@@ -38,12 +38,10 @@
   filter: alpha(opacity=100);
   opacity: 100; 
 }
-
-
-#tabbrowser-tabs {
-    --user-tab-rounding: 5px;
-}
-
 .tab-background {   
     margin-block: 0 !important;
 }
+#TabsToolbar, #tabbrowser-tabs {
+    --tab-min-height: 29px !important;
+}
+    
