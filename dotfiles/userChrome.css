@@ -4,6 +4,7 @@
 @media (-moz-proton) {
   .tab-background:not([selected=true]):not([multiselected=true]) {
     border: 1px solid #0f79cf !important;
+  }
 * {
   --animation-speed: 0s;
   
