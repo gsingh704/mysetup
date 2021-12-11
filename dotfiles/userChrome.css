@@ -1,18 +1,7 @@
 @namespace url('http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul');
-
-
-.tab-background[selected="true"] {
-  background-color: #0f79cf !important;  
-}
-.tab-background {     
-     margin-block: 1px 0 !important;
-}
-#TabsToolbar, #tabbrowser-tabs, .tab-text{
-  font-size:11pt !important;
-  font-weight: bold !important;  
-  --tab-min-height: 29px !important;
-}
-
+.tab-background[selected="true"]{background-color:#15539e !important;}
+.tab-background{margin-block: 0 !important; border-radius:  0 !important;}
+#TabsToolbar,.tab-text{font-size:11pt !important;font-weight: bold !important;--tab-min-height: 29px !important;}
 .tab-secondary-label{ display: none ;}
 
 #nav-bar:not([customizing]) {
@@ -35,3 +24,5 @@
   filter: alpha(opacity=100);
   opacity: 100; 
 }
+
+
