@@ -91,10 +91,6 @@ wget https://raw.githubusercontent.com/gsingh704/mysetup/main/dotfiles/.zshrc
 no vbox
 --------------------------------------------------------------------------------
 -------------------------------------------------------------------------------------
-#enable touchpad of lenovo v-14 ill
-sudo su
-sed -i '6s/.*/GRUB_CMDLINE_LINUX_DEFAULT="i8042.nopnp=1 pci=nocrs usbcore.autosuspend=-1"/'   /etc/default/grub
-grub-mkconfig -o /boot/grub/grub.cfg
 
 #edit environment to get better firefox support
 echo "MOZ_ENABLE_WAYLAND=1
@@ -112,12 +108,7 @@ wget https://github.com/gsingh704/mysetup/raw/main/dotfiles/libinput-gestures.co
 cp libinput-gestures.conf ~/.config/
 libinput-gestures-setup autostart start
 ------------------------------------------------------
-#go to setting and add these costum shortcut
-decrease brightness:   
-sh -c 'gdbus call --session --dest org.gnome.SettingsDaemon.Power --object-path /org/gnome/SettingsDaemon/Power --method org.gnome.SettingsDaemon.Power.Screen.StepDown && gdbus call --session --dest org.gnome.SettingsDaemon.Power --object-path /org/gnome/SettingsDaemon/Power --method org.gnome.SettingsDaemon.Power.Screen.StepDown'
-increase brightness:
-sh -c 'gdbus call --session --dest org.gnome.SettingsDaemon.Power --object-path /org/gnome/SettingsDaemon/Power --method org.gnome.SettingsDaemon.Power.Screen.StepUp && gdbus call --session --dest org.gnome.SettingsDaemon.Power --object-path /org/gnome/SettingsDaemon/Power --method org.gnome.SettingsDaemon.Power.Screen.StepUp'
--------------------------------------
+
 -------------------------------------
 -------------------------------------
 #global appmenu in fedora
