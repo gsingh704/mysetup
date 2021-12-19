@@ -83,8 +83,8 @@ cat dconf-settings.ini | dconf load /
 #extensions
 cd ~/.local/share/gnome-shell
 rm -rf extensions
-wget https://github.com/gsingh704/mysetup/blob/main/dotfiles/extensions.zip
-unzip extensions.zip
+https://github.com/gsingh704/mysetup/blob/main/dotfiles/extensions.tar.xz
+tar -xf backup.tar.xz
 ----------------------------------------------------------------------------
 ------------------------------------------------------------------------------
 no vbox
