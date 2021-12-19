@@ -4,7 +4,7 @@ git clone https://aur.archlinux.org/yay-bin.git
 cd yay-bin
 makepkg -si
 #install main applications
- yay -S firefox-appmenu-bin  wget pamac-aur qt5ct papirus-icon-theme adwaita-qt #tt-ms-fonts for arch
+ yay -S firefox-appmenu-bin  wget pamac-aur qt5ct adwaita-qt #tt-ms-fonts for arch
 ----------------------------------------------------------------------------------------------------------
 # to install global menu
 sudo pacman -Syu meson
