@@ -110,6 +110,7 @@ wget https://github.com/gsingh704/mysetup/raw/main/dotfiles/libinput-gestures.co
 libinput-gestures-setup autostart start
 
 -------------------------------------
+gvfs-goa
 -------------------------------------
 -------------------------------------
 #global appmenu in fedora
