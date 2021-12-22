@@ -113,7 +113,10 @@ libinput-gestures-setup autostart start
 yay -S touchegg touchegg
 sudo systemctl enable touchegg.service  #enble and start the service
 sudo systemctl start touchegg
-
+#config file
+mkdir -p ~/.config/touchegg
+cd ~/.config/touchegg
+wget https://github.com/gsingh704/mysetup/raw/main/dotfiles/touchegg.conf
 
 -------------------------------------
 gvfs-goa gvfs-google
