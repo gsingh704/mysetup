@@ -14,6 +14,12 @@ sudo pamac install pipewire-pulse pipewire-alsa
 sudo pacman -S --needed bluez bluez-utils 
 sudo systemctl enable --now bluetooth
 
+#set wallpaper
+cd ~/setup
+wget https://w.wallhaven.cc/full/md/wallhaven-mdjrqy.jpg
+-
+
+
 # install netdata
 bash <(curl -Ss https://my-netdata.io/kickstart.sh)
 
