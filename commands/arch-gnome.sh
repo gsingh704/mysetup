@@ -2,7 +2,7 @@
 # to install global menu
 sudo pacman -Syu meson
 yay -S gobject-introspection
-sudo pamac install vala-panel appmenu-gtk-module  vala-panel-appmenu-common  vala-panel-appmenu-valapanel
+sudo pamac install vala-panel appmenu-gtk-module vala-panel-appmenu-registrar vala-panel-appmenu-common  vala-panel-appmenu-valapanel
 #create autostart file for global menu 
 mkdir ~/.config/autostart/
 echo "[Desktop Entry]    
