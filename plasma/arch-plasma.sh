@@ -25,10 +25,6 @@ git clone https://github.com/zsh-users/zsh-history-substring-search ${ZSH_CUSTOM
 
 #######no vbox
 
-# enable touchpad
-sudo su
-sed -i '6s/.*/GRUB_CMDLINE_LINUX_DEFAULT="i8042.nopnp=1 pci=nocrs"/'   /etc/default/grub
-grub-mkconfig -o /boot/grub/grub.cfg
 
 # environment
 echo "MOZ_ENABLE_WAYLAND=1
@@ -40,7 +36,15 @@ yay -S wmctrl xdotool libinput-gestures
 wget https://github.com/gsingh704/mysetup/raw/main/libinput-gestures.conf
 cp libinput-gestures.conf ~/.config/
 libinput-gestures-setup autostart start
-
+-------------------------------------------------------
+#Insall touchegg and touch 
+yay -S touchegg touchegg
+sudo systemctl enable touchegg.service  #enble and start the service
+sudo systemctl start touchegg
+#config file
+mkdir -p ~/.config/touchegg
+cd ~/.config/touchegg
+wget https://github.com/gsingh704/mysetup/raw/main/dotfiles/touchegg.conf
 
 
 -----------------------------
