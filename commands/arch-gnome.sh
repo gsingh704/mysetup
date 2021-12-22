@@ -71,3 +71,4 @@ unzip extensions.zip
 #global appmenu in fedora
 dnf config-manager --add-repo https://download.opensuse.org/repositories/home:rilian-la-te/Fedora_25/home:rilian-la-te.repo
 dnf install vala-panel-appmenu 
+---
