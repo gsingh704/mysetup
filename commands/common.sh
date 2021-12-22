@@ -6,7 +6,7 @@ makepkg -si
 
 
 #install main applications
-yay -S firefox-appmenu-bin  wget pamac-aur qt5ct adwaita-qt gvfs-goa gvfs-google #online accounts google drive   #tt-ms-fonts for arch
+yay -S firefox-appmenu-bin  wget pamac-aur qt5ct adwaita-qt  gvfs-google #online accounts google drive   #tt-ms-fonts for arch
 
 #to install pipewire for good bluetooth support
 sudo pamac install pipewire-pulse pipewire-alsa 
