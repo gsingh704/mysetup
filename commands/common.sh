@@ -13,11 +13,11 @@ sudo pamac install pipewire-pulse pipewire-alsa
 #enable bluetooth on endevor os
 sudo pacman -S --needed bluez bluez-utils 
 sudo systemctl enable --now bluetooth
-
+----------------------------------------
 #set wallpaper
 cd ~/setup
 wget https://w.wallhaven.cc/full/md/wallhaven-mdjrqy.jpg
--
+-------------------------------
 
 
 # install netdata
