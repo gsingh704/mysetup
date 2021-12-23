@@ -4,7 +4,7 @@ kwriteconfig5 --file ~/.config/kwinrc --group Windows --key BorderlessMaximizedW
 qdbus org.kde.KWin /KWin reconfigure
 
 
-#install app
+#install apps
 yay -S libinput_gestures_qt plasma5-applets-window-buttons  #plasma only
 
 
