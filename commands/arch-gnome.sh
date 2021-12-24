@@ -55,9 +55,7 @@ yay -S adwaita-shell-theme gnome-shell-extensions chrome-gnome-shell
 sudo sed -i '22s/.*/  font-size: 16pt;/'   /usr/share/themes/Adwaita/gnome-shell/gnome-shell.css
 exit
 
-#set wallpaper
-cd ~/setup
-wget https://w.wallhaven.cc/full/md/wallhaven-mdjrqy.jpg
+
 -----------------------------------------------------------------------------------------
 #load dconf data (gnome cong fig)
 #dconf dump / > dconf-settings.ini
