@@ -44,7 +44,7 @@ MOZ_USE_XINPUT2=1" >> /etc/environment
 sudo gpasswd -a $USER input
 yay -S wmctrl xdotool libinput-gestures gestures
 cd ~/.config/
-wget https://github.com/gsingh704/mysetup/raw/main/dotfiles/libinput-gestures.conf
+wget https://github.com/gsingh704/mysetup/raw/main/dotfiles/gestures/libinput-gestures.conf
 libinput-gestures-setup autostart start
 ----------------------------------------------------
 #Insall touchegg and touch 
@@ -54,4 +54,4 @@ sudo systemctl start touchegg
 #config file
 mkdir -p ~/.config/touchegg
 cd ~/.config/touchegg
-wget https://github.com/gsingh704/mysetup/raw/main/dotfiles/touchegg.conf
+wget https://github.com/gsingh704/mysetup/raw/main/dotfiles/gestures/touchegg.conf

@@ -12,6 +12,11 @@ Hidden=false
 NoDisplay=false
 X-GNOME-Autostart-enabled=true" > ~/.config/autostart/xfce4.desktop
 
+#get vala-panel config panels
+mkdir -p ~/.config/vala-panel
+cd ~/.config/vala-panel/
+wget https://github.dev/gsingh704/mysetup/main/dotfiles/vala-panel/default
+
 ---------------------------
 
 #fildem
@@ -56,13 +61,13 @@ wget https://w.wallhaven.cc/full/md/wallhaven-mdjrqy.jpg
 -----------------------------------------------------------------------------------------
 #load dconf data (gnome cong fig)
 #dconf dump / > dconf-settings.ini
-wget https://raw.githubusercontent.com/gsingh704/mysetup/main/dotfiles/dconf-settings.ini
+wget https://raw.githubusercontent.com/gsingh704/mysetup/main/dotfiles/gnome/dconf-settings.ini
 cat dconf-settings.ini | dconf load /    
 ----------------------------------
 #extensions
 cd ~/.local/share/gnome-shell
 rm -rf extensions
-wget https://github.com/gsingh704/mysetup/raw/main/dotfiles/extensions.zip
+wget https://github.com/gsingh704/mysetup/raw/main/dotfiles/gnome/extensions.zip
 unzip extensions.zip
 ----------------------------------------------------------------------------
 
