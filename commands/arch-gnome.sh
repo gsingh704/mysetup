@@ -57,7 +57,7 @@ exit
 
 
 -----------------------------------------------------------------------------------------
-#load dconf data (gnome cong fig)
+#load dconf data (gnome config)
 #dconf dump / > dconf-settings.ini
 wget https://raw.githubusercontent.com/gsingh704/mysetup/main/dotfiles/gnome/dconf-settings.ini
 cat dconf-settings.ini | dconf load /    
