@@ -7,7 +7,7 @@ sudo pamac install vala-panel appmenu-gtk-module vala-panel-appmenu-registrar va
 mkdir ~/.config/autostart/
 echo "[Desktop Entry]    
 Type=Application
-Exec=xfce4-panel
+Exec=vala-panel
 Hidden=false
 NoDisplay=false
 X-GNOME-Autostart-enabled=true" > ~/.config/autostart/xfce4.desktop
