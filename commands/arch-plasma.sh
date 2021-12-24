@@ -7,6 +7,8 @@ qdbus org.kde.KWin /KWin reconfigure
 #install apps
 yay -S libinput_gestures_qt plasma5-applets-window-buttons  #plasma only
 
+#Kde settings root
+pkexec env DISPLAY=$DISPLAY XAUTHORITY=$XAUTHORITY KDE_SESSION_VERSION=5 KDE_FULL_SESSION=true dbus-launch systemsettings5  
 
 
 -----------------------------

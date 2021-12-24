@@ -1,14 +1,17 @@
-
-From time to time, BCD will grow in size and contain unwanted entry/entries. If you boot your PC from multiple sources (USB's, Win 10, Win 7, Linux etc...), EFI firmware will add an entry for each device. Open Admin command and type:
+----------------------------------------------------------------------------
 #windows
 mountvol U: /s ====> assign letter U to EFI system partition (or use any unused letter)
 del /s /f /q U:\efi\*.* ====> Delete everything under U:\efi folder
 bcdboot c:\windows /s U: /f UEFI =-===> Rebuild a clean BCD
 mountvol U: /d ====> Remove the letter U from EFI system partition
-
+------
+#Linux 
 efibootmgr -v
-sudo efibootmgr -b 0003 -B
+sudo efibootmgr -b 0003 -B #example
 
+
+---------------------------------------------------------------
+#change kernel settings 
 sudoedit /etc/default/grub
 GRUB_CMDLINE_LINUX_DEFAULT="i8042.nopnp=1 pci=nocrs"
 sudo update-grub   *orororororor* sudo grub-mkconfig -o /boot/grub/grub.cfg
@@ -16,33 +19,11 @@ reboot
 
 Pop os 
 sudo kernelstub -o "i8042.nopnp=1 pci=nocrs"
-
-sudo apt install qtstyleplugins
+----------------------------------------------------
 
 export QT_QPA_PLATFORMTHEME=qt5ct
 QT_SCALE_FACTOR=1.4
+----------------------------------------------
 
-Down:   
-sh -c 'gdbus call --session --dest org.gnome.SettingsDaemon.Power --object-path /org/gnome/SettingsDaemon/Power --method org.gnome.SettingsDaemon.Power.Screen.StepDown && gdbus call --session --dest org.gnome.SettingsDaemon.Power --object-path /org/gnome/SettingsDaemon/Power --method org.gnome.SettingsDaemon.Power.Screen.StepDown'
-
-up:
-sh -c 'gdbus call --session --dest org.gnome.SettingsDaemon.Power --object-path /org/gnome/SettingsDaemon/Power --method org.gnome.SettingsDaemon.Power.Screen.StepUp && gdbus call --session --dest org.gnome.SettingsDaemon.Power --object-path /org/gnome/SettingsDaemon/Power --method org.gnome.SettingsDaemon.Power.Screen.StepUp'
-
-Kde settings root
-pkexec env DISPLAY=$DISPLAY XAUTHORITY=$XAUTHORITY KDE_SESSION_VERSION=5 KDE_FULL_SESSION=true dbus-launch systemsettings5  
-
-Autoremove arch
+#Autoremove arch
 sudo pacman -Qtdq |sudo  pacman -Rns -
-
-/etc/environment
-
-QT_AUTO_SCREEN_SCALE_FACTOR=1
-QT_QPA_PLATFORMTHEME="gnome"
-EDITOR=/usr/bin/nano
-MOZ_ENABLE_WAYLAND=1
-MOZ_USE_XINPUT2=1
-
-
-cp /usr/share/applications/smartcode-stremio.desktop /home/j/.local/share/applications 
-
-
