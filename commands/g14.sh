@@ -1,9 +1,5 @@
 https://www.reddit.com/r/ZephyrusG14/comments/qhjxs6/zephyrus_g14_arch_install_guide/
 
-
-
-
-
 #post install
 
 #with root
