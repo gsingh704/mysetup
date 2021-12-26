@@ -37,7 +37,8 @@ wget https://raw.githubusercontent.com/gsingh704/mysetup/main/dotfiles/.zshrc
 
 #edit environment to get better firefox support
 echo "MOZ_ENABLE_WAYLAND=1
-MOZ_USE_XINPUT2=1" >> /etc/environment
+MOZ_USE_XINPUT2=1
+MOZ_X11_EGL=1" >> /etc/environment
 -----------------------------------------
 
 #install and configure libinput-gestures 
