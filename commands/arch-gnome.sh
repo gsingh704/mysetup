@@ -22,7 +22,7 @@ wget https://github.dev/gsingh704/mysetup/main/dotfiles/vala-panel/default
 #fildem
 sudo pacman -S dbus-python bamf appmenu-gtk-module libkeybinder3 libdbusmenu-gtk2 libdbusmenu-gtk3 libdbusmenu-qt5 git python-pip #install dependecies
 python3 -m pip install --user fuzzysearch
-#install the filedem
+#install the fildem
 wget https://github.com/gonzaarcr/Fildem/archive/refs/tags/0.6.7.zip
 unzip 0.6.7.zip
 cd Fildem*
