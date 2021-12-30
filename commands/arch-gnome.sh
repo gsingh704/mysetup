@@ -1,4 +1,3 @@
----------------------------------------------------------------------------------------------------------
 # to install global menu
     #programs to install 
         sudo pacman -Syu meson
@@ -18,7 +17,7 @@
         cd ~/.config/vala-panel/
         wget https://github.dev/gsingh704/mysetup/main/dotfiles/vala-panel/default
 
----------------------------
+
 #fildem
     #programs to install
         sudo pacman -S dbus-python bamf appmenu-gtk-module libkeybinder3 libdbusmenu-gtk2 libdbusmenu-gtk3 libdbusmenu-qt5 git python-pip #install dependecies
