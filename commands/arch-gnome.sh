@@ -1,4 +1,3 @@
----------------------------------------------------------------------------------------------------------
 # to install global menu
     #programs to install 
         sudo pacman -Syu meson
@@ -18,7 +17,7 @@
         cd ~/.config/vala-panel/
         wget https://github.dev/gsingh704/mysetup/main/dotfiles/vala-panel/default
 
----------------------------
+
 
 #fildem
     #programs to install
@@ -46,7 +45,7 @@
         Comment[en_US]=Fildem Global Menu and HUD
         Comment=Fildem Global Menu and HUD" > ~/.config/autostart/fildem.desktop
 
------------------------------------------------------------------
+
 # to get qt5ct working to change qt app theme
 echo "export QT_QPA_PLATFORMTHEME=qt5ct" >> ~/.profile
 ------------------------------------------------------------------
