@@ -1,3 +1,4 @@
+---------------------------------------------------------------------------------------------------------
 # to install global menu
     #programs to install 
         sudo pacman -Syu meson
@@ -17,6 +18,7 @@
         cd ~/.config/vala-panel/
         wget https://github.dev/gsingh704/mysetup/main/dotfiles/vala-panel/default
 
+---------------------------
 
 #fildem
     #programs to install
