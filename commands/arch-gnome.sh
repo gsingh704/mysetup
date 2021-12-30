@@ -48,7 +48,7 @@
 
 # to get qt5ct working to change qt app theme
     echo "export QT_QPA_PLATFORMTHEME=qt5ct" >> ~/.profile
-------------------------------------------------------------------
+ 
 
 #install shell theme and extensions
     yay -S adwaita-shell-theme gnome-shell-extensions chrome-gnome-shell
@@ -57,21 +57,18 @@
     exit
 
 
------------------------------------------------------------------------------------------
+
 #load dconf data (gnome config)
     #dconf dump / > dconf-settings.ini
     wget https://raw.githubusercontent.com/gsingh704/mysetup/main/dotfiles/gnome/dconf-settings.ini
     cat dconf-settings.ini | dconf load /    
-----------------------------------
+ 
 #extensions
     cd ~/.local/share/gnome-shell
     rm -rf extensions
     wget https://github.com/gsingh704/mysetup/raw/main/dotfiles/gnome/extensions.zip
     unzip extensions.zip
-----------------------------------------------------------------------------
 
--------------------------------------
--------------------------------------
 #global appmenu in fedora
     dnf config-manager --add-repo https://download.opensuse.org/repositories/home:rilian-la-te/Fedora_25/home:rilian-la-te.repo
     dnf install vala-panel-appmenu 
