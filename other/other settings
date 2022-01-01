@@ -1,10 +1,5 @@
 ----------------------------------------------------------------------------
-#windows
-mountvol U: /s ====> assign letter U to EFI system partition (or use any unused letter)
-del /s /f /q U:\efi\*.* ====> Delete everything under U:\efi folder
-bcdboot c:\windows /s U: /f UEFI =-===> Rebuild a clean BCD
-mountvol U: /d ====> Remove the letter U from EFI system partition
-------
+
 #Linux 
 efibootmgr -v
 sudo efibootmgr -b 0003 -B #example
