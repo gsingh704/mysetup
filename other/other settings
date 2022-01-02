@@ -26,3 +26,7 @@ sudo pacman -Qtdq |sudo  pacman -Rns -
 #figerprint
 https://github.com/knauth/goodix-521d-explanation
 pysub
+
+#brighness
+gdbus call --session --dest org.gnome.SettingsDaemon.Power --object-path /org/gnome/SettingsDaemon/Power --method org.gnome.SettingsDaemon.Power.Screen.StepUp
+gdbus call --session --dest org.gnome.SettingsDaemon.Power --object-path /org/gnome/SettingsDaemon/Power --method org.gnome.SettingsDaemon.Power.Screen.StepDown
