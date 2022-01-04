@@ -49,7 +49,7 @@ X-GNOME-Autostart-enabled=true" > ~/.config/autostart/fildem.desktop
 #install shell theme and extensions
     yay -S adwaita-shell-theme gnome-shell-extensions chrome-gnome-shell
 #inscrese size of gnome shell theme
-    mkdir ~/.themes/adwaita_big/gnome-shell/
+    mkdir -p ~/.themes/adwaita_big/gnome-shell/
     echo "stage {font-size: 16pt;}" >> ~/.themes/adwaita_big/gnome-shell/gnome-shell.css
 
 #load dconf data (gnome config)
