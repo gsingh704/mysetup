@@ -30,7 +30,7 @@
         sudo python3 setup.py install --optimize=1
         cp -r fildemGMenu@gonza.com ~/.local/share/gnome-shell/extensions/
 
-#load gtk modules  #to revise
+#load gtk modules 
 echo "gtk-modules='appmenu-gtk-module'" >> ~/.gtkrc-2.0
 echo "[Settings]
 gtk-modules='appmenu-gtk-module'" > ~/.config/gtk-3.0/settings.ini
