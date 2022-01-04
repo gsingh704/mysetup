@@ -1,10 +1,6 @@
-----------------------------------------------------------------------------
-
 #Linux 
 efibootmgr -v
 sudo efibootmgr -b 0003 -B #example
-
-
 ---------------------------------------------------------------
 #change kernel settings 
 sudoedit /etc/default/grub

@@ -29,21 +29,17 @@
         cd Fildem*
         sudo python3 setup.py install --optimize=1
         cp -r fildemGMenu@gonza.com ~/.local/share/gnome-shell/extensions/
-    #load gtk modules  #to revise
-        echo "gtk-modules="appmenu-gtk-module" >> ~/.gtkrc-2.0
-        echo "[Settings]
-        gtk-modules="appmenu-gtk-module" > ~/.config/gtk-3.0/settings.ini
-    #make a desktop file for fildem
-        echo "[Desktop Entry]
-        Type=Application
-        Exec=fildem
-        Hidden=false
-        NoDisplay=false
-        X-GNOME-Autostart-enabled=true
-        Name[en_US]=Fildem
-        Name=Fildem
-        Comment[en_US]=Fildem Global Menu and HUD
-        Comment=Fildem Global Menu and HUD" > ~/.config/autostart/fildem.desktop
+
+#load gtk modules  #to revise
+echo "gtk-modules='appmenu-gtk-module'" >> ~/.gtkrc-2.0
+echo "[Settings]
+gtk-modules='appmenu-gtk-module'" > ~/.config/gtk-3.0/settings.ini
+
+#make a desktop file for fildem
+echo "[Desktop Entry]
+Type=Application
+Exec=fildem
+X-GNOME-Autostart-enabled=true" > ~/.config/autostart/fildem.desktop
 
 
 # to get qt5ct working to change qt app theme
@@ -53,8 +49,8 @@
 #install shell theme and extensions
     yay -S adwaita-shell-theme gnome-shell-extensions chrome-gnome-shell
 #inscrese size of gnome shell theme
-    sudo sed -i '22s/.*/  font-size: 16pt;/'   /usr/share/themes/Adwaita/gnome-shell/gnome-shell.css
-    exit
+    mkdir ~/.themes/adwaita_big/gnome-shell/
+    echo "stage {font-size: 16pt;}" >> ~/.themes/adwaita_big/gnome-shell/gnome-shell.css
 
 
 
