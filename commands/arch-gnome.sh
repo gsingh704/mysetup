@@ -52,8 +52,6 @@ X-GNOME-Autostart-enabled=true" > ~/.config/autostart/fildem.desktop
     mkdir ~/.themes/adwaita_big/gnome-shell/
     echo "stage {font-size: 16pt;}" >> ~/.themes/adwaita_big/gnome-shell/gnome-shell.css
 
-
-
 #load dconf data (gnome config)
     #dconf dump / > dconf-settings.ini
     wget https://raw.githubusercontent.com/gsingh704/mysetup/main/dotfiles/gnome/dconf-settings.ini
