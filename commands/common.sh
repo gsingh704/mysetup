@@ -13,8 +13,6 @@
 
 # install netdata
     bash <(curl -Ss https://my-netdata.io/kickstart.sh)
-
-
 #edit environment to get better firefox support
 sudo su
 echo "MOZ_ENABLE_WAYLAND=1
