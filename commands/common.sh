@@ -29,7 +29,7 @@ exit
         libinput-gestures-setup autostart start
 
     #Touchegg
-        yay -S touchegg touchegg
+        yay -S touchegg touche
         sudo systemctl enable touchegg.service  #enble and start the service
         sudo systemctl start touchegg
         #config file
