@@ -20,7 +20,7 @@ systemctl enable --now supergfxd.service
 supergfxctl -g #Check  graphics mode; has to be integrated
 supergfxctl -m integrated #to switch , logout 
 sudo pacman -S linux-g14 linux-g14-headers
-
+sudo grub-mkconfig -o /boot/grub/grub.cfg
 
 #installing nvidia-drivers
   sudo pacman -S nvidia-dkms nvidia-utils lib32-nvidia-utils
@@ -32,7 +32,7 @@ sudo pacman -S linux-g14 linux-g14-headers
   prime-run glxinfo | grep OpenGL #if nvidia,, ok
 
 
-#gnome extension
+#gnome extension  change
   sudo pacman -S nodejs npm
   git clone git@gitlab.com:asus-linux/asusctl-gex.git
   npm install
