@@ -2,7 +2,7 @@ https://www.reddit.com/r/ZephyrusG14/comments/qhjxs6/zephyrus_g14_arch_install_g
 
 #post install
 
-#with root
+#with root-------------
 sudo su 
 echo "
 [g14]
@@ -23,7 +23,7 @@ sudo pacman -S linux-g14 linux-g14-headers
 sudo grub-mkconfig -o /boot/grub/grub.cfg
 
 #installing nvidia-drivers
-  sudo pacman -S nvidia-dkms nvidia-utils lib32-nvidia-utils
+  sudo pacman -S nvidia nvidia-dkms nvidia-utils lib32-nvidia-utils
 
 #hybrid mode----optional
   sudo pacman -S nvidia-prime
