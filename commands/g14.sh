@@ -34,9 +34,9 @@ sudo grub-mkconfig -o /boot/grub/grub.cfg
 
 #gnome extension  change
   sudo pacman -S nodejs npm
-  git clone git@gitlab.com:asus-linux/asusctl-gex.git
-  npm install
-  npm run build && npm run install-user
+git clone https://gitlab.com/asus-linux/asusctl-gex.git /tmp/asusctl-gex && cd /tmp/asusctl-gex
+npm install
+npm run build && npm run install-user 
   #sudo pacman -R nodejs npm
 
 #mic button
