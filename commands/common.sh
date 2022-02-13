@@ -10,8 +10,8 @@
     wget https://w.wallhaven.cc/full/md/wallhaven-mdjrqy.jpg
 
 #gtk for qt
-sudo pacman -S qgnomeplatform
-echo "export QT_QPA_PLATFORMTHEME='gnome'" >> /etc/environment
+yay -S qgnomeplatform
+echo "export QT_QPA_PLATFORMTHEME='gnome'" >> .profile
 
 
 # install netdata
