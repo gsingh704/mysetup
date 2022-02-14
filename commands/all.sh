@@ -43,6 +43,9 @@ wget https://github.com/gsingh704/mysetup/raw/main/dotfiles/gnome/extensions.zip
 unzip extensions.zip
 wget https://raw.githubusercontent.com/gsingh704/mysetup/main/dotfiles/gnome/dconf-settings.ini
 cat dconf-settings.ini | dconf load / 
+
+sudo grub-mkconfig -o /boot/grub/grub.cfg
+
 sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"  #install oh-my-zsh
 
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
@@ -52,3 +55,13 @@ git clone https://github.com/zsh-users/zsh-history-substring-search ${ZSH_CUSTOM
 cd ~
 rm -f .zshrc*
 wget https://raw.githubusercontent.com/gsingh704/mysetup/main/dotfiles/.zshrc
+
+#reboot
+sudo rm -rf /etc/asusd/profile.conf
+asusctl fan-curve -m quiet -D 30c:0,40c:0,50c:0,60c:0,70c:35,80c:55,90c:65,100c:65  -e true -f cpu
+asusctl fan-curve -m quiet -D 30c:0,40c:0,50c:0,60c:0,70c:35,80c:55,90c:65,100c:65  -e true -f gpu
+asusctl fan-curve -m balanced -D 30c:0,40c:0,50c:0,60c:0,70c:35,80c:55,90c:65,100c:65  -e true -f gpu
+asusctl fan-curve -m balanced -D 30c:0,40c:0,50c:0,60c:0,70c:35,80c:55,90c:65,100c:65  -e true -f cpu
+asusctl fan-curve -m performance -D 30c:0,40c:0,50c:0,60c:10,70c:55,80c:90,90c:100,100c:100 -e true -f cpu
+asusctl fan-curve -m performance -D 30c:0,40c:0,50c:0,60c:10,70c:55,80c:90,90c:100,100c:100 -e true -f gpu
+
