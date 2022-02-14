@@ -21,10 +21,6 @@ yay -S pipewire-pulse pipewire-alsa
 cd ~/setup
 wget https://w.wallhaven.cc/full/md/wallhaven-mdjrqy.jpg
 
-#gtk for qt
-yay -S qgnomeplatform
-echo "export QT_QPA_PLATFORMTHEME='gnome'" >> .profile
-
 
 # install netdata
 bash <(curl -Ss https://my-netdata.io/kickstart.sh)

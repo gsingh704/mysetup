@@ -43,6 +43,7 @@ X-GNOME-Autostart-enabled=true" > ~/.config/autostart/fildem.desktop
 # to get qt5ct working to change qt app theme
 echo "export QT_QPA_PLATFORMTHEME=qt5ct" >> ~/.profile
 #or
+yay -S qgnomeplatform
 echo "export QT_QPA_PLATFORMTHEME='gnome'" >> ~/.profile
  
 
