@@ -15,7 +15,11 @@ sudo pacman -S asusctl supergfxctl
 systemctl enable --now power-profiles-daemon.service
 systemctl enable --now supergfxd.service
 
-
+sudo pacman -S nodejs npm
+git clone https://gitlab.com/asus-linux/asusctl-gex.git /tmp/asusctl-gex && cd /tmp/asusctl-gex
+npm install
+npm run build && npm run install-user 
+#sudo pacman -R nodejs npm
 
 supergfxctl -g #Check  graphics mode; has to be integrated
 supergfxctl -m integrated #to switch , logout 
@@ -33,16 +37,14 @@ sudo grub-mkconfig -o /boot/grub/grub.cfg
 
 
 #gnome extension  change
-  sudo pacman -S nodejs npm
-git clone https://gitlab.com/asus-linux/asusctl-gex.git /tmp/asusctl-gex && cd /tmp/asusctl-gex
-npm install
-npm run build && npm run install-user 
-  #sudo pacman -R nodejs npm
+
 
 #mic button
-  evdev:input:b0003v0B05p1866*
-  KEYBOARD_KEY_ff31007c=f20 # x11 mic-mute
-  sudo systemd-hwdb update
-  sudo udevadm trigger
+sudo su 
+echo "evdev:input:b0003v0B05p1866*
+KEYBOARD_KEY_ff31007c=f20 # x11 mic-mute" >> /etc/udev/hwdb.d/90-nkey.hwdb
+exit
+sudo systemd-hwdb update
+sudo udevadm trigger
 
   
