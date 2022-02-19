@@ -46,7 +46,6 @@ cd ~/.icons
 sudo cp -r /usr/share/icons/Adwaita* .
 sudo chmod -R 777 *
 
-
 cp -rf Adwaita++-Dark/mimetypes/16/* Adwaita/16x16/mimetypes
 cp -rf Adwaita++-Dark/mimetypes/22/* Adwaita/22x22/mimetypes
 cp -rf Adwaita++-Dark/mimetypes/24/* Adwaita/24x24/mimetypes
@@ -54,11 +53,16 @@ cp -rf Adwaita++-Dark/mimetypes/32/* Adwaita/32x32/mimetypes
 cp -rf Adwaita++-Dark/mimetypes/48/* Adwaita/48x48/mimetypes
 cp -rf Adwaita++-Dark/mimetypes/scalable/* Adwaita/scalable/mimetypes
 
+cp -rf Adwaita++/places/16/* Adwaita/16x16/places
+cp -rf Adwaita++/places/22/* Adwaita/22x22/places
+cp -rf Adwaita++/places/24/* Adwaita/24x24/places
+cp -rf Adwaita++/places/32/* Adwaita/32x32/places
+cp -rf Adwaita++/places/48/* Adwaita/48x48/places
+cp -rf Adwaita++/places/scalable/* Adwaita/scalable/places
 
 mv Adwaita ad 
 rm -rf ad/icon-theme.cache
 sudo mv ad /usr/share/icons/
-
 rm -rf ~/.icons
 yay -R  adwaita-plus-git
 
