@@ -39,7 +39,26 @@ Exec=fildem
 X-GNOME-Autostart-enabled=true" > ~/.config/autostart/fildem.desktop
 
 ###########################################################################3
+#icon theme 
+yay -S adwaita-plus-git
+mkdir ~/.icons
+cd ~/.icons
+sudo cp -r /usr/share/icons/Adwaita* .
+sudo chmod -R 777 *
+cp -rf Adwaita++-Dark/mimetypes/16/* Adwaita/16x16/mimetypes
+cp -rf Adwaita++-Dark/mimetypes/22/* Adwaita/22x22/mimetypes
+cp -rf Adwaita++-Dark/mimetypes/24/* Adwaita/24x24/mimetypes
+cp -rf Adwaita++-Dark/mimetypes/32/* Adwaita/32x32/mimetypes
+cp -rf Adwaita++-Dark/mimetypes/48/* Adwaita/48x48/mimetypes
+cp -rf Adwaita++-Dark/mimetypes/scalable/* Adwaita/scalable/mimetypes
+mv Adwaita ad 
+rm -rf ad/icon-theme.cache
+sudo mv ad /usr/share/icons/
+rm -rf ~/.icons
+yay -R  adwaita-plus-git
 
+
+##################################################################################################33
 # to get qt5ct working to change qt app theme
 echo "export QT_QPA_PLATFORMTHEME=qt5ct" >> ~/.profile
 #or
