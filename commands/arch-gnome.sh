@@ -45,18 +45,29 @@ mkdir ~/.icons
 cd ~/.icons
 sudo cp -r /usr/share/icons/Adwaita* .
 sudo chmod -R 777 *
+
+
 cp -rf Adwaita++-Dark/mimetypes/16/* Adwaita/16x16/mimetypes
 cp -rf Adwaita++-Dark/mimetypes/22/* Adwaita/22x22/mimetypes
 cp -rf Adwaita++-Dark/mimetypes/24/* Adwaita/24x24/mimetypes
 cp -rf Adwaita++-Dark/mimetypes/32/* Adwaita/32x32/mimetypes
 cp -rf Adwaita++-Dark/mimetypes/48/* Adwaita/48x48/mimetypes
 cp -rf Adwaita++-Dark/mimetypes/scalable/* Adwaita/scalable/mimetypes
+
+
+cp -rf Adwaita++/apps/16/* Adwaita/16x16/apps
+cp -rf Adwaita++/apps/22/* Adwaita/22x22/apps
+cp -rf Adwaita++/apps/24/* Adwaita/24x24/apps
+cp -rf Adwaita++/apps/32/* Adwaita/32x32/apps
+cp -rf Adwaita++/apps/48/* Adwaita/48x48/apps
+cp -rf Adwaita++/apps/scalable/* Adwaita/scalable/apps
+
 mv Adwaita ad 
 rm -rf ad/icon-theme.cache
 sudo mv ad /usr/share/icons/
+
 rm -rf ~/.icons
 yay -R  adwaita-plus-git
-
 
 ##################################################################################################33
 # to get qt5ct working to change qt app theme
