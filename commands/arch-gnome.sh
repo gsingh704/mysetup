@@ -55,13 +55,6 @@ cp -rf Adwaita++-Dark/mimetypes/48/* Adwaita/48x48/mimetypes
 cp -rf Adwaita++-Dark/mimetypes/scalable/* Adwaita/scalable/mimetypes
 
 
-cp -rf Adwaita++/apps/16/* Adwaita/16x16/apps
-cp -rf Adwaita++/apps/22/* Adwaita/22x22/apps
-cp -rf Adwaita++/apps/24/* Adwaita/24x24/apps
-cp -rf Adwaita++/apps/32/* Adwaita/32x32/apps
-cp -rf Adwaita++/apps/48/* Adwaita/48x48/apps
-cp -rf Adwaita++/apps/scalable/* Adwaita/scalable/apps
-
 mv Adwaita ad 
 rm -rf ad/icon-theme.cache
 sudo mv ad /usr/share/icons/
