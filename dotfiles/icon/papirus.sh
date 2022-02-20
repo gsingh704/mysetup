@@ -31,4 +31,4 @@ rm -rf ap/icon-theme.cache
 sudo mv ap /usr/share/icons/
 
 rm -rf ~/.icons
-yay -R papirus-icon-themes
+yay -R papirus-icon-theme
