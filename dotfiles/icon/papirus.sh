@@ -1,4 +1,4 @@
-yay -S papirus-icon-themes
+yay -S papirus-icon-theme
 sudo rm -rf  /usr/share/icons/ap
 mkdir ~/.icons
 cd ~/.icons
