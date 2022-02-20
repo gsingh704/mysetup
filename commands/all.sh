@@ -58,8 +58,8 @@ cd ~
 rm -f .zshrc*
 wget https://raw.githubusercontent.com/gsingh704/mysetup/main/dotfiles/.zshrc
 
-#reboot
-sudo rm -rf /etc/asusd/profile.conf
+#reboot        sudo rm -rf /etc/asusd/profile.conf
+
 asusctl fan-curve -m quiet -D 30c:0,40c:0,50c:0,60c:0,70c:35,80c:55,90c:65,100c:65  -e true -f cpu
 asusctl fan-curve -m quiet -D 30c:0,40c:0,50c:0,60c:0,70c:35,80c:55,90c:65,100c:65  -e true -f gpu
 asusctl fan-curve -m balanced -D 30c:0,40c:0,50c:0,60c:0,70c:35,80c:55,90c:65,100c:65  -e true -f gpu
