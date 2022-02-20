@@ -43,7 +43,9 @@ wget https://github.com/gsingh704/mysetup/raw/main/dotfiles/gnome/extensions.zip
 unzip extensions.zip
 wget https://raw.githubusercontent.com/gsingh704/mysetup/main/dotfiles/gnome/dconf-settings.ini
 cat dconf-settings.ini | dconf load / 
-
+git clone https://gitlab.com/asus-linux/asusctl-gex.git /tmp/asusctl-gex && cd /tmp/asusctl-gex
+npm install
+npm run build && npm run install-user
 sudo grub-mkconfig -o /boot/grub/grub.cfg
 
 sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"  #install oh-my-zsh
