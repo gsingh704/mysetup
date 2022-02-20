@@ -17,7 +17,7 @@ exit
 
 #
 sudo pacman -Suy
-sudo pacman -S gnome-themes-extra asusctl supergfxctl firefox  wget git base-devel nodejs npm nvidia nvidia-dkms nvidia-utils nvidia-prime  mesa mesa-demos linux-g14 linux-g14-headers linux-g14 linux-g14-headers  #lib32-nvidia-utils  bluez bluez-utils base-devel
+sudo pacman -S gnome-themes-extra asusctl supergfxctl firefox  wget git base-devel nodejs npm nvidia nvidia-dkms nvidia-utils nvidia-prime  mesa mesa-demos linux-g14 linux-g14-headers linux-g14 linux-g14-headers    bluez bluez-utils base-devel #lib32-nvidia-utils
 git clone https://aur.archlinux.org/yay-bin.git
 cd yay-bin
 makepkg -si
