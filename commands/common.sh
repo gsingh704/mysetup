@@ -54,7 +54,7 @@ cd ~/.config/touchegg
 wget https://github.com/gsingh704/mysetup/raw/main/dotfiles/gestures/touchegg.conf
 
 ##############################
-
+gsettings set org.gnome.shell disable-extension-version-validation true
 
 #install zsh        
 yay -S zsh  
