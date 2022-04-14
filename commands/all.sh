@@ -13,7 +13,7 @@ exit
 
 #
 sudo pacman -Suy
-sudo pacman -S gnome-themes-extra  firefox amdvlk wget git base-devel nodejs  npm nvidia nvidia-dkms nvidia-utils nvidia-prime  mesa mesa-demos      bluez bluez-utils   #lib32-nvidia-utils
+sudo pacman -S gnome-themes-extra  firefox  wget git base-devel nodejs  npm nvidia nvidia-dkms nvidia-utils nvidia-prime  mesa      bluez bluez-utils   #lib32-nvidia-utils
 git clone https://aur.archlinux.org/yay-bin.git
 cd yay-bin
 makepkg -si
