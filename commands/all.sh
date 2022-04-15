@@ -58,6 +58,8 @@ npm install
 npm run build && npm run install-user
 sudo grub-mkconfig -o /boot/grub/grub.cfg
 
+sudo ln -s /dev/null /etc/udev/rules.d/61-gdm.rules
+
 #reboot    
 asusctl fan-curve -m quiet -D 30c:0,40c:0,50c:0,60c:0,70c:35,80c:55,90c:65,100c:65  -e true -f cpu
 asusctl fan-curve -m quiet -D 30c:0,40c:0,50c:0,60c:0,70c:35,80c:55,90c:65,100c:65  -e true -f gpu
