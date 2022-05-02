@@ -12,12 +12,6 @@ cp -rf Adwaita++-Dark/mimetypes/32/* Adwaita/32x32/mimetypes
 cp -rf Adwaita++-Dark/mimetypes/48/* Adwaita/48x48/mimetypes
 cp -rf Adwaita++-Dark/mimetypes/scalable/* Adwaita/scalable/mimetypes
 
-cp -rf Adwaita++/places/16/* Adwaita/16x16/places
-cp -rf Adwaita++/places/22/* Adwaita/22x22/places
-cp -rf Adwaita++/places/24/* Adwaita/24x24/places
-cp -rf Adwaita++/places/32/* Adwaita/32x32/places
-cp -rf Adwaita++/places/48/* Adwaita/48x48/places
-cp -rf Adwaita++/places/scalable/* Adwaita/scalable/places
 
 mv Adwaita ad 
 rm -rf ad/icon-theme.cache
