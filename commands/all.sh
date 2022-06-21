@@ -13,7 +13,7 @@ exit
 
 #
 sudo pacman -Suy
-sudo pacman -S gnome-themes-extra zsh firefox  wget git base-devel nodejs  npm nvidia nvidia-dkms nvidia-utils nvidia-prime  mesa      bluez bluez-utils   #lib32-nvidia-utils
+sudo pacman -S gnome-themes-extra zsh firefox  wget git base-devel nodejs  npm nvidia #nvidia-dkms nvidia-utils nvidia-prime  mesa      bluez bluez-utils   #lib32-nvidia-utils
 
 yay -Syu ruby-fusuma  ruby-fusuma-plugin-sendkey adw-gtk3 pipewire-pulse pipewire-alsa qgnomeplatform chrome-gnome-shell asusctl supergfxctl
 sudo gpasswd -a $USER input
