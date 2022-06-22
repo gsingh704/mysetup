@@ -40,8 +40,12 @@ cd ~/.local/share/gnome-shell
 rm -rf extensions
 wget https://github.com/gsingh704/mysetup/raw/main/dotfiles/gnome/extensions.zip
 unzip extensions.zip
+
+mkdir ~/.dconf
+cd  ~/.dconf
 wget https://raw.githubusercontent.com/gsingh704/mysetup/main/dotfiles/gnome/dconf-settings.ini
-cat dconf-settings.ini | dconf load /  
+wget https://raw.githubusercontent.com/gsingh704/mysetup/main/dotfiles/gnome/dconf-settings-m.ini
+cat dconf-settings-m.ini | dconf load /  
 
 sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"  #install oh-my-zsh
 
