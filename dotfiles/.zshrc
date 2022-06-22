@@ -11,3 +11,6 @@ alias ps="sudo pacman -Syu"
 alias pr="sudo pacman -R"
 alias pc="sudo pacman -Qtdq |sudo  pacman -Rns -"
 alias update-grub="sudo grub-mkconfig -o /boot/grub/grub.cfg"
+
+alias lp="cat ~/.dconf/dconf-settings.ini | dconf load /  "
+alias dm="cat ~/.dconf/dconf-settings-m.ini | dconf load / "
