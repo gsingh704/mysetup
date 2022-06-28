@@ -36,15 +36,13 @@ cd ~/.config/fusuma
 wget https://github.com/gsingh704/mysetup/raw/main/dotfiles/gestures/config.yml
 mkdir -p ~/.themes/adwaita_big/gnome-shell/
 echo "stage {font-size: 16pt;}" >> ~/.themes/adwaita_big/gnome-shell/gnome-shell.css
+
 cd ~/.local/share/gnome-shell
 rm -rf extensions
 wget https://github.com/gsingh704/mysetup/raw/main/dotfiles/gnome/extensions.zip
 unzip extensions.zip
-
-mkdir ~/.dconf
-cd  ~/.dconf
-wget https://raw.githubusercontent.com/gsingh704/mysetup/main/dotfiles/gnome/dconf-settings.ini
-wget https://raw.githubusercontent.com/gsingh704/mysetup/main/dotfiles/gnome/dconf-settings-m.ini
+wget https://raw.githubusercontent.com/gsingh704/mysetup/main/dotfiles/gnome/dconf-settings-lp.ini
+wget https://raw.githubusercontent.com/gsingh704/mysetup/main/dotfiles/gnome/dconf-settings-dm.ini
 cat dconf-settings-m.ini | dconf load /  
 
 sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"  #install oh-my-zsh
