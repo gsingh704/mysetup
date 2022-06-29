@@ -12,5 +12,5 @@ alias pr="sudo pacman -R"
 alias pc="sudo pacman -Qtdq |sudo  pacman -Rns -"
 alias update-grub="sudo grub-mkconfig -o /boot/grub/grub.cfg"
 
-alias lp="cat ~/.dconf/dconf-settings.ini | dconf load / && cp -r ~/.mozilla/firefox/cz8slumt.default-release/chrome/userChrome-lp.css ~/.mozilla/firefox/cz8slumt.default-release/chrome/userChrome.css  "
-alias dm="cat ~/.dconf/dconf-settings-m.ini | dconf load / && cp -r ~/.mozilla/firefox/cz8slumt.default-release/chrome/userChrome-dm.css ~/.mozilla/firefox/cz8slumt.default-release/chrome/userChrome.css "
+alias lp="cat /home/j/.local/share/gnome-shell/dconf-settings-lp.ini | dconf load / && cp -r ~/.mozilla/firefox/cz8slumt.default-release/chrome/userChrome-lp.css ~/.mozilla/firefox/cz8slumt.default-release/chrome/userChrome.css  "
+alias dm="cat /home/j/.local/share/gnome-shell/dconf-settings-dm.ini | dconf load / && cp -r ~/.mozilla/firefox/cz8slumt.default-release/chrome/userChrome-dm.css ~/.mozilla/firefox/cz8slumt.default-release/chrome/userChrome.css "
