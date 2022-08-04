@@ -13,7 +13,7 @@ exit
 
 #
 sudo pacman -Suy
-sudo pacman -S gnome-themes-extra zsh firefox  wget git base-devel nodejs  npm nvidia  nvidia-utils nvidia-prime  mesa      bluez bluez-utils   #lib32-nvidia-utils
+sudo pacman -S gnome-themes-extra zsh firefox  wget git base-devel nodejs  npm nvidia  nvidia-utils nvidia-prime  vulkan-radeon      bluez bluez-utils   #lib32-nvidia-utils
 
 yay -Syu ruby-fusuma  ruby-fusuma-plugin-sendkey adw-gtk3 pipewire-pulse pipewire-alsa qgnomeplatform chrome-gnome-shell asusctl supergfxctl
 sudo gpasswd -a $USER input
@@ -43,7 +43,7 @@ wget https://github.com/gsingh704/mysetup/raw/main/dotfiles/gnome/extensions.zip
 unzip extensions.zip
 wget https://raw.githubusercontent.com/gsingh704/mysetup/main/dotfiles/gnome/dconf-settings-lp.ini
 wget https://raw.githubusercontent.com/gsingh704/mysetup/main/dotfiles/gnome/dconf-settings-dm.ini
-cat dconf-settings-m.ini | dconf load /  
+cat dconf-settings-dm.ini | dconf load /  
 
 sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"  #install oh-my-zsh
 
