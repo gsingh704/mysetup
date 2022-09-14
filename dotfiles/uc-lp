@@ -1,0 +1,36 @@
+.tab-background[selected="true"]{background-color:  #003d88 !important;}
+.tabbrowser-tab[selected="true"] {color:#fff!important;  }
+.tab-background{margin-block: 0 !important;}
+#TabsToolbar{font-size:11pt !important;font-weight: bold !important;--tab-min-height: 24px !important; max-height:25px !important; }
+.tabbrowser-tab:hover > .tab-stack > .tab-background:not([selected="true"]):not([multiselected]){ background-color: transparent !important }
+.tab-secondary-label{ display: none ;}
+
+#nav-bar {box-shadow: none !important;}
+#navigator-toolbox { border: 0 !important; }
+
+@media (prefers-color-scheme: light) {#nav-bar {background-color: #d0d0d0 !important;}}
+@media (prefers-color-scheme: dark) {#nav-bar {background-color: #1e1e1e !important;}}
+
+#nav-bar:not([customizing]) {
+  visibility: visible;
+  margin-top: -40px;
+  transition-delay: 1s;
+  filter: alpha(opacity=0);
+  opacity: 0;
+  transition: visibility, ease 0.5s, ease 0.5s, opacity, ease 0.5s,rotate, ease 0.4s !important;}
+
+#nav-bar:hover,
+#nav-bar:focus-within,
+#urlbar[focused='true'],
+#identity-box[open='true'],
+#titlebar:hover + #nav-bar:not([customizing]),
+#toolbar-menubar:not([inactive='true']) ~ #nav-bar:not([customizing]) {
+  visibility: visible;
+  margin: 0;
+  opacity: 100; }
+  */
+  
+  
+
+
+
