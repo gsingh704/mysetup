@@ -13,9 +13,9 @@ exit
 
 #
 sudo pacman -Suy
-sudo pacman -S gnome-themes-extra zsh firefox  wget git base-devel nodejs  npm nvidia  nvidia-utils nvidia-prime  vulkan-radeon      bluez bluez-utils   #lib32-nvidia-utils
+sudo pacman -S gnome-themes-extra zsh firefox  wget git base-devel nodejs  npm nvidia  nvidia-utils nvidia-prime  vulkan-radeon bluez bluez-utils lib32-nvidia-utils gvfs-google  
 
-yay -Syu ruby-fusuma  ruby-fusuma-plugin-sendkey adw-gtk3 pipewire-pulse pipewire-alsa qgnomeplatform chrome-gnome-shell asusctl supergfxctl rog-control-center
+yay -Syu ruby-fusuma  ruby-fusuma-plugin-sendkey adw-gtk3 pipewire-pulse pipewire-alsa   asusctl supergfxctl rog-control-center
 sudo gpasswd -a $USER input
 sudo systemctl enable --now power-profiles-daemon.service
 sudo systemctl enable --now supergfxd.service
