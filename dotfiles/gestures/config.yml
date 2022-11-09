@@ -11,10 +11,10 @@ swipe:
       
       
   4:
-    left:
-      sendkey: "LEFTALT+RIGHT" # history back
-    right:
-      sendkey: "LEFTALT+LEFT" # history forward
+   # left:
+    #  sendkey: "LEFTALT+RIGHT" # history back
+   # right:
+    #  sendkey: "LEFTALT+LEFT" # history forward
     up:
       sendkey: "LEFTCTRL+LEFTSHIFT+T" # open new tab
     down:
