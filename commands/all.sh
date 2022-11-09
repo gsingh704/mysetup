@@ -35,7 +35,7 @@ mkdir -p ~/.config/fusuma
 cd ~/.config/fusuma
 wget https://github.com/gsingh704/mysetup/raw/main/dotfiles/gestures/config.yml
 mkdir -p ~/.themes/adwaita_big/gnome-shell/
-echo "stage {font-size: 16pt;}" >> ~/.themes/adwaita_big/gnome-shell/gnome-shell.css
+echo "stage {font-size: 12pt;  font-weight: bold; }" >> ~/.themes/adwaita_big/gnome-shell/gnome-shell.css
 
 cd ~/.local/share/gnome-shell
 rm -rf extensions
