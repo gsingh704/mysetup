@@ -17,7 +17,7 @@ sudo pacman -S gnome-themes-extra zsh firefox  wget git base-devel nodejs  npm n
 
 yay -Syu ruby-fusuma  ruby-fusuma-plugin-sendkey adw-gtk3 pipewire-pulse pipewire-alsa   asusctl supergfxctl rog-control-center
 sudo gpasswd -a $USER input
-sudo systemctl enable --now power-profiles-daemon.service
+sudo systemctl start asusd.service
 sudo systemctl enable --now supergfxd.service
 sudo systemctl enable --now bluetooth
  
