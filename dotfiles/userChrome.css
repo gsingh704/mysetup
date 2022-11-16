@@ -1,7 +1,19 @@
 .tab-background[selected="true"]{background-color:  #003d88 !important;}
 .tabbrowser-tab[selected="true"] {color:#fff!important;  }
 .tab-background{margin-block: 0 !important;}
-#TabsToolbar{font-size:11pt !important;font-weight: bold !important;--tab-min-height: 24px !important; max-height:25px !important; }
+/* ROOT - VARS */
+*|*:root {
+  --tab-min-height:      25px !important; /* adjust */
+  --tab-min-width:       60px !important; /* adjust */
+ }
+ 
+ /* TABS: height */
+ #tabbrowser-tabs,
+ #tabbrowser-tabs > #tabbrowser-arrowscrollbox,
+ .tabbrowser-tabs .tabbrowser-tab {
+   min-height: var(--tab-min-height) !important;
+   max-height: var(--tab-min-height) !important;
+ }
 .tabbrowser-tab:hover > .tab-stack > .tab-background:not([selected="true"]):not([multiselected]){ background-color: transparent !important }
 .tab-secondary-label{ display: none ;}
 
@@ -28,10 +40,4 @@
   visibility: visible;
   margin: 0;
   opacity: 100; }
-  */
   
-  
-
-
-
-
