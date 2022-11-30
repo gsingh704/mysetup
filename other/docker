@@ -2,3 +2,6 @@
 
 docker run -ti  -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix ubuntu
  xhost +      
+
+#packetracer
+apt-get install qtbase5-dev qtchooser qt5-qmake qtbase5-dev-tools
