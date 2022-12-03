@@ -2,7 +2,7 @@ FROM ubuntu:latest
 ARG DEBIAN_FRONTEND=noninteractive
 RUN apt update &&  apt install -y   dbus-x11 gnome-keyring wget mysql-server
 RUN wget https://dev.mysql.com/get/Downloads/MySQLGUITools/mysql-workbench-community_8.0.31-1ubuntu22.04_amd64.deb
-RUN  apt-get install -f -y ./mysql-workbench-community_8.0.31-1ubuntu22.04_amd64.deb 
+RUN apt-get install -f -y ./mysql-workbench-community_8.0.31-1ubuntu22.04_amd64.deb 
 RUN echo "#!/bin/bash" > /start.sh
 RUN echo "service mysql start" >> /start.sh
 RUN echo "echo \"ALTER USER root@localhost IDENTIFIED WITH mysql_native_password BY 'password';\" | mysql" >> start.sh
@@ -10,5 +10,5 @@ RUN echo "mysql-workbench" >> /start.sh
 RUN chmod +x /start.sh
 RUN cat /start.sh
 CMD ["/start.sh"]
-#docker build -t wb .     
-# docker run -ti   -e DISPLAY=$DISPLAY  -v /tmp/.X11-unix:/tmp/.X11-unix wb
+# docker build -t wb .   
+# docker run -ti --rm -e DISPLAY=$DISPLAY    -v /tmp/.X11-unix:/tmp/.X11-unix wb     
