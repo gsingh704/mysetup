@@ -7,7 +7,7 @@ MOZ_X11_EGL=1" >> /etc/environment
 exit
 
 #
-sudo pacman -Syu --noconfirm  gnome-themes-extra zsh firefox  wget git base-devel nodejs  npm nvidia  nvidia-utils nvidia-prime  vulkan-radeon bluez bluez-utils lib32-nvidia-utils gvfs-google  
+sudo pacman -Syu --noconfirm   zsh firefox  wget git base-devel nvidia  nvidia-utils nvidia-prime  vulkan-radeon bluez bluez-utils lib32-nvidia-utils gvfs-google  
 yay -Syu --noconfirm ruby-fusuma  ruby-fusuma-plugin-sendkey adw-gtk3 pipewire-pulse pipewire-alsa   asusctl supergfxctl rog-control-center
 sudo gpasswd -a $USER input
 sudo systemctl start asusd.service
