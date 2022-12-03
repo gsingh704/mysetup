@@ -26,3 +26,7 @@ pysub
 #brighness
 gdbus call --session --dest org.gnome.SettingsDaemon.Power --object-path /org/gnome/SettingsDaemon/Power --method org.gnome.SettingsDaemon.Power.Screen.StepUp
 gdbus call --session --dest org.gnome.SettingsDaemon.Power --object-path /org/gnome/SettingsDaemon/Power --method org.gnome.SettingsDaemon.Power.Screen.StepDown
+
+###to run proton games from ntfs
+sudo ntfs-3g -o uid=1000,guid=1000 /dev/nvme0n1p6 /mnt/0E72E0784E3878AE
+
