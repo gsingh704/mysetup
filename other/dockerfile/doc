@@ -1,19 +1,7 @@
 #run x11 apps
-
+docker build -t ubuntu .
 docker run -ti  -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix ubuntu
+
+
  xhost +      
-
-#packetracer
-apt-get install qtbase5-dev qtchooser qt5-qmake qtbase5-dev-tools
-
-#workbench
-apt update
-apt install mysql-server dbus-x11 gnome-keyring wget 
-service mysql start
-service mysql status
-mysql
-wget  https://dev.mysql.com/get/Downloads/MySQLGUITools/mysql-workbench-community_8.0.31-1ubuntu22.04_amd64.deb
-dpkg -i mysql-workbench-community_8.0.31-1ubuntu22.04_amd64.deb 
-apt install -f
-dpkg -i mysql-workbench-community_8.0.31-1ubuntu22.04_amd64.deb 
 

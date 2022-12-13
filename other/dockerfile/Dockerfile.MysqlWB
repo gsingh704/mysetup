@@ -11,6 +11,7 @@ RUN echo "#!/bin/bash" > /start.sh && \
     echo "service mysql start" >> /start.sh && \
     echo "echo \"ALTER USER root@localhost IDENTIFIED WITH mysql_native_password BY 'password';\" | mysql" >> /start.sh && \
     echo "/bin/bash" >> /start.sh && \
+    # echo "mysql-workbench" >> /start.sh && \
     chmod +x /start.sh 
 
     
@@ -23,6 +24,7 @@ RUN apt install -y locales && \
     dpkg-reconfigure locales
 
 CMD ["/start.sh"]
+
 
 # # docker build -t wb .   
 # # docker run -ti --rm -e DISPLAY=$DISPLAY    -v /tmp/.X11-unix:/tmp/.X11-unix wb     
