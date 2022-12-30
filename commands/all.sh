@@ -1,9 +1,9 @@
 sudo su
-echo "evdev:input:b0003v0B05p1866*
-KEYBOARD_KEY_ff31007c=f20 # x11 mic-mute" >> /etc/udev/hwdb.d/90-nkey.hwdb
-echo "MOZ_ENABLE_WAYLAND=1
+echo "BROWSER=firefox
+MOZ_ENABLE_WAYLAND=1
 MOZ_USE_XINPUT2=1
-MOZ_X11_EGL=1" >> /etc/environment
+MOZ_X11_EGL=1
+QT_STYLE_OVERRIDE=adwaita-dark" >> /etc/environment
 exit
 
 #
