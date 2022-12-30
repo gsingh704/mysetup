@@ -14,7 +14,6 @@ sudo systemctl start asusd.service
 sudo systemctl enable --now supergfxd.service
 sudo systemctl enable --now bluetooth
  
-echo "export QT_QPA_PLATFORMTHEME='gnome'" >> ~/.profile
 mkdir ~/.config/autostart/
 echo "[Desktop Entry]    
 Type=Application
