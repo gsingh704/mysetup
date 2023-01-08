@@ -1,10 +1,9 @@
-sudo su
-echo "BROWSER=firefox
-MOZ_ENABLE_WAYLAND=1
+#
+sudo sh -c "echo 'MOZ_ENABLE_WAYLAND=1
 MOZ_USE_XINPUT2=1
 MOZ_X11_EGL=1
-QT_STYLE_OVERRIDE=adwaita-dark" >> /etc/environment
-exit
+QT_STYLE_OVERRIDE=adwaita-dark' > /etc/environment"
+
 
 #
 sudo pacman -Syu --noconfirm   zsh firefox  wget git base-devel nvidia  nvidia-utils nvidia-prime  vulkan-radeon bluez bluez-utils lib32-nvidia-utils gvfs-google  
