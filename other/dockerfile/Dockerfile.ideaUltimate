@@ -1,0 +1,7 @@
+FROM archlinux
+RUN pacman -Syu --noconfirm wget jdk-openjdk firefox libxext libxrender libxtst fontconfig gnu-free-fonts && \
+    pacman -Scc --noconfirm && \
+    wget https://download-cdn.jetbrains.com/idea/ideaIU-2022.3.2.tar.gz && \
+    tar -xvf ideaIU-2022.3.2.tar.gz && \
+    rm ideaIU-2022.3.2.tar.gz 
+CMD  idea-IU-223.8617.56/bin/idea.sh 
