@@ -7,7 +7,7 @@ QT_STYLE_OVERRIDE=adwaita-dark' > /etc/environment"
 
 #
 sudo pacman -Syu --noconfirm   zsh firefox  wget git base-devel nvidia  nvidia-utils nvidia-prime  vulkan-radeon bluez bluez-utils lib32-nvidia-utils gvfs-google  
-yay -Syu --noconfirm ruby-fusuma  ruby-fusuma-plugin-sendkey adw-gtk3 adwaita-qt5 pipewire-pulse pipewire-alsa   asusctl supergfxctl rog-control-center 
+yay -Syu --noconfirm ruby-fusuma  ruby-fusuma-plugin-sendkey adw-gtk3 adwaita-qt5 pipewire-pulse pipewire-alsa   asusctl supergfxctl
 sudo gpasswd -a $USER input
 sudo systemctl start asusd.service
 sudo systemctl enable --now supergfxd.service
