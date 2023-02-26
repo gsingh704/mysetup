@@ -16,9 +16,6 @@ export QT_QPA_PLATFORMTHEME=qt5ct
 QT_SCALE_FACTOR=1.4
 ----------------------------------------------
 
-#Autoremove arch
-sudo pacman -Qtdq |sudo  pacman -Rns -
- 
 #figerprint
 https://github.com/knauth/goodix-521d-explanation
 pysub
