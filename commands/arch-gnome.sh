@@ -19,12 +19,10 @@ wget https://github.dev/gsingh704/mysetup/main/dotfiles/vala-panel/default
 ##############################################################
 #fildem
 #programs to install
-sudo pacman -S dbus-python bamf appmenu-gtk-module libkeybinder3 libdbusmenu-gtk2 libdbusmenu-gtk3 libdbusmenu-qt5 git python-pip #install dependecies
-python3 -m pip install --user fuzzysearch
+ yay -Syu --noconfirm bamf appmenu-gtk-module libkeybinder3 libdbusmenu-gtk2 libdbusmenu-gtk3 libdbusmenu-qt5 python-setuptools python3 -m pip install --user fuzzysearch
 #install the fildem
-wget https://github.com/gonzaarcr/Fildem/archive/refs/tags/0.6.7.zip
-unzip 0.6.7.zip
-cd Fildem*
+ git clone https://github.com/Weather-OS/Fildem-v2
+ cd Fildem-v2
 sudo python3 setup.py install --optimize=1
 cp -r fildemGMenu@gonza.com ~/.local/share/gnome-shell/extensions/
 #load gtk modules 
