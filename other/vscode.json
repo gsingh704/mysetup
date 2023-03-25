@@ -1,0 +1,42 @@
+{
+    "editor.fontSize": 20,
+    "terminal.integrated.fontSize": 20,
+    "editor.fontFamily": "Inconsolata condensed Bold",
+    "workbench.productIconTheme": "material-product-icons",
+    "workbench.iconTheme": "material-icon-theme",
+    "window.menuBarVisibility": "toggle",
+    "docker.containers.label": "ContainerName",
+    "docker.containers.description": [],
+    "git.enableSmartCommit": true,
+    "git.autofetch": true,
+    "explorer.confirmDragAndDrop": false,
+    "database-client.showTrigger": true,
+    "git.confirmSync": false,
+    "remoteHub.commitDirectlyWarning": "off",
+    "livePreview.notifyOnOpenLooseFile": false,
+    "files.defaultLanguage": "html",
+    "editor.inlineSuggest.enabled": true,
+    "indentRainbow.indicatorStyle": "light",
+    "indentRainbow.lightIndicatorStyleLineWidth": 1,
+    "indentRainbow.colors": [
+      "rgba(255,255,64,1)",
+      "rgba(127,255,127,1)",
+      "rgba(255,127,255,1)",
+      "rgba(79,236,236,1)"
+    ],
+    "redhat.telemetry.enabled": false,
+    "diffEditor.codeLens": true,
+    "java.implementationsCodeLens.enabled": true,
+    "java.referencesCodeLens.enabled": true,
+  
+    "CodeGPT.maxTokens": 15000,
+    "easycode.userEmail": "gurjant.singh@cirvianum.cat",
+    "workbench.colorTheme": "Default Dark+ Experimental",
+    "editor.glyphMargin": false,
+    "[xml]": {
+      "editor.defaultFormatter": "DotJoshJohnson.xml"
+    },
+    "workbench.editor.splitInGroupLayout": "vertical",
+    
+    "window.zoomLevel": -1
+  }
