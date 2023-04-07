@@ -15,3 +15,4 @@ RUN echo '<?xml version="1.0" encoding="UTF-8"?><tomcat-users xmlns="http://tomc
 CMD /usr/share/tomcat9/bin/startup.sh && /bin/bash
 
 
+#docker run -ti  -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix -v /mnt/Partition/docker/java:/data -p 8080:8080 --name m8 jt
