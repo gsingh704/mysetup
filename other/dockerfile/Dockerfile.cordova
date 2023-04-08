@@ -1,7 +1,8 @@
 FROM greyltc/archlinux-aur:yay
 RUN sudo -u ab -D~ bash -c 'yay -Syu --removemake --needed --noprogressbar --noconfirm  android-sdk gradle cordova jdk8-openjdk'
-RUN sdkmanager --update
-RUN sdkmanager "build-tools;30.0.3"
+RUN export ANDROID_SDK_ROOT=/opt/android-sdk
+RUN export ANDROID_HOME=/opt/android-sdk
+# RUN sdkmanager "build-tools;30.0.3"
 
 
 
