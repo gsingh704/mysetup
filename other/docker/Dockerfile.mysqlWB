@@ -1,0 +1,30 @@
+FROM ubuntu:latest
+
+ARG DEBIAN_FRONTEND=noninteractive
+
+RUN apt-get update && apt-get install -y dbus-x11 gnome-keyring wget mysql-server 
+RUN wget https://dev.mysql.com/get/Downloads/MySQLGUITools/mysql-workbench-community_8.0.31-1ubuntu22.04_amd64.deb
+
+RUN apt-get install -y ./mysql-workbench-community_8.0.31-1ubuntu22.04_amd64.deb
+
+RUN echo "#!/bin/bash" > /start.sh && \
+    echo "service mysql start" >> /start.sh && \
+    echo "echo \"ALTER USER root@localhost IDENTIFIED WITH mysql_native_password BY 'password';\" | mysql" >> /start.sh && \
+    echo "/bin/bash" >> /start.sh && \
+    # echo "mysql-workbench" >> /start.sh && \
+    chmod +x /start.sh 
+
+    
+RUN apt install -y locales && \
+    locale-gen en_US.UTF-8 && \ 
+    export LANG=en_US.UTF-8 && \
+    export LANGUAGE=en_US:en && \
+    export LC_ALL=en_US.UTF-8 && \
+    locale-gen en_US.UTF-8 && \
+    dpkg-reconfigure locales
+
+CMD ["/start.sh"]
+
+
+# # docker build -t wb .   
+# # docker run -ti --rm -e DISPLAY=$DISPLAY    -v /tmp/.X11-unix:/tmp/.X11-unix wb     
