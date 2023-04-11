@@ -3,8 +3,8 @@ version: '3.8'
 services:
   webb:
     build: .
-    image: webb
-    container_name: webb
+    image: web
+    container_name: web
     environment:
       - ANDROID_SDK_ROOT=/opt/android-sdk
       - ANDROID_HOME=/opt/android-sdk
