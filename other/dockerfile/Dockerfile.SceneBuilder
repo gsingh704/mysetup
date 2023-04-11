@@ -4,6 +4,7 @@ RUN apt update -y && apt install -y wget  openjdk-19-jdk git xdg-utils maven
 RUN wget https://download2.gluonhq.com/scenebuilder/19.0.0/install/linux/SceneBuilder-19.0.0.deb
 RUN  mkdir /usr/share/desktop-directories/
 RUN dpkg -i SceneBuilder-19.0.0.deb
+RUN echo 'export PATH=$PATH:/opt/scenebuilder/bin' >> ~/.bashrc
 
 # RUN apt update -y && apt install -y wget  default-jdk  git gnupg ca-certificates curl
 # RUN wget https://dlcdn.apache.org/netbeans/netbeans-installers/17/apache-netbeans_17-1_all.deb 
