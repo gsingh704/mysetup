@@ -65,5 +65,8 @@ sudo dnf install docker docker-compose
 sudo groupadd docker
 sudo usermod -aG docker $USER
 sudo systemctl enable --now docker 
-sudo setenforce 0   
+
+sudo sh -c "echo 'SELINUX=disabled
+SELINUXTYPE=targeted' > /etc/sysconfig/selinux "
+
 
