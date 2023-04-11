@@ -1,4 +1,0 @@
-FROM archlinux
-RUN pacman -Syu --noconfirm
-RUN pacman -S --noconfirm intellij-idea-community-edition libxext libxrender libxtst jdk-openjdk ttf-fira-code otf-fira-sans
-CMD idea

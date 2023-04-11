@@ -1,9 +1,0 @@
-FROM ubuntu:20.04
-ENV DEBIAN_FRONTEND=noninteractive
-RUN apt-get update && apt-get install -y wget sudo
-RUN wget https://dl.strem.io/shell-linux/v4.4.159/stremio_4.4.159-1_amd64.deb  
-RUN  apt-get install -y -f ./stremio_4.4.159-1_amd64.deb 
-RUN useradd -m builduser 
-RUN passwd -d builduser 
-RUN printf 'builduser ALL=(ALL) ALL\n' | tee -a /etc/sudoers
-CMD  sudo -u builduser bash -c 'stremio'
