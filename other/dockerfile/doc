@@ -1,7 +1,7 @@
 #run x11 apps
-docker build -t ubuntu .
 docker run -ti  -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix ubuntu
+xhost +      
 
-
- xhost +      
+#cordova
+docker run -ti  -v /mnt/partition/docker/web/:/data --name web beevelop/cordova
 
