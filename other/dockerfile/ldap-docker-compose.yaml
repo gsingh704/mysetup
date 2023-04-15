@@ -1,0 +1,28 @@
+version: '3.8'
+
+services:
+  openldap-server:
+    container_name: openldap-server
+    hostname: Gurjant
+    image: osixia/openldap:latest
+    environment:
+      LDAP_ORGANISATION: Gurjant
+      LDAP_DOMAIN: ldapgurji.local
+      LDAP_ADMIN_PASSWORD: j
+      LDAP_BASE_DN: dc=ldapgurji,dc=local
+    ports:
+      - "389:389"
+      - "636:636"
+    volumes:
+      - /mnt/partition/docker/m1:/data
+
+  phpldapadmin:
+    container_name: phpldapadmin
+    image: osixia/phpldapadmin:latest
+    ports:
+      - "0.0.0.0:443:443"
+    hostname: phpldapadmin-gurji
+    environment:
+      PHPLDAPADMIN_LDAP_HOSTS: openldap-server
+    depends_on:
+      - openldap-server
