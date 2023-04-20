@@ -1,17 +1,12 @@
 FROM ubuntu
 ENV DEBIAN_FRONTEND noninteractive
-RUN apt update -y && apt install -y wget  openjdk-19-jdk git xdg-utils maven unzip
+RUN apt update -y && apt install -y wget  git xdg-utils maven  libgtk2.0-0 libpango1.0-0 libgdk-pixbuf2.0-0 libgl1-mesa-glx
 RUN wget https://download2.gluonhq.com/scenebuilder/19.0.0/install/linux/SceneBuilder-19.0.0.deb
-RUN wget https://download2.gluonhq.com/openjfx/20.0.1/openjfx-20.0.1_linux-x64_bin-sdk.zip
 RUN wget https://dlcdn.apache.org/netbeans/netbeans-installers/17/apache-netbeans_17-1_all.deb 
+RUN wget https://cdn.azul.com/zulu/bin/zulu20.30.11-ca-fx-jdk20.0.1-linux_amd64.deb
 RUN mkdir /usr/share/desktop-directories/
 RUN dpkg -i SceneBuilder-19.0.0.deb
 RUN dpkg -i apache-netbeans_17-1_all.deb
-RUN unzip openjfx-20.0.1_linux-x64_bin-sdk.zip -d /opt
-RUN apt remove -y openjdk-11-*
 RUN echo 'export PATH=$PATH:/opt/scenebuilder/bin' >> ~/.bashrc
-
-#add to all .vscode/launch.json configurations:
-# "vmArgs": "--module-path /opt/javafx-sdk-20.0.1/lib --add-modules javafx.controls,javafx.fxml"
-#add to all .vscode/settings.json "java.project.referencedLibraries": 
-#"/opt/javafx-sdk-20.0.1/lib/*.jar",
+RUN apt remove -y openjdk-*
+RUN dpkg -i zulu20.30.11-ca-fx-jdk20.0.1-linux_amd64.deb
