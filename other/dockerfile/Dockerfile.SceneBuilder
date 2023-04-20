@@ -13,3 +13,12 @@ RUN echo 'export PATH=$PATH:/opt/scenebuilder/bin' >> ~/.bashrc
 # RUN echo "deb [signed-by=/usr/share/keyrings/azul.gpg] https://repos.azul.com/zulu/deb stable main" |  tee /etc/apt/sources.list.d/zulu.list
 # RUN apt -y update  && apt install -y zulu19-jdk
 # CMD netbeans 
+
+
+
+#in pom.xml in build , before plugin add this
+#<resources>
+ #   <resource>
+  #      <directory>${project.basedir}/src/main/java</directory>
+   # </resource>
+#</resources>
