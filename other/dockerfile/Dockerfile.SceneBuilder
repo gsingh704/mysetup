@@ -10,5 +10,4 @@ RUN dpkg -i apache-netbeans_17-1_all.deb
 RUN echo 'export PATH=$PATH:/opt/scenebuilder/bin' >> ~/.bashrc
 RUN apt remove -y openjdk-*
 RUN dpkg -i zulu20.30.11-ca-fx-jdk20.0.1-linux_amd64.deb
-RUN mkdir /usr/lib/sqlite/ && cd /usr/lib/sqlite/
 RUN wget https://github.com/xerial/sqlite-jdbc/releases/download/3.41.2.1/sqlite-jdbc-3.41.2.1.jar 
