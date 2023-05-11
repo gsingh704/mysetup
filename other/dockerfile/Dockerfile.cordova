@@ -10,3 +10,7 @@ RUN export ANDROID_HOME=/opt/android-sdk
 # cd myapp/
 #  cordova platform add android
 #  cordova build android
+
+
+
+#docker run -ti  -v /mnt/partition/docker/web/:/data --name web beevelop/cordova
