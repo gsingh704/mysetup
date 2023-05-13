@@ -27,3 +27,8 @@ gdbus call --session --dest org.gnome.SettingsDaemon.Power --object-path /org/gn
 ###to run proton games from ntfs
 sudo ntfs-3g -o uid=1000,guid=1000 /dev/nvme0n1p6 /mnt/0E72E0784E3878AE
 
+
+
+alias lp="gsettings set org.gnome.desktop.interface text-scaling-factor 1.25 && cp -r ~/.mozilla/firefox/cz8slumt.default-release/chrome/userChrome-lp.css ~/.mozilla/firefox/cz8slumt.default-release/chrome/userChrome.css"
+
+alias dm="gsettings set org.gnome.desktop.interface text-scaling-factor 1.50 && cp -r ~/.mozilla/firefox/cz8slumt.default-release/chrome/userChrome-dm.css ~/.mozilla/firefox/cz8slumt.default-release/chrome/userChrome.css " 

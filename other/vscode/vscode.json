@@ -1,0 +1,28 @@
+{
+  "editor.fontSize": 24,
+  "terminal.integrated.fontSize": 24,
+  "editor.fontFamily": "inconsolata condensed bold",
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.colorTheme": "Default High Contrast",
+  "workbench.productIconTheme": "material-product-icons",
+  "window.menuBarVisibility": "toggle",
+  "editor.guides.bracketPairs": true,
+  "editor.foldingImportsByDefault": true,
+  "editor.minimap.enabled": false,
+  "workbench.colorCustomizations": {
+    "editorIndentGuide.activeBackground": "#3a89e9",
+  },
+  "docker.containers.label": "ContainerName",
+  "docker.containers.description": [],
+  "git.enableSmartCommit": true,
+  "editor.inlineSuggest.enabled": true,
+  "editor.stickyScroll.enabled": true,
+  "git.openRepositoryInParentFolders": "never",
+  "xmlTools.xqueryExecutionEngine": "/usr/bin/basex",
+  "xmlTools.xqueryExecutionArguments": [
+    "-o$(project)/output.xml",
+    "$(script)"
+  ],
+  "java.implementationsCodeLens.enabled": true,
+  "java.referencesCodeLens.enabled": true,
+}
