@@ -2,12 +2,8 @@
 .tabbrowser-tab[selected="true"] {color:#fff!important;  }
 .tab-background{margin-block: 0 !important;}
 #TabsToolbar{--tab-min-height: 19px !important; max-height:19px !important; } 
-#tabbrowser-tabs,
-#tabbrowser-tabs > #tabbrowser-arrowscrollbox,
-.tabbrowser-tabs .tabbrowser-tab {
-  min-height: 19px !important;
-  max-height: 19px !important;
-}
+#tabbrowser-tabs,#tabbrowser-tabs > #tabbrowser-arrowscrollbox,.tabbrowser-tabs .tabbrowser-tab {  min-height: 19px !important;  max-height: 19px !important;}
+
 .tabbrowser-tab:hover > .tab-stack > .tab-background:not([selected="true"]):not([multiselected]){ background-color: transparent !important }
 .tab-secondary-label{ display: none ;}
 .tabbrowser-tab:hover > .tab-stack > .tab-background:not([selected="true"]):not([multiselected]){ background-color: transparent !important }
@@ -16,5 +12,5 @@
 #nav-bar {box-shadow: none !important;}
 #navigator-toolbox { border: 0 !important; }
 
-@media (prefers-color-scheme: light) {#nav-bar {background-color: #d0d0d0 !important;}}
-@media (prefers-color-scheme: dark) {#nav-bar {background-color: #1e1e1e !important;}}
+@media (prefers-color-scheme: light) {#nav-bar {background-color: #ebebeb !important;}}
+@media (prefers-color-scheme: dark) {#nav-bar {background-color: #303030 !important;}}
