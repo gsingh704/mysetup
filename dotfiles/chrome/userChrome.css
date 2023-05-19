@@ -1,12 +1,12 @@
 .tab-background[selected="true"]{background-color:  #003d88 !important;}
 .tabbrowser-tab[selected="true"] {color:#fff!important;  }
 .tab-background{margin-block: 0 !important;}
-#TabsToolbar{--tab-min-height: 24px !important; max-height:25px !important; } 
+#TabsToolbar{--tab-min-height: 19px !important; max-height:19px !important; } 
 #tabbrowser-tabs,
 #tabbrowser-tabs > #tabbrowser-arrowscrollbox,
 .tabbrowser-tabs .tabbrowser-tab {
-  min-height: 25px !important;
-  max-height: 25px !important;
+  min-height: 19px !important;
+  max-height: 19px !important;
 }
 .tabbrowser-tab:hover > .tab-stack > .tab-background:not([selected="true"]):not([multiselected]){ background-color: transparent !important }
 .tab-secondary-label{ display: none ;}
