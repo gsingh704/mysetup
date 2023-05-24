@@ -11,9 +11,6 @@ mkdir -p .themes/my/gnome-shell && echo '.clock {
     border-width: 0;
  }' > .themes/my/gnome-shell/gnome-shell.css
 
-
-
-
 # general ####################################################################################
 yay -Syu --noconfirm visual-studio-code-bin gvfs-google adwaita-qt5 
 #sudo systemctl enable --now bluetooth
