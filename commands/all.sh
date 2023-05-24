@@ -7,6 +7,10 @@ QT_STYLE_OVERRIDE=adwaita-dark' > /etc/environment"
 
 #theme ######################################################################################
 yay -Syu --noconfirm  adw-gtk3
+mkdir -p .themes/my/gnome-shell && echo '.clock {
+    border-width: 0;
+ }' > .themes/my/gnome-shell/gnome-shell.css
+
 
 
 
