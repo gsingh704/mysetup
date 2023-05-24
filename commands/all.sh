@@ -5,8 +5,13 @@ MOZ_X11_EGL=1
 QT_STYLE_OVERRIDE=adwaita-dark' > /etc/environment"
 
 
+#theme ####################################################################################
+yay -Syu --noconfirm  adw-gtk3
+
+
+
 # general ####################################################################################
-yay -Syu --noconfirm  gvfs-google adw-gtk3 adwaita-qt5 
+yay -Syu --noconfirm visual-studio-code-bin gvfs-google adwaita-qt5 
 #sudo systemctl enable --now bluetooth
 
 #graphics related ############################################################################
@@ -49,5 +54,13 @@ wget https://raw.githubusercontent.com/gsingh704/mysetup/main/dotfiles/gnome/dco
 yay -Syu --noconfirm fish
 mkdir ~/.config/fish
 cd ~/.config/fish
-wget https://raw.githubusercontent.com/gsingh704/mysetup/main/dotfiles/config.zsh
+wget https://raw.githubusercontent.com/gsingh704/mysetup/main/dotfiles/config.fish
+
+
+#docker ######################################################################################
+yay -Syu --noconfirm docker docker-compose 
+sudo groupadd docker
+sudo usermod -aG docker $USER
+sudo systemctl enable --now docker 
+
 
