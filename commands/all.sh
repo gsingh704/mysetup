@@ -7,12 +7,13 @@ QT_STYLE_OVERRIDE=adwaita-dark' > /etc/environment"
 
 # general ####################################################################################
 yay -Syu --noconfirm visual-studio-code-bin gvfs-google adwaita-qt5 
-#sudo systemctl enable --now bluetooth
+sudo systemctl enable --now bluetooth
 
 
 #graphics related ############################################################################
+yay -R --confirm nvidia-dkms
 yay -Syu --noconfirm  base-devel nvidia  nvidia-utils nvidia-prime  vulkan-radeon lib32-nvidia-utils asusctl supergfxctl 
-sudo systemctl start asusd.service
+sudo systemctl start asusd
 sudo systemctl enable --now supergfxd.service
 sudo ln -s /dev/null /etc/udev/rules.d/61-gdm.rules
 
@@ -25,7 +26,7 @@ asusctl fan-curve -m performance -D 30c:0,40c:0,50c:0,60c:10,70c:55,80c:90,90c:1
 
 
 #touchpad gestures ###########################################################################
-yay -Syu --noconfirm ruby-fusuma  ruby-fusuma-plugin-sendkey
+yay -Syu --noconfirm wget ruby-fusuma ruby-fusuma-plugin-sendkey
 sudo gpasswd -a $USER input
 
 mkdir ~/.config/autostart/
@@ -42,20 +43,23 @@ wget https://github.com/gsingh704/mysetup/raw/main/dotfiles/gestures/config.yml
 
 
 # gnome dconf ################################################################################
-yay -Syu --noconfirm  adw-gtk3
+yay -Syu --noconfirm wget adw-gtk3
 cd ~/.local/share/gnome-shell
 rm -rf extensions
 wget https://github.com/gsingh704/mysetup/raw/main/dotfiles/gnome/extensions.zip
 unzip extensions.zip
 wget https://raw.githubusercontent.com/gsingh704/mysetup/main/dotfiles/gnome/dconf-settings-ft.ini
 
-mkdir -p .themes/my/gnome-shell && echo '.clock {
+mkdir -p ~/.themes/my/gnome-shell && echo '.clock {
     border-width: 0;
- }' > .themes/my/gnome-shell/gnome-shell.css
+ }' > ~/.themes/my/gnome-shell/gnome-shell.css
 
+mkdir ~/.local/share/fonts
+cd  ~/.local/share/fonts
+wget https://github.com/RedHatOfficial/RedHatFont/blob/master/fonts/proportional/static/ttf/RedHatDisplay-Black.ttf
 
 #fish ########################################################################################
-yay -Syu --noconfirm fish
+yay -Syu --noconfirm wget fish
 mkdir ~/.config/fish
 cd ~/.config/fish
 wget https://raw.githubusercontent.com/gsingh704/mysetup/main/dotfiles/config.fish
