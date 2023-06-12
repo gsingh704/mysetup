@@ -1,6 +1,6 @@
 export ZSH="/home/$USER/.oh-my-zsh"
 ZSH_THEME="jonathan"
-plugins=(git zsh-completions  zsh-autosuggestions zsh-syntax-highlighting zsh-history-substring-search zsh-navigation-tools )
+plugins=(git zsh-completions  zsh-autosuggestions  zsh-navigation-tools zsh-history-substring-search zsh-syntax-highlighting)
 source $ZSH/oh-my-zsh.sh
 
 alias ys="yay -S"
