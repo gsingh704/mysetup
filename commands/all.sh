@@ -56,8 +56,7 @@ mkdir -p ~/.themes/my/gnome-shell && echo '.clock {
 
 mkdir ~/.local/share/fonts
 cd  ~/.local/share/fonts
-wget https://github.com/RedHatOfficial/RedHatFont/blob/master/fonts/proportional/static/ttf/RedHatDisplay-Black.ttf
-
+wget https://raw.githubusercontent.com/RedHatOfficial/RedHatFont/master/fonts/proportional/static/ttf/RedHatDisplay-Bold.ttf
 
 #zsh ########################################################################################
 yay -Syu --noconfirm wget zsh git
