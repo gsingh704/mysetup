@@ -23,10 +23,10 @@ swipe:
 
 pinch:
   3:
-     out:
+    out:
       sendkey: 'LEFTCTRL+T'  # new tab
-    #out:
-    #  sendkey: 'LEFTALT+TAB'
+    in:
+      sendkey: 'LEFTCTRL+T'  # new tab
 
   
   
@@ -37,5 +37,3 @@ threshold:
 interval:
   swipe: 1.0
   pinch: 0.7
-
-
