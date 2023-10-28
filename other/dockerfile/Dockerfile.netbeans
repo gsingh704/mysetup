@@ -1,6 +1,0 @@
-FROM ubuntu
-ENV DEBIAN_FRONTEND noninteractive
-RUN apt update -y && apt install -y wget  default-jdk
-RUN wget https://dlcdn.apache.org/netbeans/netbeans-installers/17/apache-netbeans_17-1_all.deb 
-RUN dpkg -i apache-netbeans_17-1_all.deb
-CMD netbeans    

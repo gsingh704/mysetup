@@ -9,14 +9,6 @@ makepkg -si
 #install main applications
 yay -S   wget pamac-aur qt5ct adwaita-qt  gvfs-google tt-ms-fonts 
 
-#enable bluetooth on endevor os
-sudo pacman -S --needed bluez bluez-utils 
-sudo systemctl enable --now bluetooth
-#to install pipewire for good bluetooth support
-yay -S pipewire-pulse pipewire-alsa 
-
-
-
 #download wallpaper
 cd ~/setup
 wget https://w.wallhaven.cc/full/md/wallhaven-mdjrqy.jpg
@@ -57,14 +49,12 @@ wget https://github.com/gsingh704/mysetup/raw/main/dotfiles/gestures/touchegg.co
 gsettings set org.gnome.shell disable-extension-version-validation true
 
 #install zsh        
-yay -S zsh  
 sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"  #install oh-my-zsh
 #install oh-my-zsh plugins
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 git clone https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM:=~/.oh-my-zsh/custom}/plugins/zsh-completions
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 git clone https://github.com/zsh-users/zsh-history-substring-search ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-history-substring-search
-#make changes to .zshrc file
 cd ~
 rm -f .zshrc*
 wget https://raw.githubusercontent.com/gsingh704/mysetup/main/dotfiles/.zshrc

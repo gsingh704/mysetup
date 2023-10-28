@@ -6,7 +6,7 @@ MOZ_X11_EGL=1
 
 
 # general ####################################################################################
-yay -Syu --noconfirm visual-studio-code-bin # gvfs-google adwaita-qt5 
+yay -Syu --noconfirm visual-studio-code-bin  # gvfs-google adwaita-qt5 
 sudo systemctl enable --now bluetooth
 
 
@@ -25,6 +25,19 @@ asusctl fan-curve -m performance -D 30c:0,40c:0,50c:0,60c:10,70c:55,80c:90,90c:1
 asusctl fan-curve -m performance -D 30c:0,40c:0,50c:0,60c:10,70c:55,80c:90,90c:100,100c:100 -e true -f gpu
 asusctl fan-curve -m balanced -e true   
 
+# gnome dconf ################################################################################
+yay -Syu --noconfirm wget adw-gtk3 extension-manager
+cd ~/.local/share/gnome-shell
+wget https://raw.githubusercontent.com/gsingh704/mysetup/main/dotfiles/gnome/dconf-settings-ft.ini
+
+mkdir -p ~/.themes/my/gnome-shell && echo '.clock {
+    border-width: 0;
+ }' > ~/.themes/my/gnome-shell/gnome-shell.css
+
+mkdir ~/.local/share/fonts
+cd  ~/.local/share/fonts
+wget https://raw.githubusercontent.com/RedHatOfficial/RedHatFont/master/fonts/proportional/static/ttf/RedHatDisplay-Bold.ttf
+
 #touchpad gestures ###########################################################################
 yay -Syu --noconfirm wget ruby-fusuma ruby-fusuma-plugin-sendkey
 sudo gpasswd -a $USER input
@@ -40,23 +53,6 @@ X-GNOME-Autostart-enabled=true" > ~/.config/autostart/fusuma.desktop
 mkdir -p ~/.config/fusuma
 cd ~/.config/fusuma
 wget https://github.com/gsingh704/mysetup/raw/main/dotfiles/gestures/config.yml
-
-
-# gnome dconf ################################################################################
-yay -Syu --noconfirm wget adw-gtk3
-cd ~/.local/share/gnome-shell
-# rm -rf extensions
-# wget https://github.com/gsingh704/mysetup/raw/main/dotfiles/gnome/extensions.zip
-# unzip extensions.zip
-wget https://raw.githubusercontent.com/gsingh704/mysetup/main/dotfiles/gnome/dconf-settings-ft.ini
-
-mkdir -p ~/.themes/my/gnome-shell && echo '.clock {
-    border-width: 0;
- }' > ~/.themes/my/gnome-shell/gnome-shell.css
-
-mkdir ~/.local/share/fonts
-cd  ~/.local/share/fonts
-wget https://raw.githubusercontent.com/RedHatOfficial/RedHatFont/master/fonts/proportional/static/ttf/RedHatDisplay-Bold.ttf
 
 #zsh ########################################################################################
 yay -Syu --noconfirm wget zsh git
@@ -76,5 +72,3 @@ yay -Syu --noconfirm docker docker-compose
 sudo groupadd docker
 sudo usermod -aG docker $USER
 sudo systemctl enable --now docker 
-
-

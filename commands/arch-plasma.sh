@@ -5,7 +5,7 @@ qdbus org.kde.KWin /KWin reconfigure
 
 
 #install apps
-yay -S libinput_gestures_qt plasma5-applets-window-buttons libdbusmenu-gtk3 material-kwin-decoration-git plasma5-applets-supergfxctl appmenu-gtk-module libdbusmenu-glib #plasma only
+yay -S  plasma5-applets-window-buttons libdbusmenu-gtk3 material-kwin-decoration-git plasma5-applets-supergfxctl appmenu-gtk-module libdbusmenu-glib #plasma only
 
 
 

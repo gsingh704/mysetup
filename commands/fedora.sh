@@ -49,8 +49,7 @@ wget https://github.com/gsingh704/mysetup/raw/main/dotfiles/gestures/config.yml
 
 
 #adw
-sudo dnf copr enable nickavem/adw-gtk3
-sudo dnf install adw-gtk3
+sudo dnf install adw-gtk3-theme
 
 #code
 sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc

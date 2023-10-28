@@ -1,8 +1,0 @@
-# podman run --privileged --cap-add SYS_ADMIN --cap-add SYS_RESOURCE -ti --security-opt label=disable -v /sys/fs/cgroup:/sys/fs/cgroup:ro -p 8443:8443 jrei/systemd-ubuntu:20.04
-
-FROM jrei/systemd-ubuntu:20.04
-ENV DEBIAN_FRONTEND noninteractive
-RUN apt-get update && apt upgrade -y && apt-get install -y wget lsb-core iputils-ping redis-server  && \
-     useradd -m jant && usermod -aG sudo jant && echo 'jant:jant' | chpasswd && \
-     wget https://zentyal.com/zentyal_installer.sh && \
-     chmod u+x zentyal_installer.sh
