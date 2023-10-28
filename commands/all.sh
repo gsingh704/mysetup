@@ -6,7 +6,7 @@ QT_STYLE_OVERRIDE=adwaita-dark' > /etc/environment"
 
 
 # general ####################################################################################
-yay -Syu --noconfirm visual-studio-code-bin gvfs-google adwaita-qt5 
+yay -Syu --noconfirm visual-studio-code-bin # gvfs-google adwaita-qt5 
 sudo systemctl enable --now bluetooth
 
 
@@ -45,10 +45,10 @@ wget https://github.com/gsingh704/mysetup/raw/main/dotfiles/gestures/config.yml
 # gnome dconf ################################################################################
 yay -Syu --noconfirm wget adw-gtk3
 cd ~/.local/share/gnome-shell
-rm -rf extensions
-wget https://github.com/gsingh704/mysetup/raw/main/dotfiles/gnome/extensions.zip
-unzip extensions.zip
-wget https://raw.githubusercontent.com/gsingh704/mysetup/main/dotfiles/gnome/dconf-settings-ft.ini
+# rm -rf extensions
+# wget https://github.com/gsingh704/mysetup/raw/main/dotfiles/gnome/extensions.zip
+# unzip extensions.zip
+# wget https://raw.githubusercontent.com/gsingh704/mysetup/main/dotfiles/gnome/dconf-settings-ft.ini
 
 mkdir -p ~/.themes/my/gnome-shell && echo '.clock {
     border-width: 0;
