@@ -3,6 +3,9 @@
 # plugins=(git zsh-completions  zsh-autosuggestions history-substring-search zsh-navigation-tools zsh-syntax-highlighting )
 # source $ZSH/oh-my-zsh.sh
 HISTFILE=~/.zsh_history
+HISTSIZE=10000
+SAVEHIST=10000
+setopt SHARE_HISTORY && setopt hist_ignore_dups && setopt inc_append_history 
 autoload -Uz promptinit compinit && promptinit && compinit
 prompt fade blue
 bindkey "^[[3~" delete-char
@@ -12,8 +15,6 @@ source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zs
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
 source ~/.config/znt/zsh-navigation-tools/zsh-navigation-tools.plugin.zsh
-
-
 
 alias ys="yay -S"
 alias yr="yay -R"
