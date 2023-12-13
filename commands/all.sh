@@ -1,8 +1,12 @@
 # make firefox run wayland ###################################################################
-sudo sh -c "echo 'MOZ_ENABLE_WAYLAND=1
-MOZ_USE_XINPUT2=1
-MOZ_X11_EGL=1
-#QT_STYLE_OVERRIDE=adwaita-dark' > /etc/environment"
+sudo sh -c "echo 'MOZ_ENABLE_WAYLAND=1' > /etc/environment && echo '
+[g14]
+Server = https://arch.asus-linux.org' >> /etc/pacman.conf  && 
+pacman-key --recv-keys 8F654886F17D497FEFE3DB448B15A6B0E9A3FA35
+pacman-key --finger 8F654886F17D497FEFE3DB448B15A6B0E9A3FA35
+pacman-key --lsign-key 8F654886F17D497FEFE3DB448B15A6B0E9A3FA35
+pacman-key --finger 8F654886F17D497FEFE3DB448B15A6B0E9A3FA35
+"
 
 #graphics related ############################################################################
 yay -R --confirm nvidia-dkms
