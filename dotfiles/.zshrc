@@ -6,8 +6,6 @@ fpath=(/usr/share/zsh/site-functions $fpath)
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
-source ~/.config/znt/zsh-navigation-tools/zsh-navigation-tools.plugin.zsh
-
 
 HISTFILE=~/.zsh_history
 HISTSIZE=10000
