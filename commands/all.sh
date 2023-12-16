@@ -1,6 +1,5 @@
 # make firefox run wayland ###################################################################
 sudo sh -c "echo 'MOZ_ENABLE_WAYLAND=1' > /etc/environment && echo '
-sudo sh -c "echo 'MOZ_ENABLE_WAYLAND=1' > /etc/environment"
 [g14]
 Server = https://arch.asus-linux.org' >> /etc/pacman.conf  && 
 pacman-key --recv-keys 8F654886F17D497FEFE3DB448B15A6B0E9A3FA35
@@ -15,7 +14,7 @@ yay -Syu --noconfirm  base-devel nvidia  nvidia-utils nvidia-prime  vulkan-radeo
 sudo systemctl start asusd
 sudo systemctl enable --now supergfxd.service
 sudo systemctl enable --now bluetooth
-#sudo ln -s /dev/null /etc/udev/rules.d/61-gdm.rules
+sudo ln -s /dev/null /etc/udev/rules.d/61-gdm.rules
 
 asusctl fan-curve -m balanced -D 30c:0,40c:0,50c:0,60c:0,70c:0,80c:0,90c:0,100c:0  -e true -f cpu
 asusctl fan-curve -m balanced -D 30c:0,40c:0,50c:0,60c:0,70c:0,80c:0,90c:0,100c:0  -e true -f gpu
