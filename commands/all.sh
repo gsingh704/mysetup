@@ -1,6 +1,3 @@
-# make firefox run wayland ###################################################################
-sudo sh -c "echo 'MOZ_ENABLE_WAYLAND=1' > /etc/environment"
-
 #graphics related ############################################################################
 yay -R --confirm nvidia-dkms
 yay -Syu --noconfirm  base-devel nvidia  nvidia-utils nvidia-prime  vulkan-radeon lib32-nvidia-utils asusctl supergfxctl 
