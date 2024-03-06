@@ -13,10 +13,11 @@ asusctl fan-curve -m balanced -e true
 # gnome dconf ################################################################################
 yay -Syu --noconfirm wget adw-gtk3 extension-manager
 wget -O ~/.local/share/gnome-shell/dconf-settings-ft.ini https://raw.githubusercontent.com/gsingh704/mysetup/main/dotfiles/gnome/dconf-settings-ft.ini
+wget -O ~/.local/share/gnome-shell/1.jpg https://w.wallhaven.cc/full/md/wallhaven-mdjrqy.jpg
 
-mkdir -p ~/.themes/my/gnome-shell && echo '.clock {
-    border-width: 0;
- }' > ~/.themes/my/gnome-shell/gnome-shell.css
+# mkdir -p ~/.themes/my/gnome-shell && echo '.clock {
+#     border-width: 0;
+#  }' > ~/.themes/my/gnome-shell/gnome-shell.css
 
 mkdir ~/.local/share/fonts
 cd  ~/.local/share/fonts
