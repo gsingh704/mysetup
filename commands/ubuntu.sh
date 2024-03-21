@@ -12,14 +12,6 @@ make && sudo make install
 sudo systemctl daemon-reload
 sudo systemctl restart asusd
 
-asusctl fan-curve -m quiet -D 30c:0,40c:0,50c:0,60c:0,70c:0,80c:0,90c:0,100c:0  -e true -f cpu
-asusctl fan-curve -m quiet -D 30c:0,40c:0,50c:0,60c:0,70c:0,80c:0,90c:0,100c:0  -e true -f gpu
-asusctl fan-curve -m balanced -D 30c:0,40c:0,50c:0,60c:0,70c:0,80c:0,90c:0,100c:0  -e true -f cpu
-asusctl fan-curve -m balanced -D 30c:0,40c:0,50c:0,60c:0,70c:0,80c:0,90c:0,100c:0  -e true -f gpu
-asusctl fan-curve -m performance -D 30c:0,40c:0,50c:0,60c:10,70c:55,80c:90,90c:100,100c:100 -e true -f cpu
-asusctl fan-curve -m performance -D 30c:0,40c:0,50c:0,60c:10,70c:55,80c:90,90c:100,100c:100 -e true -f gpu
-
-
 #replace snap with flatpak
 sudo apt install --no-install-recommends -y gnome-software  gnome-software-plugin-flatpak flatpak zsh gnome-console 
 
@@ -44,8 +36,6 @@ sudo apt remove --autoremove snapd gnome-terminal
 
 sudo rm -rf /var/cache/snapd/
 rm -rf ~/snap
-
-
 
 
 
