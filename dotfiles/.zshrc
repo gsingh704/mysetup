@@ -26,5 +26,3 @@ alias lp='gsettings set org.gnome.desktop.interface text-scaling-factor 1 && dco
 alias dm='gsettings set org.gnome.desktop.interface text-scaling-factor 1.25 && dconf write /org/gnome/shell/extensions/dash-to-panel/panel-sizes "'\''{\"0\":25,\"1\":25}'\''"'
 
 alias ft="cat ~/.local/share/gnome-shell/dconf-settings-ft.ini | dconf load /"
-
-alias sail='./vendor/bin/sail'
