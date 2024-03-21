@@ -1,4 +1,5 @@
 sudo systemctl enable --now bluetooth
+echo '--enable-features=TouchpadOverscrollHistoryNavigation' > ~/.config/chrome-flags.conf
 
 # gnome dconf ################################################################################
 yay -Syu --noconfirm wget adw-gtk3 extension-manager
@@ -7,6 +8,7 @@ curl -o ~/.local/share/gnome-shell/1.jpg https://w.wallhaven.cc/full/md/wallhave
 curl -o ~/.local/share/fonts/RedHatDisplay-Bold.ttf https://raw.githubusercontent.com/RedHatOfficial/RedHatFont/master/fonts/proportional/static/ttf/RedHatDisplay-Bold.ttf --create-dirs
 
 mkdir -p ~/.themes/my/gnome-shell && echo '.clock {border-width: 0;}' > ~/.themes/my/gnome-shell/gnome-shell.css
+
 #touchpad gestures ###########################################################################
 yay -Syu --noconfirm wget ruby-fusuma ruby-fusuma-plugin-sendkey
 sudo gpasswd -a $USER input
