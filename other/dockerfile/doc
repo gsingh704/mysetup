@@ -1,7 +1,0 @@
-#run x11 apps
-docker run -ti  -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix ubuntu
-xhost +      
-
-#cordova
-docker run -ti  -v /mnt/partition/docker/web/:/data --name web beevelop/cordova
-

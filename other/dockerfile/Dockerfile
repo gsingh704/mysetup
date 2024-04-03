@@ -30,3 +30,25 @@ RUN apt update && apt install -y wget
 RUN wget https://eu8.dl.visual-paradigm.com/visual-paradigm/vpce17.0/20230401/Visual_Paradigm_CE_17_0_20230401_Linux64.sh
 RUN chmod +x Visual_Paradigm_CE_17_0_20230401_Linux64.sh
 RUN apt install -y openjdk-19-jdk
+
+
+# #run x11 apps
+# docker run -ti  -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix ubuntu
+# xhost +      
+
+FROM greyltc/archlinux-aur:yay
+RUN sudo -u ab -D~ bash -c 'yay -Syu --removemake --needed --noprogressbar --noconfirm  android-sdk gradle cordova jdk8-openjdk'
+RUN sudo -u ab -D~ bash -c 'yay -R --noconfirm jdk-openjdk'
+RUN export ANDROID_SDK_ROOT=/opt/android-sdk
+RUN export ANDROID_HOME=/opt/android-sdk
+
+# export JAVA_HOME=/usr/lib/jvm/java-8-openjdk
+# RUN sdkmanager "build-tools;30.0.3"
+# cordova create myapp com.example.myapp MyApp
+# cd myapp/
+#  cordova platform add android
+#  cordova build android
+
+
+
+#docker run -ti  -v /mnt/partition/docker/web/:/data --name web beevelop/cordova
