@@ -24,7 +24,7 @@ NoDisplay=false
 Name=fusuma
 X-GNOME-Autostart-enabled=true" > ~/.config/autostart/fusuma.desktop
 
-curl -o ~/.config/fusuma/config.yml https://github.com/gsingh704/mysetup/raw/main/dotfiles/gestures/config.yml --create-dirs
+curl -o ~/.config/fusuma/config.yml https://raw.githubusercontent.com/gsingh704/mysetup/main/dotfiles/gestures/config.yml --create-dirs
 
 #zsh ########################################################################################
 yay -Syu --noconfirm wget zsh git zsh-autosuggestions zsh-completions zsh-history-substring-search zsh-syntax-highlighting
