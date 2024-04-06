@@ -43,7 +43,7 @@ wget https://github.com/gsingh704/mysetup/raw/main/dotfiles/gestures/config.yml
 #zsh ########################################################################################
 yay -Syu --noconfirm wget zsh git zsh-autosuggestions zsh-completions zsh-history-substring-search zsh-syntax-highlighting
 chsh -s $(which zsh)
-wget -O ~/.zshrc https://raw.githubusercontent.com/gsingh704/mysetup/main/dotfiles/.zshrc
+curl -o ~/.zshrc https://raw.githubusercontent.com/gsingh704/mysetup/main/dotfiles/sh/.zshrc
 
 #docker ######################################################################################
 yay -Syu --noconfirm docker docker-compose visual-studio-code-bin  # gvfs-google adwaita-qt5 

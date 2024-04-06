@@ -53,7 +53,7 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-m
 git clone https://github.com/zsh-users/zsh-history-substring-search ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-history-substring-search
 cd ~
 rm -f .zshrc*
-wget https://raw.githubusercontent.com/gsingh704/mysetup/main/dotfiles/.zshrc
+curl -o ~/.zshrc https://raw.githubusercontent.com/gsingh704/mysetup/main/dotfiles/sh/.zshrc
 
 
 #fusuma

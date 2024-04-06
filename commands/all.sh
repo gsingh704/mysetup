@@ -5,7 +5,7 @@ sudo sed -i '1i\[Element Master]\nswitch = mute\nvolume = ignore\n' /usr/share/a
 
 # gnome dconf ################################################################################
 yay -Syu --noconfirm wget adw-gtk3 extension-manager
-curl -o ~/.local/share/gnome-shell/dconf-settings-ft.ini https://raw.githubusercontent.com/gsingh704/mysetup/main/dotfiles/gnome/dconf-settings-ft.ini --create-dirs
+curl -o ~/.local/share/gnome-shell/dconf-settings-ft.ini https://raw.githubusercontent.com/gsingh704/mysetup/main/dotfiles/dconf-settings-ft.ini --create-dirs
 curl -o ~/.local/share/backgrounds/1.jpg https://w.wallhaven.cc/full/md/wallhaven-mdjrqy.jpg --create-dirs
 curl -o ~/.local/share/backgrounds/2.jpg https://i.imgur.com/ukrq4Tz.jpeg --create-dirs
 curl -o ~/.local/share/fonts/RedHatDisplay-Bold.ttf https://raw.githubusercontent.com/RedHatOfficial/RedHatFont/master/fonts/proportional/static/ttf/RedHatDisplay-Bold.ttf --create-dirs
@@ -30,7 +30,7 @@ curl -o ~/.config/fusuma/config.yml https://raw.githubusercontent.com/gsingh704/
 #zsh ########################################################################################
 yay -Syu --noconfirm wget zsh git zsh-autosuggestions zsh-completions zsh-history-substring-search zsh-syntax-highlighting
 chsh -s $(which zsh)
-curl -o ~/.zshrc https://raw.githubusercontent.com/gsingh704/mysetup/main/dotfiles/.zshrc
+curl -o ~/.zshrc https://raw.githubusercontent.com/gsingh704/mysetup/main/dotfiles/sh/.zshrc
 
 #docker ######################################################################################
 yay -Syu --noconfirm docker docker-compose visual-studio-code-bin  # gvfs-google adwaita-qt5 

@@ -47,7 +47,7 @@ wget https://github.com/gsingh704/mysetup/raw/main/dotfiles/gestures/touchegg.co
 yay -Syu --noconfirm wget fish
 mkdir ~/.config/fish
 cd ~/.config/fish
-wget https://raw.githubusercontent.com/gsingh704/mysetup/main/dotfiles/config.fish
+wget https://raw.githubusercontent.com/gsingh704/mysetup/main/dotfiles/sh/config.fish
 
 
 ##############################################################################
@@ -64,10 +64,6 @@ Exec=vala-panel
 Hidden=false
 NoDisplay=false
 X-GNOME-Autostart-enabled=true" > ~/.config/autostart/xfce4.desktop
-#get vala-panel config panels
-mkdir -p ~/.config/vala-panel
-cd ~/.config/vala-panel/
-wget https://github.dev/gsingh704/mysetup/main/dotfiles/vala-panel/default
 
 ##############################################################
 #fildem
