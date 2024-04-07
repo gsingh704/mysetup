@@ -2,12 +2,8 @@ alias ys 'yay -S'
 alias yr 'yay -R'
 alias pc 'sudo pacman -Qtdq | sudo  pacman -Rns -'
 alias update-grub 'sudo grub-mkconfig -o /boot/grub/grub.cfg'
-alias lp 'gsettings set org.gnome.desktop.interface text-scaling-factor 1.07 ; and dconf write /org/gnome/shell/extensions/dash-to-panel/panel-sizes (string escape \'{"0":17,"1":17}\')'
-
-alias dm 'gsettings set org.gnome.desktop.interface text-scaling-factor 1.25 ; and dconf write /org/gnome/shell/extensions/dash-to-panel/panel-sizes (string escape \'{"0":24,"1":24}\')'
 
 alias ft "cat ~/.local/share/gnome-shell/dconf-settings-ft.ini | dconf load /"
-
 
 function __fish_add_history
     set -l cmd (string replace -- \n \\n (string join ' ' $argv) | string replace \\ \\\\)
