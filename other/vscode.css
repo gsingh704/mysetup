@@ -9,7 +9,6 @@
 .monaco-workbench .part > .title > .title-label h2 {
     font-size: 18px;
 }
-
 /* Activity bar adjustments */
 .monaco-workbench .activitybar>.content :not(.monaco-menu)>.monaco-action-bar .action-label:not(.codicon) {
     padding: 0;
