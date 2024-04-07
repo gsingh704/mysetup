@@ -1,96 +1,50 @@
-.monaco-list {
-    font-size: 18px;
-}
-.monaco .monaco-action-bar .action-label {
-    font-size: 18px;
-}
-
-.monaco-workbench .part.statusbar {
-    font-size: 18px;
-}
-
-.monaco-workbench .part.editor>.content .editor-group-container>.title .tabs-container>.tab .tab-label a,
-.monaco-workbench .part.editor>.content .editor-group-container>.title .title-label a {
+/* Font size adjustments */
+.monaco-list,
+.monaco .monaco-action-bar .action-label,
+.monaco-workbench .part.statusbar,
+.monaco-workbench .part.editor > .content .editor-group-container > .title .tabs-container > .tab .tab-label a,
+.monaco-workbench .part.editor > .content .editor-group-container > .title .title-label a,
+.monaco-workbench .part > .content,
+.monaco-pane-view .pane > .pane-header h3.title,
+.monaco-workbench .part > .title > .title-label h2 {
     font-size: 18px;
 }
 
-
+/* Activity bar adjustments */
 .monaco-workbench .activitybar>.content :not(.monaco-menu)>.monaco-action-bar .action-label:not(.codicon) {
     padding: 0;
     margin: -3px;
-}
-
-.monaco-workbench .part>.content {
-    font-size: 18px;
-}
-
-.monaco-pane-view .pane>.pane-header h3.title {
-    font-size: 18px;
-}
-
-.monaco-workbench .part>.title>.title-label h2 {
-    font-size: 18px;
-}
-
-
-/*make file name center*/
-.explorer-folders-view .explorer-item {
-    padding-top: 3px;
-}
-
-
-/*make activity bar icons bigger*/
-.monaco-workbench .activitybar .monaco-action-bar {
     margin-top: 100px;
     transform: scale(1.4) !important;
 }
-
-
-
-
-.monaco-dropdown-with-primary>.dropdown-action-container>.monaco-dropdown>.dropdown-label .codicon[class*=codicon-] {
-    font-size: 26px;
-    line-height: 26px;
-    margin-left: 3px;
-}
-
-.monaco-action-bar .action-item .single-terminal-tab .codicon:first-child {
-    margin-right: 20px;
-    margin-top: 10px;
-}
-
-.codicon[class*=codicon-] {
-    display: inline;
-}
-
-/* make other icons bigger */
-.monaco-workbench .codicon[class*=codicon-] {
+/* Icon size adjustments */
+.monaco-dropdown-with-primary > .dropdown-action-container > .monaco-dropdown > .dropdown-label .codicon[class*="codicon-"],
+.monaco-action-bar .action-item .single-terminal-tab .codicon:first-child,
+.codicon[class*="codicon-"],
+.monaco-workbench .codicon[class*="codicon-"],
+.monaco-workbench .part.statusbar > .items-container > .statusbar-item span.codicon {
     font-size: 26px;
     width: 30px;
     height: 30px;
+    line-height: 26px;
+    margin-left: 3px;
+    margin-right: 20px; /* Adjust margin-right for specific case */
+    margin-top: 10px; /* Adjust margin-top for specific case */
 }
-
-/*make statusbar icons in center and bigger*/
-.monaco-workbench .part.statusbar>.items-container>.statusbar-item>.statusbar-item-label {
+/* Other adjustments */
+.explorer-folders-view .explorer-item {
+    padding-top: 3px;
+}
+.monaco-workbench .part.statusbar > .items-container > .statusbar-item > .statusbar-item-label {
     margin-top: 2px;
 }
-
-.monaco-workbench .part.statusbar>.items-container>.statusbar-item span.codicon {
-    font-size: 20px;
+.monaco-workbench .part.statusbar > .items-container > .statusbar-item span.codicon {
     margin-top: 8px;
 }
-
-
-/*
-.monaco-dropdown-with-default>.dropdown-action-container>.monaco-dropdown>.dropdown-label .codicon[class*=codicon-] {
-    line-height: 30px; 
-}*/
-
 .text-sm {
     font-size: 2rem;
     line-height: 2rem;
 }
-
 
 /* "vscode_custom_css.imports": [
     "file:////home/gurji/Documents/1.css"
