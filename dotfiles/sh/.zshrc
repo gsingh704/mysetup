@@ -20,9 +20,6 @@ alias ys="yay -S"
 alias yr="yay -R"
 alias pc="sudo pacman -Qtdq | sudo  pacman -Rns -"
 alias update-grub="sudo grub-mkconfig -o /boot/grub/grub.cfg"
-
-alias lp='gsettings set org.gnome.desktop.interface text-scaling-factor 1 && dconf write /org/gnome/shell/extensions/dash-to-panel/panel-sizes "'\''{\"0\":21,\"1\":21}'\''"'
-
-alias dm='gsettings set org.gnome.desktop.interface text-scaling-factor 1.25 && dconf write /org/gnome/shell/extensions/dash-to-panel/panel-sizes "'\''{\"0\":25,\"1\":25}'\''"'
-
 alias ft="cat ~/.local/share/gnome-shell/dconf-settings-ft.ini | dconf load /"
+
+alias ace='function _ace() { mpv "http://127.0.0.1:6878/ace/getstream?id=${1#acestream://}"; }; _ace'
