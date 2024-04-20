@@ -1,6 +1,7 @@
 
 sudo systemctl enable --now bluetooth
-echo '--enable-features=TouchpadOverscrollHistoryNavigation' > ~/.config/chrome-flags.conf
+echo '--enable-features=TouchpadOverscrollHistoryNavigation
+--ozone-platform=wayland' > ~/.config/chrome-flags.conf
 sudo sed -i '1i\[Element Master]\nswitch = mute\nvolume = ignore\n' /usr/share/alsa-card-profile/mixer/paths/analog-output.conf.common
 
 
