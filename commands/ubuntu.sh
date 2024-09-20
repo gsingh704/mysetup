@@ -37,12 +37,12 @@ sudo apt remove --autoremove snapd gnome-terminal
 sudo rm -rf /var/cache/snapd/
 rm -rf ~/snap
 
+###########################################333
 
+echo '--enable-features=TouchpadOverscrollHistoryNavigation
+--ozone-platform=wayland' > ~/.var/app/com.google.Chrome/config/chrome-flags.conf
 
-#firefox
-sudo sh -c "echo 'MOZ_ENABLE_WAYLAND=1
-MOZ_USE_XINPUT2=1
-MOZ_X11_EGL=1' > /etc/environment"
+sudo sh -c "echo 'export ELECTRON_OZONE_PLATFORM_HINT=auto' >> /etc/environment"
 
 #zsh
 sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"  #install oh-my-zsh
@@ -52,8 +52,21 @@ git clone https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM:=~/.oh-my-zs
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 git clone https://github.com/zsh-users/zsh-history-substring-search ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-history-substring-search
 cd ~
-rm -f .zshrc*
-curl -o ~/.zshrc https://raw.githubusercontent.com/gsingh704/mysetup/main/dotfiles/sh/.zshrc
+
+echo 'export ZSH="/home/$USER/.oh-my-zsh"
+ZSH_THEME="jonathan"
+plugins=(git zsh-completions  zsh-completions 
+zsh-autosuggestions zsh-syntax-highlighting zsh-history-substring-search
+)
+source $ZSH/oh-my-zsh.sh
+
+alias ai="sudo apt install"
+alias ar="sudo apt remove"
+alias au="sudo apt update -y && sudo apt upgrade -y"
+alias ac="sudo apt autoremove"
+alias as="apt search"
+alias aiy="sudo apt install -y"' > .zshrc
+
 
 
 #fusuma
