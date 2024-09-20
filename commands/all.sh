@@ -29,6 +29,10 @@ X-GNOME-Autostart-enabled=true" > ~/.config/autostart/fusuma.desktop
 
 curl -o ~/.config/fusuma/config.yml https://raw.githubusercontent.com/gsingh704/mysetup/main/dotfiles/gestures/config.yml --create-dirs
 
+wget   https://github.com/user-attachments/files/17069476/gestureImprovements47%40gestures.zip
+gnome-extensions install -f gestureImprovements47@gestures.zip 
+
+
 #zsh ########################################################################################
 yay -Syu --noconfirm wget zsh git zsh-autosuggestions zsh-completions zsh-history-substring-search zsh-syntax-highlighting
 chsh -s $(which zsh)
