@@ -1,11 +1,11 @@
 swipe:
-  3:
-    down:
-      sendkey: "LEFTALT+LEFTSHIFT+TAB" # window 
+  # 3:  
+    # down:
+      # sendkey: "LEFTALT+LEFTSHIFT+TAB" # window 
 #     left:
 #       sendkey: "LEFTCTRL+TAB"   # tab
 #     right:
-#       sendkey: "LEFTCTRL+LEFTSHIFT+TAB" # tab
+#     sendkey: "LEFTCTRL+LEFTSHIFT+TAB" # tab
         
      
   4:
