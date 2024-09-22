@@ -38,6 +38,10 @@ yay -Syu --noconfirm wget zsh git zsh-autosuggestions zsh-completions zsh-histor
 chsh -s $(which zsh)
 curl -o ~/.zshrc https://raw.githubusercontent.com/gsingh704/mysetup/main/dotfiles/sh/.zshrc
 
+#acestream
+curl -o ~/.local/share/applications/acestream.AppImage https://github.com/bro2020/acestream-appimage/releases/download/v2.2/AceStream-3.1.49-v2.2.AppImage
+chmod +x ~/.local/share/applications/acestream.AppImage
+
 #docker ######################################################################################
 yay -Syu --noconfirm docker docker-compose visual-studio-code-bin  # gvfs-google adwaita-qt5 
 sudo groupadd docker
