@@ -16,12 +16,13 @@ zstyle ':completion:*' menu select
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 
 #alias
-alias ys="yay -Syu --noconfirm
+alias ys="yay -Syu --noconfirm"
 alias yr="yay -R"
 alias pc="sudo pacman -Qtdq | sudo  pacman -Rns -"
 alias update-grub="sudo grub-mkconfig -o /boot/grub/grub.cfg"
 alias ft="cat ~/.local/share/gnome-shell/dconf-settings-ft.ini | dconf load /"
 
 alias ace='function _ace() { mpv "http://127.0.0.1:6878/ace/getstream?id=${1#acestream://}"; }; _ace'
-#alias dace='docker run -it  --rm -p 6878:6878 blaiseio/acelink'
-alias ast="~/.local/share/applications/acestream.AppImage --client-console"
+# alias dace='docker run -it  --rm -p 6878:6878 blaiseio/acelink'
+alias ast="ps aux | grep '[a]cestream' | awk '{print \$2}' | xargs -r kill; ~/.local/share/applications/acestream.AppImage --client-console"
+alias wp="systemctl restart --user wireplumber.service"
