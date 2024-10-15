@@ -45,6 +45,9 @@ curl -o ~/.zshrc https://raw.githubusercontent.com/gsingh704/mysetup/main/dotfil
 # chmod +x ~/.local/share/applications/acestream.AppImage
 yay -Syu --noconfirm  acestream-engine acestream-launcher
 
+#
+yay -Syu --noconfirm binder_linux-dkms waydroid  
+sudo waydroid init
 
 #docker ######################################################################################
 yay -Syu --noconfirm docker docker-compose visual-studio-code-bin  # gvfs-google adwaita-qt5 
