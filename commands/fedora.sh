@@ -31,9 +31,10 @@ curl -o ~/.zshrc https://raw.githubusercontent.com/gsingh704/mysetup/main/dotfil
 
 
 #fusuma
-sudo dnf install libinput ruby ruby-devel
+sudo dnf install libinput ruby ruby-devel make automake gcc gcc-c++ kernel-devel 
 sudo gem install revdev bundler fusuma fusuma-plugin-sendkey
 sudo gpasswd -a $USER input
+sudo dnf remove make automake gcc gcc-c++ kernel-devel
 
 mkdir ~/.config/autostart/
 echo "[Desktop Entry]    
