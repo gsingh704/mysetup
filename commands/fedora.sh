@@ -70,7 +70,7 @@ sudo sh -c "echo 'SELINUX=disabled
 SELINUXTYPE=targeted' > /etc/sysconfig/selinux "
 
 
-#better video
+#better video run in bash
 sudo dnf -y install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm
 sudo dnf -y install https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
-dnf swap ffmpeg-free ffmpeg --allowerasing
+sudo dnf swap ffmpeg-free ffmpeg --allowerasing
