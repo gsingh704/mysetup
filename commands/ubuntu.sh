@@ -51,22 +51,19 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:
 git clone https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM:=~/.oh-my-zsh/custom}/plugins/zsh-completions
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 git clone https://github.com/zsh-users/zsh-history-substring-search ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-history-substring-search
-cd ~
-
 echo 'export ZSH="/home/$USER/.oh-my-zsh"
 ZSH_THEME="jonathan"
-plugins=(git zsh-completions  zsh-completions 
-zsh-autosuggestions zsh-syntax-highlighting zsh-history-substring-search
-)
+plugins=(git zsh-completions  zsh-completions zsh-autosuggestions zsh-syntax-highlighting zsh-history-substring-search)
 source $ZSH/oh-my-zsh.sh
+bindkey "$terminfo[kcuu1]" history-substring-search-up
+bindkey "$terminfo[kcud1]" history-substring-search-down
 
 alias ai="sudo apt install"
 alias ar="sudo apt remove"
 alias au="sudo apt update -y && sudo apt upgrade -y"
 alias ac="sudo apt autoremove"
 alias as="apt search"
-alias aiy="sudo apt install -y"' > .zshrc
-
+alias aiy="sudo apt install -y"' > ~/.zshrc
 
 
 #fusuma
