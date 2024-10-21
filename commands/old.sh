@@ -118,3 +118,41 @@ headerbar button.titlebutton, .titlebar button.titlebutton {
   background-size: 27px 27px;
 }" >> ~/.config/gtk-3.0/gtk.css
 
+#--------------------------G14-------------------
+#graphics related ############################################################################
+yay -R --confirm nvidia-dkms
+yay -Syu --noconfirm  base-devel nvidia  nvidia-utils nvidia-prime  vulkan-radeon lib32-nvidia-utils asusctl supergfxctl 
+sudo systemctl start asusd
+sudo systemctl enable --now supergfxd.service
+sudo systemctl enable --now bluetooth
+sudo ln -s /dev/null /etc/udev/rules.d/61-gdm.rules
+
+asusctl fan-curve -m balanced -D 30c:0,40c:0,50c:0,60c:0,70c:0,80c:0,90c:0,100c:0  -e true -f cpu
+asusctl fan-curve -m balanced -D 30c:0,40c:0,50c:0,60c:0,70c:0,80c:0,90c:0,100c:0  -e true -f gpu
+asusctl fan-curve -m balanced -e true  
+
+
+#fedora
+sudo dnf copr enable lukenukem/asus-linux
+sudo dnf update -y
+sudo dnf install kernel-devel
+sudo dnf install akmod-nvidia xorg-x11-drv-nvidia-cuda
+sudo systemctl enable nvidia-hibernate.service nvidia-suspend.service nvidia-resume.servicej
+sudo dnf install asusctl supergfxctl
+sudo dnf update --refresh
+sudo systemctl start asusd.service
+sudo systemctl enable --now supergfxd.service
+
+#ubuntu
+sudo apt update && sudo apt install -y curl git build-essential libgtk-3-dev libpango1.0-dev  libgdk-pixbuf-2.0-dev libglib2.0-dev cmake libclang-dev libudev-dev libayatana-appindicator3-1    cargo
+
+git clone https://gitlab.com/asus-linux/supergfxctl.git
+cd supergfxctl
+make && sudo make install
+sudo systemctl enable supergfxd.service --now
+
+git clone https://gitlab.com/asus-linux/asusctl
+cd asusctl
+make && sudo make install
+sudo systemctl daemon-reload
+sudo systemctl restart asusd

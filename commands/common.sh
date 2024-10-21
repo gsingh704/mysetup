@@ -1,24 +1,14 @@
+sudo systemctl enable --now bluetooth
 
+echo '--enable-features=TouchpadOverscrollHistoryNavigation
+--ozone-platform=wayland' > ~/.config/chrome-flags.conf
+echo '--enable-features=TouchpadOverscrollHistoryNavigation
+--ozone-platform=wayland' > ~/.var/app/com.google.Chrome/config/chrome-flags.conf
 
+sudo sed -i '1s/^/nameserver 1.1.1.1\n/' /etc/resolv.conf
+sudo sh -c "echo 'export ELECTRON_OZONE_PLATFORM_HINT=auto' >> /etc/environment"
 
-sudo dnf copr enable lukenukem/asus-linux
-
-
-sudo dnf update -y
-sudo dnf install kernel-devel
-sudo dnf install akmod-nvidia xorg-x11-drv-nvidia-cuda
-
-
-sudo systemctl enable nvidia-hibernate.service nvidia-suspend.service nvidia-resume.servicej
-
-sudo dnf install asusctl supergfxctl
-sudo dnf update --refresh
-sudo systemctl start asusd.service
-sudo systemctl enable --now supergfxd.service
-
-
-#zsh
-sudo dnf install util-linux-user zsh
+#zsh----------------------------------------------------
 sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"  #install oh-my-zsh
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 git clone https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM:=~/.oh-my-zsh/custom}/plugins/zsh-completions
@@ -33,12 +23,18 @@ bindkey "$terminfo[kcuu1]" history-substring-search-up
 bindkey "$terminfo[kcud1]" history-substring-search-down' > ~/.zshrc
 
 
+#gnome config------------------------------------------
+curl -o ~/.local/share/gnome-shell/dconf-settings-ft.ini https://raw.githubusercontent.com/gsingh704/mysetup/main/dotfiles/dconf-settings-ft.ini --create-dirs
+curl -o ~/.local/share/backgrounds/1.jpg https://w.wallhaven.cc/full/md/wallhaven-mdjrqy.jpg --create-dirs
+curl -o ~/.local/share/backgrounds/2.jpg https://i.imgur.com/ukrq4Tz.jpeg --create-dirs
 
-#fusuma
-sudo dnf install libinput ruby ruby-devel make automake gcc gcc-c++ kernel-devel 
+mkdir -p ~/.themes/my/gnome-shell && echo '.clock {border-width: 0;}' > ~/.themes/my/gnome-shell/gnome-shell.css
+wget   https://github.com/user-attachments/files/17069476/gestureImprovements47%40gestures.zip
+gnome-extensions install -f gestureImprovements47@gestures.zip 
+
+#fusuma--------------------------------------
 sudo gem install revdev bundler fusuma fusuma-plugin-sendkey
 sudo gpasswd -a $USER input
-sudo dnf remove make automake gcc gcc-c++ kernel-devel
 
 mkdir ~/.config/autostart/
 echo "[Desktop Entry]    
@@ -52,29 +48,8 @@ mkdir -p ~/.config/fusuma
 cd ~/.config/fusuma
 wget https://github.com/gsingh704/mysetup/raw/main/dotfiles/gestures/config.yml
 
-
-#adw
-sudo dnf install adw-gtk3-theme
-
-#code
-sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
-sudo sh -c 'echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com/yumrepos/vscode\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" > /etc/yum.repos.d/vscode.repo'
-
-dnf check-update
-sudo dnf install code
-
-
-#docker
-sudo dnf install docker docker-compose  
+#docker----------------------------------------
 sudo groupadd docker
 sudo usermod -aG docker $USER
 sudo systemctl enable --now docker 
 
-sudo sh -c "echo 'SELINUX=disabled
-SELINUXTYPE=targeted' > /etc/sysconfig/selinux "
-
-
-#better video run in bash
-sudo dnf -y install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm
-sudo dnf -y install https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
-sudo dnf swap ffmpeg-free ffmpeg --allowerasing
