@@ -1,35 +1,20 @@
-swipe:
-  # 3:  
-    # down:
-      # sendkey: "LEFTALT+LEFTSHIFT+TAB" # window 
-#     left:
-#       sendkey: "LEFTCTRL+TAB"   # tab
-#     right:
-#     sendkey: "LEFTCTRL+LEFTSHIFT+TAB" # tab
-        
-     
+swipe:      
   4:
     left:
       sendkey: "LEFTCTRL+TAB"   # tab
-#     sendkey: "LEFTALT+RIGHT" # history back
-
     right:
       sendkey: "LEFTCTRL+LEFTSHIFT+TAB" # tab
-#     sendkey: "LEFTALT+LEFT" # history forward
     up:
       sendkey: "LEFTCTRL+LEFTSHIFT+T" # open new tab
     down:
       sendkey: "LEFTCTRL+W" # close tab
-
 pinch:
   3:
     out:
       sendkey: 'LEFTCTRL+T'  # new tab
     in:
-      sendkey: 'LEFTCTRL+T'  # new tab
+      sendkey: 'LEFTCTRL+T'  # new tab  
 
-  
-  
 threshold:
   swipe: 0.5
   pinch: 0.2
