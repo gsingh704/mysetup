@@ -1,9 +1,10 @@
 sudo systemctl enable --now bluetooth
 
-echo '--enable-features=TouchpadOverscrollHistoryNavigation
---ozone-platform=wayland' > ~/.config/chrome-flags.conf
-echo '--enable-features=TouchpadOverscrollHistoryNavigation
---ozone-platform=wayland' > ~/.var/app/com.google.Chrome/config/chrome-flags.conf
+echo '--enable-features=TouchpadOverscrollHistoryNavigation,Vulkan,VulkanFromANGLE,DefaultANGLEVulkan,VaapiIgnoreDriverChecks,VaapiVideoDecoder,PlatformHEVCDecoderSupport,UseMultiPlaneFormatForHardwareVideo,TouchpadOverscrollHistoryNavigation
+--ozone-platform=wayland
+--use-gl=angle
+--use-angle=vulkan' > ~/.config/chrome-flags.conf
+cp ~/.config/chrome-flags.conf ~/.var/app/com.google.Chrome/config/chrome-flags.conf
 
 sudo sed -i '1s/^/nameserver 1.1.1.1\n/' /etc/resolv.conf
 sudo sh -c "echo 'export ELECTRON_OZONE_PLATFORM_HINT=auto' >> /etc/environment"
