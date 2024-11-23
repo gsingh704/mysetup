@@ -29,7 +29,7 @@ alias pc="sudo pacman -Qtdq | sudo  pacman -Rns -"
 alias update-grub="sudo grub-mkconfig -o /boot/grub/grub.cfg"
 
 alias ft="cat ~/.local/share/gnome-shell/dconf-settings-ft.ini | dconf load /"
-export GEM_HOME="$(ruby -e 'puts Gem.user_dir')"
+export GEM_HOME="$(ruby -e '\''puts Gem.user_dir'\'' )"
 export PATH="$PATH:$GEM_HOME/bin"' > ~/.zshrc
 
 
