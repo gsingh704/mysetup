@@ -15,7 +15,7 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:
 git clone https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM:=~/.oh-my-zsh/custom}/plugins/zsh-completions
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 git clone https://github.com/zsh-users/zsh-history-substring-search ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-history-substring-search
-echo -e 'export ZSH="/home/$USER/.oh-my-zsh"\nZSH_THEME="jonathan"\nplugins=(git zsh-completions zsh-completions zsh-autosuggestions zsh-syntax-highlighting zsh-history-substring-search)\nsource $ZSH/oh-my-zsh.sh\nbindkey "$terminfo[kcuu1]" history-substring-search-up\nbindkey "$terminfo[kcud1]" history-substring-search-down' > ~/.zshrc
+echo -e 'export ZSH="/home/$USER/.oh-my-zsh"\nZSH_THEME="jonathan"\nplugins=(git zsh-completions zsh-completions zsh-autosuggestions zsh-syntax-highlighting zsh-history-substring-search)\nsource $ZSH/oh-my-zsh.sh\nbindkey "$terminfo[kcuu1]" history-substring-search-up\nbindkey "$terminfo[kcud1]" history-substring-search-down\nalias ft="cat ~/.local/share/gnome-shell/dconf-settings-ft.ini | dconf load /"' > ~/.zshrc
 
 #gnome config------------------------------------------
 curl -o ~/.local/share/gnome-shell/dconf-settings-ft.ini https://raw.githubusercontent.com/gsingh704/mysetup/main/dotfiles/dconf-settings-ft.ini --create-dirs
