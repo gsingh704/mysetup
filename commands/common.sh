@@ -21,16 +21,7 @@ ZSH_THEME="jonathan"
 plugins=(git zsh-completions zsh-completions zsh-autosuggestions zsh-syntax-highlighting zsh-history-substring-search)
 source $ZSH/oh-my-zsh.sh
 bindkey "$terminfo[kcuu1]" history-substring-search-up
-bindkey "$terminfo[kcud1]" history-substring-search-down
-
-alias ys="yay -S"
-alias yr="yay -R"
-alias pc="sudo pacman -Qtdq | sudo  pacman -Rns -"
-alias update-grub="sudo grub-mkconfig -o /boot/grub/grub.cfg"
-
-alias ft="cat ~/.local/share/gnome-shell/dconf-settings-ft.ini | dconf load /"
-export GEM_HOME="$(ruby -e '\''puts Gem.user_dir'\'' )"
-export PATH="$PATH:$GEM_HOME/bin"' > ~/.zshrc
+bindkey "$terminfo[kcud1]" history-substring-search-down' > ~/.zshrc
 
 
 #gnome config------------------------------------------
