@@ -158,4 +158,5 @@ sudo systemctl daemon-reload
 sudo systemctl restart asusd
 
 ################3
- curl -s "https://af1cionados.vercel.app/AcEStREAM%20iDs.w3u" | jq -r '(.groups[] | (.stations[]? | "<li><img src=\"\(.image)\" alt=\"\(.name)\" style=\"max-width:40px; \"><a href=\"\(.url)\">\(.name)</a></li>"))' > 1.html 
+curl -s "https://af1cionados.vercel.app/AcEStREAM%20iDs.w3u" | jq -r '(.groups[] | (.stations[]? | "<li><img src=\"\(.image)\" alt=\"\(.name)\" style=\"max-width:40px; \"><a href=\"\(.url)\">\(.name)</a></li>"))' > 1.html 
+curl -s "https://af1c1onados.vercel.app/02.Menu.Iptvs.w3u" | jq -r '.groups[].url' | sort -u | awk -F/ '!seen[$3]++ {print $0}' | while read -r URL; do curl -s "$URL" >> "1.m3u"; done > "1.m3u"
