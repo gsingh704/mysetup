@@ -157,6 +157,9 @@ make && sudo make install
 sudo systemctl daemon-reload
 sudo systemctl restart asusd
 
-################3
-curl -s "https://af1cionados.vercel.app/AcEStREAM%20iDs.w3u" | jq -r '(.groups[] | (.stations[]? | "<li><img src=\"\(.image)\" alt=\"\(.name)\" style=\"max-width:40px; \"><a href=\"\(.url)\">\(.name)</a></li>"))' > 1.html 
+################
 curl -s "https://af1c1onados.vercel.app/02.Menu.Iptvs.w3u" | jq -r '.groups[].url' | sort -u | awk -F/ '!seen[$3]++ {print $0}' | while read -r URL; do curl -s "$URL" >> "1.m3u"; done > "1.m3u"
+
+curl -s "https://af1cionados.vercel.app/AcEStREAM%20iDs.w3u" | jq -r '(.groups[] | (.stations[]? | "<li><img src=\"\(.image)\" alt=\"\(.name)\" style=\"width:40px; \"><a href=\"\(.url)\">\(.name)</a></li>"))' > 1.htm
+echo -e '#!/bin/bash\ndocker ps | grep -q "ghcr.io/javinator9889/acexy" || {\n    docker run -d -t -p 6878:6878 -p 8080:8080 ghcr.io/javinator9889/acexy\n    sleep 5\n}\nmpv "http://127.0.0.1:6878/ace/getstream?id=${1#acestream://}"' > ~/Music/1.sh && chmod +x ~/Music/1.sh
+echo -e "[Desktop Entry]\nName=AceStream MPV\nExec=$HOME/Music/1.sh %u\nType=Application\nNoDisplay=true\nMimeType=x-scheme-handler/acestream;" > ~/.local/share/applications/acestream-mpv.desktop
