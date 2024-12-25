@@ -11,6 +11,7 @@ sudo sh -c "echo 'export ELECTRON_OZONE_PLATFORM_HINT=auto' >> /etc/environment"
 
 #zsh----------------------------------------------------
 sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+#other terminal
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 git clone https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM:=~/.oh-my-zsh/custom}/plugins/zsh-completions
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
@@ -21,7 +22,15 @@ ZSH_THEME="jonathan"
 plugins=(git zsh-completions zsh-completions zsh-autosuggestions zsh-syntax-highlighting zsh-history-substring-search)
 source $ZSH/oh-my-zsh.sh
 bindkey "$terminfo[kcuu1]" history-substring-search-up
-bindkey "$terminfo[kcud1]" history-substring-search-down' > ~/.zshrc
+bindkey "$terminfo[kcud1]" history-substring-search-down
+export GEM_HOME="$(ruby -e 'puts Gem.user_dir')"
+export PATH="$PATH:$GEM_HOME/bin"' > ~/.zshrc
+
+#arch
+echo -e 'alias ys="yay -S"
+alias yr="yay -R"
+alias pc="sudo pacman -Qtdq | sudo  pacman -Rns -"
+alias update-grub="sudo grub-mkconfig -o /boot/grub/grub.cfg" > ~/.zshrc
 
 
 #gnome config------------------------------------------
@@ -29,6 +38,8 @@ curl -o ~/.local/share/gnome-shell/dconf-settings-ft.ini https://raw.githubuserc
 curl -o ~/.local/share/backgrounds/1.jpg https://w.wallhaven.cc/full/md/wallhaven-mdjrqy.jpg --create-dirs
 curl -o ~/.local/share/backgrounds/2.jpg https://i.imgur.com/ukrq4Tz.jpeg --create-dirs
 
+dconf load / < ~/.local/share/gnome-shell/dconf-settings-ft.ini 
+gsettings set org.gnome.mutter experimental-features "['scale-monitor-framebuffer']"
 mkdir -p ~/.themes/my/gnome-shell && echo '.clock {border-width: 0;}' > ~/.themes/my/gnome-shell/gnome-shell.css
 wget   https://github.com/user-attachments/files/17069476/gestureImprovements47%40gestures.zip
 gnome-extensions install -f gestureImprovements47@gestures.zip 
