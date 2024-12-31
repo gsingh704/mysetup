@@ -54,5 +54,6 @@ mkdir -p ~/.config/fusuma/ && echo -e "swipe:\n  3:\n    left: {sendkey: 'LEFTCT
 #docker----------------------------------------
 sudo groupadd docker
 sudo usermod -aG docker $USER
+newgrp docker
 sudo systemctl enable --now docker 
 
