@@ -8,6 +8,9 @@ cp ~/.config/chrome-flags.conf ~/.var/app/com.google.Chrome/config/chrome-flags.
 
 sudo sed -i '1s/^/nameserver 1.1.1.1\n/' /etc/resolv.conf
 sudo sh -c "echo 'export ELECTRON_OZONE_PLATFORM_HINT=auto' >> /etc/environment"
+echo '--profile=fast
+--hwdec=auto' > ~/.config/mpv/mpv.conf
+
 
 #zsh----------------------------------------------------
 sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
