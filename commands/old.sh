@@ -164,5 +164,6 @@ curl -s "https://af1cionados.vercel.app/AcEStREAM%20iDs.w3u" | jq -r '(.groups[]
 echo -e '#!/bin/bash\ndocker ps | grep -q "ghcr.io/javinator9889/acexy" || {\n    docker run -d -t -p 6878:6878 -p 8080:8080 ghcr.io/javinator9889/acexy\n    sleep 5\n}\nmpv "http://127.0.0.1:6878/ace/getstream?id=${1#acestream://}"' > ~/Music/ace.sh && chmod +x ~/Music/ace.sh
 echo -e "[Desktop Entry]\nName=Ace\nExec=$HOME/Music/ace.sh %u\nType=Application\nNoDisplay=true\nMimeType=x-scheme-handler/acestream;" > ~/.local/share/applications/ace.desktop
 xdg-mime default ace.desktop x-scheme-handler/acestream
+update-desktop-database ~/.local/share/applications
 
 
