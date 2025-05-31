@@ -26,7 +26,7 @@ plugins=(git zsh-completions zsh-completions zsh-autosuggestions zsh-syntax-high
 source $ZSH/oh-my-zsh.sh
 bindkey "$terminfo[kcuu1]" history-substring-search-up
 bindkey "$terminfo[kcud1]" history-substring-search-down
-export GEM_HOME="$(ruby -e 'puts Gem.user_dir')"
+export GEM_HOME="$(gem env user_gemhome)"
 export PATH="$PATH:$GEM_HOME/bin"' > ~/.zshrc
 
 #arch
