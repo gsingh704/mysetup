@@ -50,8 +50,7 @@ gnome-extensions install -f gestureImprovements47@gestures.zip
 #fusuma--------------------------------------
 gem install revdev bundler fusuma fusuma-plugin-sendkey
 sudo gpasswd -a $USER input
-
-mkdir -p ~/.config/autostart && echo -e "[Desktop Entry]\nType=Application\nExec=fusuma\nHidden=false\nNoDisplay=false\nX-GNOME-Autostart-enabled=true" > ~/.config/autostart/fusuma.desktop
+mkdir -p ~/.config/autostart && printf "[Desktop Entry]\nType=Application\nExec=/bin/bash -c \"source ~/.zshrc && fusuma\"\nHidden=false\nNoDisplay=false\nX-GNOME-Autostart-enabled=true\n" > ~/.config/autostart/fusuma.desktop
 mkdir -p ~/.config/fusuma/ && echo -e "swipe:\n  3:\n    left: {sendkey: 'LEFTCTRL+TAB'}\n    right: {sendkey: 'LEFTCTRL+LEFTSHIFT+TAB'}\n    up: {sendkey: 'LEFTCTRL+LEFTSHIFT+T'}\n    down: {sendkey: 'LEFTCTRL+W'}\npinch:\n  3:\n    out: {sendkey: 'LEFTCTRL+T'}\n    in: {sendkey: 'LEFTCTRL+T'}\nthreshold: {swipe: 0.5, pinch: 0.2}\ninterval: {swipe: 1.0, pinch: 0.7}" > ~/.config/fusuma/config.yml
 
 #docker----------------------------------------
