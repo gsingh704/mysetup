@@ -350,6 +350,9 @@ three-swipe-right-action=4
 three-swipe-right-keybind='65056:5'
 three-swipe-up-keybind='116:5'
 
+[org/gnome/shell/extensions/touchpad-speed-control]
+app-factors={'chrome': 1.0, 'google-chrome-stable': 1.0, 'google-chrome-unstable': 1.0, 'google-chrome-beta': 1.0, 'google-chrome-dev': 1.0, 'com.google.Chrome': 0.34999999999999998, 'com.google.Chrome.unstable': 1.0, 'firefox': 1.0, 'firefox-developer': 1.0, 'firefox-nightly': 1.0, 'org.mozilla.firefox': 1.0, 'code': 1.0, 'code-url-handler': 1.0, 'org.gnome.Terminal': 1.0, 'telegram-desktop': 1.0, 'discord': 1.0, 'slack': 1.0, 'org.gnome.Nautilus': 1.0, 'org.gnome.TextEditor': 1.0, 'org.gnome.gedit': 1.0, 'okular': 1.0, 'org.gnome.Evince': 1.0, 'com.github.johnfactotum.Foliate': 1.0, 'org.gnome.Extensions': 1.0, 'zotero': 1.0}
+
 [org/gnome/shell/extensions/vitals]
 battery-slot=3
 hide-icons=true
